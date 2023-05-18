@@ -1,0 +1,316 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://services.test'
+paths:
+  /api/login:
+    post:
+      summary: 'Handle an incoming authentication request.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: koepp.paula@example.com
+                password:
+                  type: string
+                  description: ''
+                  example: id
+              required:
+                - email
+                - password
+      security: []
+  /api/user:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/logout:
+    post:
+      summary: 'Destroy an authenticated session.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/services:
+    get:
+      summary: 'Get all services.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Services APIs'
+      security: []
+    post:
+      summary: 'Add a new service.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Services APIs'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'The title of the new service'
+                  example: quia
+                price_min:
+                  type: string
+                  description: ''
+                  example: repellendus
+                location_lat:
+                  type: string
+                  description: 'The latitude location of the new service'
+                  example: minima
+                location_long:
+                  type: string
+                  description: 'The longitude location of the new service'
+                  example: nisi
+                description:
+                  type: text
+                  description: 'The description of the new service'
+                  example: nihil
+                price:
+                  type: string
+                  description: 'The price of the new service'
+                  example: suscipit
+              required:
+                - title
+                - price_min
+                - location_lat
+                - location_long
+                - price
+  '/api/services/{id}':
+    get:
+      summary: 'Show service details.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Services APIs'
+      security: []
+    post:
+      summary: 'Update a service.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Services APIs'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'The title of the service'
+                  example: voluptatem
+                description:
+                  type: string
+                  description: 'The description of the service'
+                  example: reprehenderit
+                price:
+                  type: string
+                  description: 'The price of the service'
+                  example: consequatur
+                location_lat:
+                  type: string
+                  description: 'The latitude location of the new service'
+                  example: commodi
+                location_long:
+                  type: string
+                  description: 'The longitude location of the new service'
+                  example: odit
+              required:
+                - title
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The id of the service'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: laboriosam
+tags:
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: 'Services APIs'
+    description: ''
