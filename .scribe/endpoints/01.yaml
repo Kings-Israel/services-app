@@ -44,7 +44,7 @@ endpoints:
         name: id
         description: 'The id of the service'
         required: false
-        example: laboriosam
+        example: ipsam
         type: string
         custom: []
     queryParameters: []
@@ -79,42 +79,42 @@ endpoints:
         name: title
         description: 'The title of the new service'
         required: true
-        example: quia
+        example: tenetur
         type: string
         custom: []
       price_min:
         name: price_min
         description: ''
         required: true
-        example: repellendus
+        example: quasi
         type: string
         custom: []
       location_lat:
         name: location_lat
         description: 'The latitude location of the new service'
         required: true
-        example: minima
+        example: necessitatibus
         type: string
         custom: []
       location_long:
         name: location_long
         description: 'The longitude location of the new service'
         required: true
-        example: nisi
+        example: tempore
         type: string
         custom: []
       description:
         name: description
         description: 'The description of the new service'
         required: false
-        example: nihil
+        example: omnis
         type: text
         custom: []
       price:
         name: price
         description: 'The price of the new service'
         required: true
-        example: suscipit
+        example: assumenda
         type: string
         custom: []
     responses:
@@ -145,7 +145,7 @@ endpoints:
         name: id
         description: 'The id of the service'
         required: false
-        example: perferendis
+        example: non
         type: string
         custom: []
     queryParameters: []
@@ -154,35 +154,35 @@ endpoints:
         name: title
         description: 'The title of the service'
         required: true
-        example: voluptatem
+        example: consequatur
         type: string
         custom: []
       description:
         name: description
         description: 'The description of the service'
         required: false
-        example: reprehenderit
+        example: inventore
         type: string
         custom: []
       price:
         name: price
         description: 'The price of the service'
         required: false
-        example: consequatur
+        example: minus
         type: string
         custom: []
       location_lat:
         name: location_lat
         description: 'The latitude location of the new service'
         required: false
-        example: commodi
+        example: odio
         type: string
         custom: []
       location_long:
         name: location_long
         description: 'The longitude location of the new service'
         required: false
-        example: odit
+        example: minima
         type: string
         custom: []
     responses:

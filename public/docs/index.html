@@ -70,22 +70,41 @@
                                                 </ul>
                     
                     <ul id="tocify-header-2" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="endpoints">
-                    <a href="#endpoints">Endpoints</a>
+                <li class="tocify-item level-1" data-unique="auth-apis">
+                    <a href="#auth-apis">Auth APIs</a>
                 </li>
-                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-login">
-                        <a href="#endpoints-POSTapi-login">Handle an incoming authentication request.</a>
+                                    <ul id="tocify-subheader-auth-apis" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="auth-apis-POSTapi-login">
+                        <a href="#auth-apis-POSTapi-login">Login the user.</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-user">
-                        <a href="#endpoints-GETapi-user">GET api/user</a>
+                                    <li class="tocify-item level-2" data-unique="auth-apis-POSTapi-register">
+                        <a href="#auth-apis-POSTapi-register">Register the user</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-logout">
-                        <a href="#endpoints-POSTapi-logout">Destroy an authenticated session.</a>
+                                    <li class="tocify-item level-2" data-unique="auth-apis-POSTapi-forgot-password">
+                        <a href="#auth-apis-POSTapi-forgot-password">Request password reset code</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="auth-apis-POSTapi-otp-validate">
+                        <a href="#auth-apis-POSTapi-otp-validate">Validate the OTP</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="auth-apis-POSTapi-reset-password">
+                        <a href="#auth-apis-POSTapi-reset-password">Reset Password</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="auth-apis-POSTapi-logout">
+                        <a href="#auth-apis-POSTapi-logout">Logout.</a>
                     </li>
                                                     </ul>
                             </ul>
                     <ul id="tocify-header-3" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="user-apis">
+                    <a href="#user-apis">User APIs</a>
+                </li>
+                                    <ul id="tocify-subheader-user-apis" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="user-apis-GETapi-user">
+                        <a href="#user-apis-GETapi-user">Get user details.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-4" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="services-apis">
                     <a href="#services-apis">Services APIs</a>
                 </li>
@@ -114,7 +133,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: May 16 2023</li>
+        <li>Last updated: May 19 2023</li>
     </ul>
 </div>
 
@@ -133,11 +152,11 @@ You can switch the language used with the tabs at the top right (or from the nav
         <h1 id="authenticating-requests">Authenticating requests</h1>
 <p>This API is not authenticated.</p>
 
-        <h1 id="endpoints">Endpoints</h1>
+        <h1 id="auth-apis">Auth APIs</h1>
 
     
 
-            <h2 id="endpoints-POSTapi-login">Handle an incoming authentication request.</h2>
+            <h2 id="auth-apis-POSTapi-login">Login the user.</h2>
 
 <p>
 </p>
@@ -154,8 +173,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"koepp.paula@example.com\",
-    \"password\": \"id\"
+    \"email\": \"dolor\",
+    \"password\": \"voluptatem\"
 }"
 </code></pre></div>
 
@@ -171,8 +190,8 @@ const headers = {
 };
 
 let body = {
-    "email": "koepp.paula@example.com",
-    "password": "id"
+    "email": "dolor",
+    "password": "voluptatem"
 };
 
 fetch(url, {
@@ -184,7 +203,14 @@ fetch(url, {
 </span>
 
 <span id="example-responses-POSTapi-login">
-</span>
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{}</code>
+ </pre>
+    </span>
 <span id="execution-results-POSTapi-login" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-POSTapi-login"></span>:
@@ -230,26 +256,629 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-login"
-               value="koepp.paula@example.com"
+               value="dolor"
                data-component="body" hidden>
     <br>
-<p>Must be a valid email address.</p>
+<p>The user's email or phone number</p>
         </p>
                 <p>
             <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-login"
-               value="id"
+               value="voluptatem"
+               data-component="body" hidden>
+    <br>
+<p>The user's password</p>
+        </p>
+        </form>
+
+            <h2 id="auth-apis-POSTapi-register">Register the user</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-register">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://services.test/api/register" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"first_name\": \"ut\",
+    \"last_name\": \"perspiciatis\",
+    \"email\": \"voluptates\",
+    \"phone_number\": \"et\",
+    \"password\": \"est\",
+    \"role\": \"necessitatibus\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://services.test/api/register"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "first_name": "ut",
+    "last_name": "perspiciatis",
+    "email": "voluptates",
+    "phone_number": "et",
+    "password": "est",
+    "role": "necessitatibus"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-register">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-register" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-register"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-register"></code></pre>
+</span>
+<span id="execution-error-POSTapi-register" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-register"></code></pre>
+</span>
+<form id="form-POSTapi-register" data-method="POST"
+      data-path="api/register"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-register', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-register"
+                    onclick="tryItOut('POSTapi-register');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-register"
+                    onclick="cancelTryOut('POSTapi-register');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-register" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/register</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>first_name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="first_name"
+               data-endpoint="POSTapi-register"
+               value="ut"
+               data-component="body" hidden>
+    <br>
+<p>The vendor's first name</p>
+        </p>
+                <p>
+            <b><code>last_name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="last_name"
+               data-endpoint="POSTapi-register"
+               value="perspiciatis"
+               data-component="body" hidden>
+    <br>
+<p>The vendor's last name</p>
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-register"
+               value="voluptates"
+               data-component="body" hidden>
+    <br>
+<p>The vendor's email</p>
+        </p>
+                <p>
+            <b><code>phone_number</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="phone_number"
+               data-endpoint="POSTapi-register"
+               value="et"
+               data-component="body" hidden>
+    <br>
+<p>The vendor's phone number</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-register"
+               value="est"
+               data-component="body" hidden>
+    <br>
+<p>The vendor's password</p>
+        </p>
+                <p>
+            <b><code>role</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="role"
+               data-endpoint="POSTapi-register"
+               value="necessitatibus"
+               data-component="body" hidden>
+    <br>
+<p>The person's role(vendor or user)</p>
+        </p>
+        </form>
+
+            <h2 id="auth-apis-POSTapi-forgot-password">Request password reset code</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-forgot-password">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://services.test/api/forgot-password" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"phone_number\": \"quisquam\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://services.test/api/forgot-password"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "phone_number": "quisquam"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-forgot-password">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-forgot-password" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-forgot-password"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-forgot-password"></code></pre>
+</span>
+<span id="execution-error-POSTapi-forgot-password" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-forgot-password"></code></pre>
+</span>
+<form id="form-POSTapi-forgot-password" data-method="POST"
+      data-path="api/forgot-password"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-forgot-password', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-forgot-password"
+                    onclick="tryItOut('POSTapi-forgot-password');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-forgot-password"
+                    onclick="cancelTryOut('POSTapi-forgot-password');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-forgot-password" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/forgot-password</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>phone_number</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="phone_number"
+               data-endpoint="POSTapi-forgot-password"
+               value="quisquam"
+               data-component="body" hidden>
+    <br>
+<p>The user's phone number</p>
+        </p>
+        </form>
+
+            <h2 id="auth-apis-POSTapi-otp-validate">Validate the OTP</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-otp-validate">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://services.test/api/otp/validate" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"code\": \"consequuntur\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://services.test/api/otp/validate"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "code": "consequuntur"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-otp-validate">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-otp-validate" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-otp-validate"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-otp-validate"></code></pre>
+</span>
+<span id="execution-error-POSTapi-otp-validate" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-otp-validate"></code></pre>
+</span>
+<form id="form-POSTapi-otp-validate" data-method="POST"
+      data-path="api/otp/validate"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-otp-validate', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-otp-validate"
+                    onclick="tryItOut('POSTapi-otp-validate');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-otp-validate"
+                    onclick="cancelTryOut('POSTapi-otp-validate');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-otp-validate" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/otp/validate</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>code</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="code"
+               data-endpoint="POSTapi-otp-validate"
+               value="consequuntur"
+               data-component="body" hidden>
+    <br>
+<p>The Entered code</p>
+        </p>
+        </form>
+
+            <h2 id="auth-apis-POSTapi-reset-password">Reset Password</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-reset-password">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://services.test/api/reset-password" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"code\": \"aliquid\",
+    \"password\": \"repellendus\",
+    \"password_confirmation\": \"quis\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://services.test/api/reset-password"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "code": "aliquid",
+    "password": "repellendus",
+    "password_confirmation": "quis"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-reset-password">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-reset-password" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-reset-password"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-reset-password"></code></pre>
+</span>
+<span id="execution-error-POSTapi-reset-password" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-reset-password"></code></pre>
+</span>
+<form id="form-POSTapi-reset-password" data-method="POST"
+      data-path="api/reset-password"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-reset-password', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-reset-password"
+                    onclick="tryItOut('POSTapi-reset-password');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-reset-password"
+                    onclick="cancelTryOut('POSTapi-reset-password');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-reset-password" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/reset-password</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>code</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="code"
+               data-endpoint="POSTapi-reset-password"
+               value="aliquid"
                data-component="body" hidden>
     <br>
 
         </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-reset-password"
+               value="repellendus"
+               data-component="body" hidden>
+    <br>
+<p>New password</p>
+        </p>
+                <p>
+            <b><code>password_confirmation</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password_confirmation"
+               data-endpoint="POSTapi-reset-password"
+               value="quis"
+               data-component="body" hidden>
+    <br>
+<p>New password confirmation</p>
+        </p>
         </form>
 
-            <h2 id="endpoints-GETapi-user">GET api/user</h2>
+            <h2 id="auth-apis-POSTapi-logout">Logout.</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-logout">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://services.test/api/logout" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://services.test/api/logout"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-logout">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-logout" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-logout"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-logout"></code></pre>
+</span>
+<span id="execution-error-POSTapi-logout" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-logout"></code></pre>
+</span>
+<form id="form-POSTapi-logout" data-method="POST"
+      data-path="api/logout"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-logout', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-logout"
+                    onclick="tryItOut('POSTapi-logout');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-logout"
+                    onclick="cancelTryOut('POSTapi-logout');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-logout" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/logout</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-logout" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-logout"
+                                                                data-component="header"></label>
+        </p>
+                </form>
+
+        <h1 id="user-apis">User APIs</h1>
+
+    
+
+            <h2 id="user-apis-GETapi-user">Get user details.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -284,22 +913,11 @@ fetch(url, {
 
 <span id="example-responses-GETapi-user">
             <blockquote>
-            <p>Example response (401):</p>
+            <p>Example response (200):</p>
         </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: http://localhost:3000
-access-control-allow-credentials: true
- </code></pre>
-        </details>         <pre>
+                <pre>
 
-<code class="language-json">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
-}</code>
+<code class="language-json">{}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-user" hidden>
@@ -314,7 +932,7 @@ access-control-allow-credentials: true
 </span>
 <form id="form-GETapi-user" data-method="GET"
       data-path="api/user"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
@@ -341,85 +959,15 @@ access-control-allow-credentials: true
             <small class="badge badge-green">GET</small>
             <b><code>api/user</code></b>
         </p>
-                    </form>
-
-            <h2 id="endpoints-POSTapi-logout">Destroy an authenticated session.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-logout">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://services.test/api/logout" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://services.test/api/logout"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-logout">
-</span>
-<span id="execution-results-POSTapi-logout" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-logout"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-logout"></code></pre>
-</span>
-<span id="execution-error-POSTapi-logout" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-logout"></code></pre>
-</span>
-<form id="form-POSTapi-logout" data-method="POST"
-      data-path="api/logout"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-logout', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-logout"
-                    onclick="tryItOut('POSTapi-logout');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-logout"
-                    onclick="cancelTryOut('POSTapi-logout');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-logout" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/logout</code></b>
+                <p>
+            <label id="auth-GETapi-user" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-user"
+                                                                data-component="header"></label>
         </p>
-                    </form>
+                </form>
 
         <h1 id="services-apis">Services APIs</h1>
 
@@ -530,14 +1078,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://services.test/api/services/laboriosam" \
+    --get "http://services.test/api/services/ipsam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://services.test/api/services/laboriosam"
+    "http://services.test/api/services/ipsam"
 );
 
 const headers = {
@@ -606,7 +1154,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="GETapi-services--id-"
-               value="laboriosam"
+               value="ipsam"
                data-component="url" hidden>
     <br>
 <p>The id of the service</p>
@@ -638,12 +1186,12 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"quia\",
-    \"price_min\": \"repellendus\",
-    \"location_lat\": \"minima\",
-    \"location_long\": \"nisi\",
-    \"description\": \"nihil\",
-    \"price\": \"suscipit\"
+    \"title\": \"tenetur\",
+    \"price_min\": \"quasi\",
+    \"location_lat\": \"necessitatibus\",
+    \"location_long\": \"tempore\",
+    \"description\": \"omnis\",
+    \"price\": \"assumenda\"
 }"
 </code></pre></div>
 
@@ -659,12 +1207,12 @@ const headers = {
 };
 
 let body = {
-    "title": "quia",
-    "price_min": "repellendus",
-    "location_lat": "minima",
-    "location_long": "nisi",
-    "description": "nihil",
-    "price": "suscipit"
+    "title": "tenetur",
+    "price_min": "quasi",
+    "location_lat": "necessitatibus",
+    "location_long": "tempore",
+    "description": "omnis",
+    "price": "assumenda"
 };
 
 fetch(url, {
@@ -737,7 +1285,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-services"
-               value="quia"
+               value="tenetur"
                data-component="body" hidden>
     <br>
 <p>The title of the new service</p>
@@ -747,7 +1295,7 @@ fetch(url, {
                 <input type="text"
                name="price_min"
                data-endpoint="POSTapi-services"
-               value="repellendus"
+               value="quasi"
                data-component="body" hidden>
     <br>
 
@@ -757,7 +1305,7 @@ fetch(url, {
                 <input type="text"
                name="location_lat"
                data-endpoint="POSTapi-services"
-               value="minima"
+               value="necessitatibus"
                data-component="body" hidden>
     <br>
 <p>The latitude location of the new service</p>
@@ -767,7 +1315,7 @@ fetch(url, {
                 <input type="text"
                name="location_long"
                data-endpoint="POSTapi-services"
-               value="nisi"
+               value="tempore"
                data-component="body" hidden>
     <br>
 <p>The longitude location of the new service</p>
@@ -777,7 +1325,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-services"
-               value="nihil"
+               value="omnis"
                data-component="body" hidden>
     <br>
 <p>The description of the new service</p>
@@ -787,7 +1335,7 @@ fetch(url, {
                 <input type="text"
                name="price"
                data-endpoint="POSTapi-services"
-               value="suscipit"
+               value="assumenda"
                data-component="body" hidden>
     <br>
 <p>The price of the new service</p>
@@ -815,22 +1363,22 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://services.test/api/services/perferendis" \
+    "http://services.test/api/services/non" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"voluptatem\",
-    \"description\": \"reprehenderit\",
-    \"price\": \"consequatur\",
-    \"location_lat\": \"commodi\",
-    \"location_long\": \"odit\"
+    \"title\": \"consequatur\",
+    \"description\": \"inventore\",
+    \"price\": \"minus\",
+    \"location_lat\": \"odio\",
+    \"location_long\": \"minima\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://services.test/api/services/perferendis"
+    "http://services.test/api/services/non"
 );
 
 const headers = {
@@ -839,11 +1387,11 @@ const headers = {
 };
 
 let body = {
-    "title": "voluptatem",
-    "description": "reprehenderit",
-    "price": "consequatur",
-    "location_lat": "commodi",
-    "location_long": "odit"
+    "title": "consequatur",
+    "description": "inventore",
+    "price": "minus",
+    "location_lat": "odio",
+    "location_long": "minima"
 };
 
 fetch(url, {
@@ -916,7 +1464,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="POSTapi-services--id-"
-               value="perferendis"
+               value="non"
                data-component="url" hidden>
     <br>
 <p>The id of the service</p>
@@ -927,7 +1475,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-services--id-"
-               value="voluptatem"
+               value="consequatur"
                data-component="body" hidden>
     <br>
 <p>The title of the service</p>
@@ -937,7 +1485,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-services--id-"
-               value="reprehenderit"
+               value="inventore"
                data-component="body" hidden>
     <br>
 <p>The description of the service</p>
@@ -947,7 +1495,7 @@ fetch(url, {
                 <input type="text"
                name="price"
                data-endpoint="POSTapi-services--id-"
-               value="consequatur"
+               value="minus"
                data-component="body" hidden>
     <br>
 <p>The price of the service</p>
@@ -957,7 +1505,7 @@ fetch(url, {
                 <input type="text"
                name="location_lat"
                data-endpoint="POSTapi-services--id-"
-               value="commodi"
+               value="odio"
                data-component="body" hidden>
     <br>
 <p>The latitude location of the new service</p>
@@ -967,7 +1515,7 @@ fetch(url, {
                 <input type="text"
                name="location_long"
                data-endpoint="POSTapi-services--id-"
-               value="odit"
+               value="minima"
                data-component="body" hidden>
     <br>
 <p>The longitude location of the new service</p>

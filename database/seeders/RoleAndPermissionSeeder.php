@@ -15,7 +15,7 @@ class RoleAndPermissionSeeder extends Seeder
      */
     public function run()
     {
-        $roles = ['admin', 'user'];
+        $roles = ['admin', 'user', 'vendor'];
 
         $permissions = ['manage all', 'create service', 'update service', 'view service', 'delete service'];
 
@@ -23,9 +23,10 @@ class RoleAndPermissionSeeder extends Seeder
         collect($permissions)->each(fn ($permission) => Permission::create(['name' => $permission]));
 
         Role::findByName('admin')->givePermissionTo('manage all');
-        Role::findByName('user')->givePermissionTo('create service');
-        Role::findByName('user')->givePermissionTo('update service');
+        Role::findByName('vendor')->givePermissionTo('create service');
+        Role::findByName('vendor')->givePermissionTo('update service');
+        Role::findByName('vendor')->givePermissionTo('view service');
+        Role::findByName('vendor')->givePermissionTo('delete service');
         Role::findByName('user')->givePermissionTo('view service');
-        Role::findByName('user')->givePermissionTo('delete service');
     }
 }

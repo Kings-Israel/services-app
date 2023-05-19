@@ -9,14 +9,21 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use F9Web\ApiResponseHelpers;
 
+/**
+ * @group Auth APIs
+ */
 class AuthenticatedSessionController extends Controller
 {
     use ApiResponseHelpers;
     /**
-     * Handle an incoming authentication request.
+     * Login the user.
      *
-     * @param  \App\Http\Requests\Auth\LoginRequest  $request
-     * @return \Illuminate\Http\Response
+     * @bodyParam email string required The user's email or phone number
+     * @bodyParam password string required The user's password
+     *
+     * @response 200
+     * @responseParam data The logged in user data
+     * @responseParam token The authenticated user token
      */
     public function store(LoginRequest $request)
     {
@@ -59,14 +66,15 @@ class AuthenticatedSessionController extends Controller
             $role = $user->getRoleNames()[0];
             return $this->respondWithSuccess(['user' => $user->only('id', 'name', 'email'), 'token' => $token, 'permissions' => $permissions, 'role' => $role]);
         }
-        return $this->respondWithSuccess(['data' => $user->only('id', 'name', 'email'), 'token' => $token]);
+        return $this->respondWithSuccess(['data' => $user->only('id', 'name', 'email', 'avatar'), 'token' => $token]);
     }
 
     /**
-     * Destroy an authenticated session.
+     * Logout.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @response 200
+     * @responseParam message Logged out
      */
     public function destroy(Request $request)
     {

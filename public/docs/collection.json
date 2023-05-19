@@ -10,17 +10,17 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "ce23d36a-6b4c-435d-94f9-8a4bed2163f7",
+        "_postman_id": "6c615a92-4045-4307-815d-27176e513933",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Endpoints",
+            "name": "Auth APIs",
             "description": "",
             "item": [
                 {
-                    "name": "Handle an incoming authentication request.",
+                    "name": "Login the user.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -41,25 +41,32 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"koepp.paula@example.com\",\"password\":\"id\"}"
+                            "raw": "{\"email\":\"dolor\",\"password\":\"voluptatem\"}"
                         },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
                 },
                 {
-                    "name": "api\/user",
+                    "name": "Register the user",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/user",
+                            "path": "api\/register",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/user"
+                            "raw": "{{baseUrl}}\/api\/register"
                         },
-                        "method": "GET",
+                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -70,7 +77,10 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"first_name\":\"ut\",\"last_name\":\"perspiciatis\",\"email\":\"voluptates\",\"phone_number\":\"et\",\"password\":\"est\",\"role\":\"necessitatibus\"}"
+                        },
                         "description": "",
                         "auth": {
                             "type": "noauth"
@@ -78,32 +88,129 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "http:\/\/localhost:3000"
-                                },
-                                {
-                                    "key": "access-control-allow-credentials",
-                                    "value": "true"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Destroy an authenticated session.",
+                    "name": "Request password reset code",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/forgot-password",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/forgot-password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"phone_number\":\"quisquam\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Validate the OTP",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/otp\/validate",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/otp\/validate"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"code\":\"consequuntur\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Reset Password",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/reset-password",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/reset-password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"code\":\"aliquid\",\"password\":\"repellendus\",\"password_confirmation\":\"quis\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -123,12 +230,54 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User APIs",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get user details.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
                 }
             ]
         },
@@ -183,7 +332,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "laboriosam",
+                                    "value": "ipsam",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -236,7 +385,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"quia\",\"price_min\":\"repellendus\",\"location_lat\":\"minima\",\"location_long\":\"nisi\",\"description\":\"nihil\",\"price\":\"suscipit\"}"
+                            "raw": "{\"title\":\"tenetur\",\"price_min\":\"quasi\",\"location_lat\":\"necessitatibus\",\"location_long\":\"tempore\",\"description\":\"omnis\",\"price\":\"assumenda\"}"
                         },
                         "description": ""
                     },
@@ -261,7 +410,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "perferendis",
+                                    "value": "non",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -279,7 +428,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"voluptatem\",\"description\":\"reprehenderit\",\"price\":\"consequatur\",\"location_lat\":\"commodi\",\"location_long\":\"odit\"}"
+                            "raw": "{\"title\":\"consequatur\",\"description\":\"inventore\",\"price\":\"minus\",\"location_lat\":\"odio\",\"location_long\":\"minima\"}"
                         },
                         "description": ""
                     },
