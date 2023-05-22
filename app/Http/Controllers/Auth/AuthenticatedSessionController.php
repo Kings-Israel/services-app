@@ -64,9 +64,9 @@ class AuthenticatedSessionController extends Controller
         if ($user->hasRole('admin')) {
             $permissions = $user->getPermissionsViaRoles()->pluck('name');
             $role = $user->getRoleNames()[0];
-            return $this->respondWithSuccess(['user' => $user->only('id', 'name', 'email'), 'token' => $token, 'permissions' => $permissions, 'role' => $role]);
+            return $this->respondWithSuccess(['user' => $user->only('id', 'first_name', 'last_name', 'email'), 'token' => $token, 'permissions' => $permissions, 'role' => $role]);
         }
-        return $this->respondWithSuccess(['data' => $user->only('id', 'name', 'email', 'avatar'), 'token' => $token]);
+        return $this->respondWithSuccess(['data' => $user->only('id', 'first_name', 'last_name', 'email', 'avatar'), 'token' => $token]);
     }
 
     /**

@@ -53,6 +53,20 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
 
+        'service' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/service'),
+            'url' => env('APP_URL').'/storage/service',
+            'visibility' => 'public',
+        ],
+
+        'category' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/category'),
+            'url' => env('APP_URL').'/storage/category',
+            'visibility' => 'public',
+        ]
+
     ],
 
     /*

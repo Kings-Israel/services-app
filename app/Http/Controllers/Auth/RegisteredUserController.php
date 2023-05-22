@@ -52,7 +52,8 @@ class RegisteredUserController extends Controller
         }
 
         $user = User::create([
-            'name' => $request->name,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
             'email' => $request->email,
             'phone_number' => $request->phone_number,
             'password' => Hash::make($request->password),
@@ -80,7 +81,7 @@ class RegisteredUserController extends Controller
 
             $token = $user->createToken($request->email)->plainTextToken;
 
-            return $this->respondWithSuccess(['data' => $user->only('id', 'name', 'email', 'avatar'), 'token' => $token]);
+            return $this->respondWithSuccess(['data' => $user->only('id', 'first_name', 'last_name', 'email', 'avatar'), 'token' => $token]);
         }
 
         return response()->noContent();
@@ -211,6 +212,6 @@ class RegisteredUserController extends Controller
 
         $token = $user->createToken($request->email)->plainTextToken;
 
-        return $this->respondWithSuccess(['message' => 'Password reset successfully' ,'data' => $user->only('id', 'name', 'email', 'avatar'), 'token' => $token]);
+        return $this->respondWithSuccess(['message' => 'Password reset successfully' ,'data' => $user->only('id', 'first_name', 'last_name', 'email', 'avatar'), 'token' => $token]);
     }
 }

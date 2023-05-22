@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreServiceRequest;
 use App\Models\Service;
+use App\Models\ServiceImage;
 use F9Web\ApiResponseHelpers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -20,7 +21,7 @@ class ServiceController extends Controller
      * @response 200
      * @responseField content List of all services
      */
-    public function index()
+    public function index($latitude = NULL, $longitude = NULL)
     {
         $services = Service::with('user', 'images', 'categories')->get();
 
@@ -109,5 +110,35 @@ class ServiceController extends Controller
     public function destroy($id)
     {
         $service = Service::with('images')->find($id);
+    }
+
+    /**
+     * Add services images
+     *
+     * @urlParam id The id of the service
+     * @requestBody images file required The images as an array
+     *
+     * @response 200
+     * @responseBody message The images were successfully added
+     * @responseBody data The service details
+     */
+    public function saveServiceImages(Request $request, $id)
+    {
+        $request->validate([
+            'images' => 'array',
+            'images.*' => 'mimes:png,jpg,jpeg'
+        ]);
+
+        $service = Service::find($id);
+
+        foreach($request->images as $image) {
+            ServiceImage::create([
+                'url' => config('app.url').'storage/service/images/' . pathinfo($image->store('images', 'service'), PATHINFO_BASENAME),
+            ]);
+        }
+
+        $service = Service::with('images', 'categories', 'user')->where('id', $id);
+
+        return $this->respondCreated(['data' => $service]);
     }
 }

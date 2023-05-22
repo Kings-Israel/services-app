@@ -21,9 +21,28 @@ class UserController extends Controller
         $this->middleware(['auth', 'auth:sanctum']);
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $per_page = $request->query('per_page');
+        $search_query = $request->query('search_query');
+
+        if ($request->query('per_page')) {
+            $users = User::with('services.images', 'services.categories')
+                        ->when($search_query && $search_query != '', function($query) use ($search_query) {
+                            $query->where('name', 'LIKE', '%'.$search_query.'%')
+                                ->orWhere('email', 'LIKE', '%'.$search_query.'%')
+                                ->orWhere('phone_number', 'LIKE', '%'.$search_query.'%');
+                        })
+                        ->paginate($per_page);
+        } else {
+            $users = User::with('services.images', 'services.categories')->get();
+        }
+
+        $users = $users->filter(function ($user) {
+            return !$user->hasRole('admin');
+        })->values()->all();
+
+        return $this->respondWithSuccess(['data' => $users]);
     }
 
     public function create()

@@ -15,7 +15,8 @@ class UserSeeder extends Seeder
     public function run()
     {
         $admin1 = [
-            'name' => 'Services Admin',
+            'first_name' => 'Services',
+            'last_name' => 'Admin',
             'email' => 'admin@services.com',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'email_verified_at' => now(),
@@ -24,8 +25,9 @@ class UserSeeder extends Seeder
         ];
 
         $admin2 = [
-            'name' => 'Services Admin 2',
-            'email' => 'info@deveint.com',
+            'first_name' => 'Deveint',
+            'last_name' => 'Admin',
+            'email' => 'admin@deveint.com',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'email_verified_at' => now(),
             'created_at' => now(),
