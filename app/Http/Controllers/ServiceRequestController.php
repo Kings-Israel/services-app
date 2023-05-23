@@ -17,6 +17,13 @@ class ServiceRequestController extends Controller
 {
     use ApiResponseHelpers;
 
+    /**
+     * Get Service Requests
+     *
+     * @response 200
+     * @responseParam data A List of the user and vendor service requests
+     */
+
     public function index(Request $request)
     {
         $per_page = $request->query('per_page');

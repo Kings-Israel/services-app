@@ -20,14 +20,14 @@ endpoints:
         name: email
         description: 'The user''s email or phone number'
         required: true
-        example: consequatur
+        example: enim
         type: string
         custom: []
       password:
         name: password
         description: 'The user''s password'
         required: true
-        example: a
+        example: molestias
         type: string
         custom: []
     responses:
@@ -56,42 +56,42 @@ endpoints:
         name: first_name
         description: 'The vendor''s first name'
         required: true
-        example: dicta
+        example: minus
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'The vendor''s last name'
         required: true
-        example: tempore
+        example: eum
         type: string
         custom: []
       email:
         name: email
         description: 'The vendor''s email'
         required: true
-        example: odit
+        example: et
         type: string
         custom: []
       phone_number:
         name: phone_number
         description: 'The vendor''s phone number'
         required: true
-        example: fuga
+        example: quae
         type: string
         custom: []
       password:
         name: password
         description: 'The vendor''s password'
         required: true
-        example: necessitatibus
+        example: blanditiis
         type: string
         custom: []
       role:
         name: role
         description: 'The person''s role(vendor or user)'
         required: true
-        example: omnis
+        example: esse
         type: string
         custom: []
     responses:
@@ -120,7 +120,7 @@ endpoints:
         name: phone_number
         description: 'The user''s phone number'
         required: true
-        example: nulla
+        example: dignissimos
         type: string
         custom: []
     responses:
@@ -149,7 +149,7 @@ endpoints:
         name: code
         description: 'The Entered code'
         required: true
-        example: illum
+        example: sunt
         type: string
         custom: []
     responses:
@@ -178,21 +178,21 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: in
+        example: reprehenderit
         type: string
         custom: []
       password:
         name: password
         description: 'New password'
         required: true
-        example: incidunt
+        example: voluptates
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'New password confirmation'
         required: true
-        example: illum
+        example: velit
         type: string
         custom: []
     responses:

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Services App",
-        "_postman_id": "92c966a4-8e19-48c8-939d-56c7f6cce1b2",
+        "_postman_id": "0603ed3c-a65d-4c7e-a58c-bbefa1c11f2e",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"consequatur\",\"password\":\"a\"}"
+                            "raw": "{\"email\":\"enim\",\"password\":\"molestias\"}"
                         },
                         "description": "",
                         "auth": {
@@ -79,7 +79,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"dicta\",\"last_name\":\"tempore\",\"email\":\"odit\",\"phone_number\":\"fuga\",\"password\":\"necessitatibus\",\"role\":\"omnis\"}"
+                            "raw": "{\"first_name\":\"minus\",\"last_name\":\"eum\",\"email\":\"et\",\"phone_number\":\"quae\",\"password\":\"blanditiis\",\"role\":\"esse\"}"
                         },
                         "description": "",
                         "auth": {
@@ -117,7 +117,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone_number\":\"nulla\"}"
+                            "raw": "{\"phone_number\":\"dignissimos\"}"
                         },
                         "description": "",
                         "auth": {
@@ -155,7 +155,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"illum\"}"
+                            "raw": "{\"code\":\"sunt\"}"
                         },
                         "description": "",
                         "auth": {
@@ -193,7 +193,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"in\",\"password\":\"incidunt\",\"password_confirmation\":\"illum\"}"
+                            "raw": "{\"code\":\"reprehenderit\",\"password\":\"voluptates\",\"password_confirmation\":\"velit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -294,7 +294,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "eaque",
+                                    "value": "adipisci",
                                     "description": "The ID of the category"
                                 }
                             ]
@@ -347,7 +347,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"cumque\"}"
+                            "raw": "{\"name\":\"rem\"}"
                         },
                         "description": "",
                         "auth": {
@@ -386,7 +386,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ullam\"}"
+                            "raw": "{\"name\":\"voluptatum\"}"
                         },
                         "description": "",
                         "auth": {
@@ -413,7 +413,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ratione",
+                                    "value": "et",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -466,7 +466,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"quaerat\",\"price_min\":\"occaecati\",\"location_lat\":\"ut\",\"location_long\":\"temporibus\",\"categories\":[\"sed\"],\"description\":\"impedit\",\"price\":\"qui\"}"
+                            "raw": "{\"title\":\"expedita\",\"price_min\":\"id\",\"location_lat\":\"eligendi\",\"location_long\":\"dolor\",\"categories\":[\"in\"],\"description\":\"ipsum\",\"price\":\"nihil\"}"
                         },
                         "description": ""
                     },
@@ -491,13 +491,13 @@
                                 {
                                     "id": "latitude",
                                     "key": "latitude",
-                                    "value": "at",
+                                    "value": "velit",
                                     "description": ""
                                 },
                                 {
                                     "id": "longitude",
                                     "key": "longitude",
-                                    "value": "dignissimos",
+                                    "value": "quo",
                                     "description": ""
                                 }
                             ]
@@ -540,7 +540,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "aspernatur",
+                                    "value": "porro",
                                     "description": "The ID of the service"
                                 }
                             ]
@@ -558,7 +558,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"aliquam\",\"price_min\":\"dolores\",\"location_lat\":\"inventore\",\"location_long\":\"architecto\",\"categories\":[\"nemo\"],\"description\":\"nam\",\"price\":\"atque\"}"
+                            "raw": "{\"title\":\"maxime\",\"price_min\":\"sit\",\"location_lat\":\"officia\",\"location_long\":\"id\",\"categories\":[\"quia\"],\"description\":\"atque\",\"price\":\"pariatur\"}"
                         },
                         "description": ""
                     },
@@ -583,7 +583,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "similique",
+                                    "value": "modi",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -607,6 +607,108 @@
                         "auth": {
                             "type": "noauth"
                         }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Request for a service",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/service\/request",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/service\/request"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"service_id\":\"animi\",\"message\":\"nisi\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Change the status of a service delivery request",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/service\/delivery\/status\/update",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/service\/delivery\/status\/update"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"service_request_id\":\"est\",\"status\":\"velit\",\"service_id\":\"occaecati\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Service Requests",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/service\/requests",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/service\/requests"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
                     },
                     "response": [
                         {

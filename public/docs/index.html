@@ -127,6 +127,15 @@
                                     <li class="tocify-item level-2" data-unique="services-apis-POSTapi-services--id--images-add">
                         <a href="#services-apis-POSTapi-services--id--images-add">Add services images</a>
                     </li>
+                                    <li class="tocify-item level-2" data-unique="services-apis-POSTapi-service-request">
+                        <a href="#services-apis-POSTapi-service-request">Request for a service</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="services-apis-POSTapi-service-delivery-status-update">
+                        <a href="#services-apis-POSTapi-service-delivery-status-update">Change the status of a service delivery request</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="services-apis-GETapi-service-requests">
+                        <a href="#services-apis-GETapi-service-requests">Get Service Requests</a>
+                    </li>
                                                     </ul>
                             </ul>
                     <ul id="tocify-header-5" class="tocify-header">
@@ -192,8 +201,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"consequatur\",
-    \"password\": \"a\"
+    \"email\": \"enim\",
+    \"password\": \"molestias\"
 }"
 </code></pre></div>
 
@@ -209,8 +218,8 @@ const headers = {
 };
 
 let body = {
-    "email": "consequatur",
-    "password": "a"
+    "email": "enim",
+    "password": "molestias"
 };
 
 fetch(url, {
@@ -261,7 +270,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-login"
-               value="consequatur"
+               value="enim"
                data-component="body" hidden>
     <br>
 <p>The user's email or phone number</p>
@@ -271,7 +280,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-login"
-               value="a"
+               value="molestias"
                data-component="body" hidden>
     <br>
 <p>The user's password</p>
@@ -295,12 +304,12 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"dicta\",
-    \"last_name\": \"tempore\",
-    \"email\": \"odit\",
-    \"phone_number\": \"fuga\",
-    \"password\": \"necessitatibus\",
-    \"role\": \"omnis\"
+    \"first_name\": \"minus\",
+    \"last_name\": \"eum\",
+    \"email\": \"et\",
+    \"phone_number\": \"quae\",
+    \"password\": \"blanditiis\",
+    \"role\": \"esse\"
 }"
 </code></pre></div>
 
@@ -316,12 +325,12 @@ const headers = {
 };
 
 let body = {
-    "first_name": "dicta",
-    "last_name": "tempore",
-    "email": "odit",
-    "phone_number": "fuga",
-    "password": "necessitatibus",
-    "role": "omnis"
+    "first_name": "minus",
+    "last_name": "eum",
+    "email": "et",
+    "phone_number": "quae",
+    "password": "blanditiis",
+    "role": "esse"
 };
 
 fetch(url, {
@@ -372,7 +381,7 @@ fetch(url, {
                 <input type="text"
                name="first_name"
                data-endpoint="POSTapi-register"
-               value="dicta"
+               value="minus"
                data-component="body" hidden>
     <br>
 <p>The vendor's first name</p>
@@ -382,7 +391,7 @@ fetch(url, {
                 <input type="text"
                name="last_name"
                data-endpoint="POSTapi-register"
-               value="tempore"
+               value="eum"
                data-component="body" hidden>
     <br>
 <p>The vendor's last name</p>
@@ -392,7 +401,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-register"
-               value="odit"
+               value="et"
                data-component="body" hidden>
     <br>
 <p>The vendor's email</p>
@@ -402,7 +411,7 @@ fetch(url, {
                 <input type="text"
                name="phone_number"
                data-endpoint="POSTapi-register"
-               value="fuga"
+               value="quae"
                data-component="body" hidden>
     <br>
 <p>The vendor's phone number</p>
@@ -412,7 +421,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-register"
-               value="necessitatibus"
+               value="blanditiis"
                data-component="body" hidden>
     <br>
 <p>The vendor's password</p>
@@ -422,7 +431,7 @@ fetch(url, {
                 <input type="text"
                name="role"
                data-endpoint="POSTapi-register"
-               value="omnis"
+               value="esse"
                data-component="body" hidden>
     <br>
 <p>The person's role(vendor or user)</p>
@@ -446,7 +455,7 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"phone_number\": \"nulla\"
+    \"phone_number\": \"dignissimos\"
 }"
 </code></pre></div>
 
@@ -462,7 +471,7 @@ const headers = {
 };
 
 let body = {
-    "phone_number": "nulla"
+    "phone_number": "dignissimos"
 };
 
 fetch(url, {
@@ -513,7 +522,7 @@ fetch(url, {
                 <input type="text"
                name="phone_number"
                data-endpoint="POSTapi-forgot-password"
-               value="nulla"
+               value="dignissimos"
                data-component="body" hidden>
     <br>
 <p>The user's phone number</p>
@@ -537,7 +546,7 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"code\": \"illum\"
+    \"code\": \"sunt\"
 }"
 </code></pre></div>
 
@@ -553,7 +562,7 @@ const headers = {
 };
 
 let body = {
-    "code": "illum"
+    "code": "sunt"
 };
 
 fetch(url, {
@@ -604,7 +613,7 @@ fetch(url, {
                 <input type="text"
                name="code"
                data-endpoint="POSTapi-otp-validate"
-               value="illum"
+               value="sunt"
                data-component="body" hidden>
     <br>
 <p>The Entered code</p>
@@ -628,9 +637,9 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"code\": \"in\",
-    \"password\": \"incidunt\",
-    \"password_confirmation\": \"illum\"
+    \"code\": \"reprehenderit\",
+    \"password\": \"voluptates\",
+    \"password_confirmation\": \"velit\"
 }"
 </code></pre></div>
 
@@ -646,9 +655,9 @@ const headers = {
 };
 
 let body = {
-    "code": "in",
-    "password": "incidunt",
-    "password_confirmation": "illum"
+    "code": "reprehenderit",
+    "password": "voluptates",
+    "password_confirmation": "velit"
 };
 
 fetch(url, {
@@ -699,7 +708,7 @@ fetch(url, {
                 <input type="text"
                name="code"
                data-endpoint="POSTapi-reset-password"
-               value="in"
+               value="reprehenderit"
                data-component="body" hidden>
     <br>
 
@@ -709,7 +718,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-reset-password"
-               value="incidunt"
+               value="voluptates"
                data-component="body" hidden>
     <br>
 <p>New password</p>
@@ -719,7 +728,7 @@ fetch(url, {
                 <input type="text"
                name="password_confirmation"
                data-endpoint="POSTapi-reset-password"
-               value="illum"
+               value="velit"
                data-component="body" hidden>
     <br>
 <p>New password confirmation</p>
@@ -894,14 +903,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://services.test/api/categories/eaque" \
+    --get "http://services.test/api/categories/adipisci" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://services.test/api/categories/eaque"
+    "http://services.test/api/categories/adipisci"
 );
 
 const headers = {
@@ -956,7 +965,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="GETapi-categories--id-"
-               value="eaque"
+               value="adipisci"
                data-component="url" hidden>
     <br>
 <p>The ID of the category</p>
@@ -980,7 +989,7 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"cumque\"
+    \"name\": \"rem\"
 }"
 </code></pre></div>
 
@@ -996,7 +1005,7 @@ const headers = {
 };
 
 let body = {
-    "name": "cumque"
+    "name": "rem"
 };
 
 fetch(url, {
@@ -1040,7 +1049,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-admin-categories"
-               value="cumque"
+               value="rem"
                data-component="body" hidden>
     <br>
 
@@ -1074,7 +1083,7 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"ullam\"
+    \"name\": \"voluptatum\"
 }"
 </code></pre></div>
 
@@ -1090,7 +1099,7 @@ const headers = {
 };
 
 let body = {
-    "name": "ullam"
+    "name": "voluptatum"
 };
 
 fetch(url, {
@@ -1145,7 +1154,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-admin-categories--id--update"
-               value="ullam"
+               value="voluptatum"
                data-component="body" hidden>
     <br>
 
@@ -1179,14 +1188,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://services.test/api/services/ratione" \
+    --get "http://services.test/api/services/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://services.test/api/services/ratione"
+    "http://services.test/api/services/et"
 );
 
 const headers = {
@@ -1241,7 +1250,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="GETapi-services--id-"
-               value="ratione"
+               value="et"
                data-component="url" hidden>
     <br>
 <p>The id of the service</p>
@@ -1273,15 +1282,15 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"quaerat\",
-    \"price_min\": \"occaecati\",
-    \"location_lat\": \"ut\",
-    \"location_long\": \"temporibus\",
+    \"title\": \"expedita\",
+    \"price_min\": \"id\",
+    \"location_lat\": \"eligendi\",
+    \"location_long\": \"dolor\",
     \"categories\": [
-        \"sed\"
+        \"in\"
     ],
-    \"description\": \"impedit\",
-    \"price\": \"qui\"
+    \"description\": \"ipsum\",
+    \"price\": \"nihil\"
 }"
 </code></pre></div>
 
@@ -1297,15 +1306,15 @@ const headers = {
 };
 
 let body = {
-    "title": "quaerat",
-    "price_min": "occaecati",
-    "location_lat": "ut",
-    "location_long": "temporibus",
+    "title": "expedita",
+    "price_min": "id",
+    "location_lat": "eligendi",
+    "location_long": "dolor",
     "categories": [
-        "sed"
+        "in"
     ],
-    "description": "impedit",
-    "price": "qui"
+    "description": "ipsum",
+    "price": "nihil"
 };
 
 fetch(url, {
@@ -1364,7 +1373,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-services"
-               value="quaerat"
+               value="expedita"
                data-component="body" hidden>
     <br>
 <p>The title of the new service</p>
@@ -1374,7 +1383,7 @@ fetch(url, {
                 <input type="text"
                name="price_min"
                data-endpoint="POSTapi-services"
-               value="occaecati"
+               value="id"
                data-component="body" hidden>
     <br>
 
@@ -1384,7 +1393,7 @@ fetch(url, {
                 <input type="text"
                name="location_lat"
                data-endpoint="POSTapi-services"
-               value="ut"
+               value="eligendi"
                data-component="body" hidden>
     <br>
 <p>The latitude location of the new service</p>
@@ -1394,7 +1403,7 @@ fetch(url, {
                 <input type="text"
                name="location_long"
                data-endpoint="POSTapi-services"
-               value="temporibus"
+               value="dolor"
                data-component="body" hidden>
     <br>
 <p>The longitude location of the new service</p>
@@ -1417,7 +1426,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-services"
-               value="impedit"
+               value="ipsum"
                data-component="body" hidden>
     <br>
 <p>The description of the new service</p>
@@ -1427,7 +1436,7 @@ fetch(url, {
                 <input type="text"
                name="price"
                data-endpoint="POSTapi-services"
-               value="qui"
+               value="nihil"
                data-component="body" hidden>
     <br>
 <p>The price of the new service</p>
@@ -1454,14 +1463,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://services.test/api/services/at/dignissimos" \
+    --get "http://services.test/api/services/velit/quo" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://services.test/api/services/at/dignissimos"
+    "http://services.test/api/services/velit/quo"
 );
 
 const headers = {
@@ -1516,7 +1525,7 @@ fetch(url, {
                 <input type="text"
                name="latitude"
                data-endpoint="GETapi-services--latitude----longitude--"
-               value="at"
+               value="velit"
                data-component="url" hidden>
     <br>
 
@@ -1526,7 +1535,7 @@ fetch(url, {
                 <input type="text"
                name="longitude"
                data-endpoint="GETapi-services--latitude----longitude--"
-               value="dignissimos"
+               value="quo"
                data-component="url" hidden>
     <br>
 
@@ -1554,26 +1563,26 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://services.test/api/services/aspernatur/update" \
+    "http://services.test/api/services/porro/update" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"aliquam\",
-    \"price_min\": \"dolores\",
-    \"location_lat\": \"inventore\",
-    \"location_long\": \"architecto\",
+    \"title\": \"maxime\",
+    \"price_min\": \"sit\",
+    \"location_lat\": \"officia\",
+    \"location_long\": \"id\",
     \"categories\": [
-        \"nemo\"
+        \"quia\"
     ],
-    \"description\": \"nam\",
-    \"price\": \"atque\"
+    \"description\": \"atque\",
+    \"price\": \"pariatur\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://services.test/api/services/aspernatur/update"
+    "http://services.test/api/services/porro/update"
 );
 
 const headers = {
@@ -1582,15 +1591,15 @@ const headers = {
 };
 
 let body = {
-    "title": "aliquam",
-    "price_min": "dolores",
-    "location_lat": "inventore",
-    "location_long": "architecto",
+    "title": "maxime",
+    "price_min": "sit",
+    "location_lat": "officia",
+    "location_long": "id",
     "categories": [
-        "nemo"
+        "quia"
     ],
-    "description": "nam",
-    "price": "atque"
+    "description": "atque",
+    "price": "pariatur"
 };
 
 fetch(url, {
@@ -1649,7 +1658,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="POSTapi-services--id--update"
-               value="aspernatur"
+               value="porro"
                data-component="url" hidden>
     <br>
 <p>The ID of the service</p>
@@ -1660,7 +1669,7 @@ fetch(url, {
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-services--id--update"
-               value="aliquam"
+               value="maxime"
                data-component="body" hidden>
     <br>
 <p>The title of the service</p>
@@ -1670,7 +1679,7 @@ fetch(url, {
                 <input type="text"
                name="price_min"
                data-endpoint="POSTapi-services--id--update"
-               value="dolores"
+               value="sit"
                data-component="body" hidden>
     <br>
 
@@ -1680,7 +1689,7 @@ fetch(url, {
                 <input type="text"
                name="location_lat"
                data-endpoint="POSTapi-services--id--update"
-               value="inventore"
+               value="officia"
                data-component="body" hidden>
     <br>
 <p>The latitude location of the new service</p>
@@ -1690,7 +1699,7 @@ fetch(url, {
                 <input type="text"
                name="location_long"
                data-endpoint="POSTapi-services--id--update"
-               value="architecto"
+               value="id"
                data-component="body" hidden>
     <br>
 <p>The longitude location of the new service</p>
@@ -1713,7 +1722,7 @@ fetch(url, {
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-services--id--update"
-               value="nam"
+               value="atque"
                data-component="body" hidden>
     <br>
 <p>The description of the service</p>
@@ -1723,7 +1732,7 @@ fetch(url, {
                 <input type="text"
                name="price"
                data-endpoint="POSTapi-services--id--update"
-               value="atque"
+               value="pariatur"
                data-component="body" hidden>
     <br>
 <p>The price of the service</p>
@@ -1750,7 +1759,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://services.test/api/services/similique/images/add" \
+    "http://services.test/api/services/modi/images/add" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1763,7 +1772,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://services.test/api/services/similique/images/add"
+    "http://services.test/api/services/modi/images/add"
 );
 
 const headers = {
@@ -1825,7 +1834,7 @@ fetch(url, {
                 <input type="text"
                name="id"
                data-endpoint="POSTapi-services--id--images-add"
-               value="similique"
+               value="modi"
                data-component="url" hidden>
     <br>
 <p>The id of the service</p>
@@ -1845,6 +1854,322 @@ fetch(url, {
 
         </p>
         </form>
+
+            <h2 id="services-apis-POSTapi-service-request">Request for a service</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-service-request">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://services.test/api/service/request" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"service_id\": \"animi\",
+    \"message\": \"nisi\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://services.test/api/service/request"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "service_id": "animi",
+    "message": "nisi"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-service-request">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-service-request" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-service-request"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-service-request"></code></pre>
+</span>
+<span id="execution-error-POSTapi-service-request" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-service-request"></code></pre>
+</span>
+<form id="form-POSTapi-service-request" data-method="POST"
+      data-path="api/service/request"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-service-request', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/service/request</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-service-request" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-service-request"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>service_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="service_id"
+               data-endpoint="POSTapi-service-request"
+               value="animi"
+               data-component="body" hidden>
+    <br>
+<p>The id of the service</p>
+        </p>
+                <p>
+            <b><code>message</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="message"
+               data-endpoint="POSTapi-service-request"
+               value="nisi"
+               data-component="body" hidden>
+    <br>
+<p>An optional message for the service provider</p>
+        </p>
+        </form>
+
+            <h2 id="services-apis-POSTapi-service-delivery-status-update">Change the status of a service delivery request</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-service-delivery-status-update">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://services.test/api/service/delivery/status/update" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"service_request_id\": \"est\",
+    \"status\": \"velit\",
+    \"service_id\": \"occaecati\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://services.test/api/service/delivery/status/update"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "service_request_id": "est",
+    "status": "velit",
+    "service_id": "occaecati"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-service-delivery-status-update">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-service-delivery-status-update" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-service-delivery-status-update"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-service-delivery-status-update"></code></pre>
+</span>
+<span id="execution-error-POSTapi-service-delivery-status-update" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-service-delivery-status-update"></code></pre>
+</span>
+<form id="form-POSTapi-service-delivery-status-update" data-method="POST"
+      data-path="api/service/delivery/status/update"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-service-delivery-status-update', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/service/delivery/status/update</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-service-delivery-status-update" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-service-delivery-status-update"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>service_request_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="service_request_id"
+               data-endpoint="POSTapi-service-delivery-status-update"
+               value="est"
+               data-component="body" hidden>
+    <br>
+<p>The ID of the service request to be changed</p>
+        </p>
+                <p>
+            <b><code>status</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="status"
+               data-endpoint="POSTapi-service-delivery-status-update"
+               value="velit"
+               data-component="body" hidden>
+    <br>
+<p>The new status of the service(Completed/Delivered, Delete, Dispute)</p>
+        </p>
+                <p>
+            <b><code>service_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="service_id"
+               data-endpoint="POSTapi-service-delivery-status-update"
+               value="occaecati"
+               data-component="body" hidden>
+    <br>
+<p>The ID of the service</p>
+        </p>
+        </form>
+
+            <h2 id="services-apis-GETapi-service-requests">Get Service Requests</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-service-requests">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://services.test/api/service/requests" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://services.test/api/service/requests"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-service-requests">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-service-requests" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-service-requests"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-service-requests"></code></pre>
+</span>
+<span id="execution-error-GETapi-service-requests" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-service-requests"></code></pre>
+</span>
+<form id="form-GETapi-service-requests" data-method="GET"
+      data-path="api/service/requests"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-service-requests', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/service/requests</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-service-requests" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-service-requests"
+                                                                data-component="header"></label>
+        </p>
+                </form>
 
         <h1 id="user-apis">User APIs</h1>
 
