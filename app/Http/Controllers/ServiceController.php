@@ -22,13 +22,24 @@ class ServiceController extends Controller
      * @response 200
      * @responseField content List of all services
      */
-    public function index($latitude = NULL, $longitude = NULL)
+    public function index(Request $request, $latitude = NULL, $longitude = NULL)
     {
-        $services = Service::with('user', 'images', 'categories')->get();
+        $per_page = $request->query('per_page');
+        $search_query = $request->query('search_query');
 
-        return request()->wantsJson() ?
-            $this->respondWithSuccess(['data' => $services]) :
-            view('', compact('services'));
+        if ($request->query('per_page')) {
+            $services = Service::with('images', 'categories', 'user')
+                        ->when($search_query && $search_query != '', function($query) use ($search_query) {
+                            $query->where('title', 'LIKE', '%'.$search_query.'%');
+                        })
+                        ->paginate($per_page);
+        } else {
+            $services = Service::with('images', 'categories', 'user')->get();
+        }
+
+        return request()->wantsJson()
+            ? $this->respondWithSuccess(['data' => $services])
+            : view('', compact('services'));
     }
 
     /**
@@ -67,7 +78,9 @@ class ServiceController extends Controller
             ]);
         });
 
-        return $request->wantsJson() ? $this->respondCreated($service->load('categories', 'images')) : view('', compact('service'));
+        return $request->wantsJson()
+            ? $this->respondCreated($service->load('categories', 'images'))
+            : view('', compact('service'));
     }
 
     /**
@@ -82,7 +95,9 @@ class ServiceController extends Controller
     {
         $service = Service::find($id);
 
-        return request()->wantsJson() ? $this->respondeWithSuccess($service) : view('', compact('service'));
+        return request()->wantsJson()
+            ? $this->respondeWithSuccess($service)
+            : view('', compact('service'));
     }
 
     /**
@@ -127,7 +142,9 @@ class ServiceController extends Controller
             ]);
         });
 
-        return $request->wantsJson() ? $this->respondWithSuccess(['data' => $service->load('categories', 'images')]) : view('', compact('service'));
+        return $request->wantsJson()
+            ? $this->respondWithSuccess(['data' => $service->load('categories', 'images')])
+            : view('', compact('service'));
     }
 
     /**
@@ -178,6 +195,8 @@ class ServiceController extends Controller
 
         $service = Service::with('images', 'categories')->find($id);
 
-        return $this->respondCreated(['data' => $service]);
+        return request()->wantsJson()
+            ? $this->respondCreated(['data' => $service])
+            : view('', compact('service'));
     }
 }
