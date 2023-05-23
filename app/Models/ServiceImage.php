@@ -11,6 +11,13 @@ class ServiceImage extends Model
     use HasFactory;
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['url'];
+
+    /**
      * Get the service that owns the ServiceImage
      */
     public function service(): BelongsTo

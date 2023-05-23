@@ -15,6 +15,6 @@ class Category extends Model
      */
     public function services(): BelongsToMany
     {
-        return $this->belongsToMany(Service::class, 'services_categories');
+        return $this->belongsToMany(Service::class, 'service_categories');
     }
 }

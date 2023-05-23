@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
 use F9Web\ApiResponseHelpers;
 use Illuminate\Http\Request;
@@ -22,23 +23,17 @@ class CategoryController extends Controller
         $per_page = $request->query('per_page');
         $search_query = $request->query('search_query');
 
-        $users = Category::with('services.images', 'services.categories')
-                        ->when($search_query && $search_query != '', function($query) use ($search_query) {
-                            $query->where('name', 'LIKE', '%'.$search_query.'%');
-                        })
-                        ->paginate($per_page);
-
-        if ($request->per_page) {
-            $users = Category::with('services.images', 'services.categories')
+        if ($request->query('per_page')) {
+            $categories = Category::with('services.images', 'services.categories', 'services.user')
                         ->when($search_query && $search_query != '', function($query) use ($search_query) {
                             $query->where('name', 'LIKE', '%'.$search_query.'%');
                         })
                         ->paginate($per_page);
         } else {
-            $users = Category::with('services.images', 'services.categories')->get();
+            $categories = Category::with('services.images', 'services.categories', 'services.user')->get();
         }
 
-        return $this->respondWithSuccess(['data' => $users]);
+        return $this->respondWithSuccess(['data' => $categories]);
     }
 
     public function store(StoreCategoryRequest $request)
@@ -58,14 +53,21 @@ class CategoryController extends Controller
      * @response 200
      * @responseParam data The category
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        return $this->respondWithSuccess(['data' => $category->load('services.images')]);
+        $category = Category::with('services.images', 'services.user')->find($id);
+        
+        return $this->respondWithSuccess(['data' => $category]);
     }
 
-    public function update(Request $request, Category $category)
+    public function update(UpdateCategoryRequest $request, Category $category)
     {
-        //
+        $category->update([
+            'name' => $request->name,
+            'image' => $request->hasFile('image') ? config('app.url').'storage/category/images/'.pathinfo($request->image->store('images', 'category'), PATHINFO_BASENAME) : $category->image,
+        ]);
+
+        return $this->respondWithSuccess(['data' => $category->load('services.images', 'services.category', 'services.user')]);
     }
 
     public function destroy(Category $category)

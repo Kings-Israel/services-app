@@ -13,7 +13,7 @@ class StoreServiceRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return auth()->check() && auth()->user()->hasRole('vendor');
     }
 
     /**
@@ -28,6 +28,7 @@ class StoreServiceRequest extends FormRequest
             'price_min' => 'required',
             'location_lat' => 'required',
             'location_long' => 'required',
+            'categories' => 'required|array',
         ];
     }
 
@@ -38,6 +39,7 @@ class StoreServiceRequest extends FormRequest
             'price_min.required' => 'Enter minimum price for the service',
             'location_lat.required' => 'Enter location lat',
             'location_long.required' => 'Enter location long',
+            'categories.required' => 'Please select a category',
         ];
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreServiceRequest;
 use App\Models\Service;
+use App\Models\ServiceCategory;
 use App\Models\ServiceImage;
 use F9Web\ApiResponseHelpers;
 use Illuminate\Http\Request;
@@ -26,7 +27,7 @@ class ServiceController extends Controller
         $services = Service::with('user', 'images', 'categories')->get();
 
         return request()->wantsJson() ?
-            $this->respondWithSuccess(['services' => $services]) :
+            $this->respondWithSuccess(['data' => $services]) :
             view('', compact('services'));
     }
 
@@ -39,6 +40,7 @@ class ServiceController extends Controller
      * @bodyParam price string required The price of the new service
      * @bodyParam location_lat string required The latitude location of the new service
      * @bodyParam location_long string required The longitude location of the new service
+     * @bodyParam categories array required The category/categories of the new service
      *
      * @response 201
      * @responseField data Details of the added service
@@ -58,7 +60,14 @@ class ServiceController extends Controller
             'location_long' => $request->location_long,
         ]);
 
-        return $request->wantsJson() ? $this->respondCreated($service) : view('', compact('service'));
+        collect($request->categories)->each(function ($category) use ($service) {
+            ServiceCategory::create([
+                'service_id' => $service->id,
+                'category_id' => $category,
+            ]);
+        });
+
+        return $request->wantsJson() ? $this->respondCreated($service->load('categories', 'images')) : view('', compact('service'));
     }
 
     /**
@@ -87,14 +96,38 @@ class ServiceController extends Controller
      * @bodyParam location_lat string The latitude location of the new service
      * @bodyParam location_long string The longitude location of the new service
      *
-     * @urlParam id The id of the service
+     * @urlParam id The ID of the service
      *
      * @response 200
      * @responseField content The details of the updated service
      */
-    public function update(Request $request, $id)
+    public function update(StoreServiceRequest $request, $id)
     {
+        $service_location = Http::get('https://maps.googleapis.com/maps/api/geocode/json?latlng='.$request->location_lat.','.$request->location_long.'&key=AIzaSyCisnVFSnc5QVfU2Jm2W3oRLqMDrKwOEoM');
+
+        $location = $service_location['results'][0]['formatted_address'];
+
         $service = Service::find($id);
+
+        $service->update([
+            'title' => $request->title,
+            'price_min' => $request->price_min,
+            'price_max' => $request->has('price_max') && $request->price_max != '' ? $request->price_max : NULL,
+            'location' => $location,
+            'location_lat' => $request->location_lat,
+            'location_long' => $request->location_long,
+        ]);
+
+        ServiceCategory::where('service_id', $id)->delete();
+
+        collect($request->categories)->each(function ($category) use ($service) {
+            ServiceCategory::create([
+                'service_id' => $service->id,
+                'category_id' => $category,
+            ]);
+        });
+
+        return $request->wantsJson() ? $this->respondWithSuccess(['data' => $service->load('categories', 'images')]) : view('', compact('service'));
     }
 
     /**
@@ -124,20 +157,26 @@ class ServiceController extends Controller
      */
     public function saveServiceImages(Request $request, $id)
     {
+        abort_if(auth()->check() && auth()->user()->hasRole('user'), 401);
+
         $request->validate([
-            'images' => 'array',
+            'images' => 'required|array',
             'images.*' => 'mimes:png,jpg,jpeg'
         ]);
 
         $service = Service::find($id);
 
+        if (!$service) {
+            return $this->respondNotFound('Service not found');
+        }
+
         foreach($request->images as $image) {
-            ServiceImage::create([
+            $service->images()->create([
                 'url' => config('app.url').'storage/service/images/' . pathinfo($image->store('images', 'service'), PATHINFO_BASENAME),
             ]);
         }
 
-        $service = Service::with('images', 'categories', 'user')->where('id', $id);
+        $service = Service::with('images', 'categories')->find($id);
 
         return $this->respondCreated(['data' => $service]);
     }

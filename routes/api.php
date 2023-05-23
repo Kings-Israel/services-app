@@ -25,18 +25,21 @@ Route::post('/forgot-password', [RegisteredUserController::class, 'sendResetPass
 Route::post('/otp/validate', [RegisteredUserController::class, 'validateOtp']);
 Route::post('/reset-password', [RegisteredUserController::class, 'resetPassword']);
 
-Route::get('/services', [ServiceController::class, 'index']);
+Route::get('/services/{latitude?}/{longitude?}', [ServiceController::class, 'index']);
 Route::get('/services/{id}', [ServiceController::class, 'show']);
 Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/categories/{id}', [CategoryController::class, 'show']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/user', [UserController::class, 'show']);
-    Route::post('/services/{latitude?}/{longitude?}', [ServiceController::class, 'store']);
-    Route::post('/services/{id}', [ServiceController::class, 'update']);
+    Route::post('/services', [ServiceController::class, 'store']);
+    Route::post('/services/{id}/update', [ServiceController::class, 'update']);
+    Route::post('/services/{id}/images/add', [ServiceController::class, 'saveServiceImages']);
 
     Route::group(['prefix' => 'admin/'], function () {
-        Route::post('/categories', [CategoryController::class, 'store']);
         Route::get('users', [UserController::class, 'index']);
+        Route::post('/categories', [CategoryController::class, 'store']);
+        Route::post('/categories/{id}/update', [CategoryController::class, 'update']);
     });
 
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);
