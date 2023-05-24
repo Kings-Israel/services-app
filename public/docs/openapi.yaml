@@ -47,11 +47,11 @@ paths:
                 email:
                   type: string
                   description: 'The user''s email or phone number'
-                  example: aut
+                  example: quisquam
                 password:
                   type: string
                   description: 'The user''s password'
-                  example: iure
+                  example: neque
               required:
                 - email
                 - password
@@ -96,27 +96,27 @@ paths:
                 first_name:
                   type: string
                   description: 'The vendor''s first name'
-                  example: dicta
+                  example: perspiciatis
                 last_name:
                   type: string
                   description: 'The vendor''s last name'
-                  example: beatae
+                  example: quidem
                 email:
                   type: string
                   description: 'The vendor''s email'
-                  example: dolorum
+                  example: ut
                 phone_number:
                   type: string
                   description: 'The vendor''s phone number'
-                  example: eveniet
+                  example: quis
                 password:
                   type: string
                   description: 'The vendor''s password'
-                  example: ut
+                  example: iure
                 role:
                   type: string
                   description: 'The person''s role(vendor or user)'
-                  example: temporibus
+                  example: error
               required:
                 - first_name
                 - last_name
@@ -165,7 +165,7 @@ paths:
                 phone_number:
                   type: string
                   description: 'The user''s phone number'
-                  example: id
+                  example: quas
               required:
                 - phone_number
       security: []
@@ -209,7 +209,7 @@ paths:
                 code:
                   type: string
                   description: 'The Entered code'
-                  example: ratione
+                  example: et
               required:
                 - code
       security: []
@@ -253,15 +253,15 @@ paths:
                 code:
                   type: string
                   description: ''
-                  example: quis
+                  example: doloremque
                 password:
                   type: string
                   description: 'New password'
-                  example: ab
+                  example: blanditiis
                 password_confirmation:
                   type: string
                   description: 'New password confirmation'
-                  example: voluptas
+                  example: dolor
               required:
                 - code
                 - password
@@ -297,6 +297,67 @@ paths:
                 properties: {  }
       tags:
         - 'Auth APIs'
+  /api/google/authenticate:
+    post:
+      summary: 'Social Login'
+      description: 'Login through google'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Auth APIs'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'The name of the user'
+                  example: et
+                email:
+                  type: string
+                  description: 'The email of the user'
+                  example: veniam
+                phone_number:
+                  type: string
+                  description: 'The user''s phone number'
+                  example: voluptate
+                token:
+                  type: string
+                  description: 'A google provided token'
+                  example: omnis
+                email_verified:
+                  type: boolean
+                  description: 'Whether the user email is verified'
+                  example: false
+              required:
+                - name
+                - email
+      security: []
   /api/categories:
     get:
       summary: 'List all the categories.'
@@ -373,7 +434,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: quis
+            value: nisi
   /api/admin/categories:
     post:
       summary: ''
@@ -406,7 +467,7 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: tenetur
+                  example: ullam
                 image:
                   type: string
                   description: ''
@@ -446,7 +507,7 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: rerum
                 image:
                   type: string
                   description: ''
@@ -508,7 +569,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: voluptatem
+            value: unde
   /api/services:
     post:
       summary: 'Add a new service.'
@@ -549,34 +610,34 @@ paths:
                 title:
                   type: string
                   description: 'The title of the new service'
-                  example: quos
+                  example: a
                 price_min:
                   type: string
                   description: ''
-                  example: inventore
+                  example: rerum
                 location_lat:
                   type: string
                   description: 'The latitude location of the new service'
-                  example: praesentium
+                  example: explicabo
                 location_long:
                   type: string
                   description: 'The longitude location of the new service'
-                  example: nesciunt
+                  example: molestiae
                 categories:
                   type: array
                   description: 'The category/categories of the new service'
                   example:
-                    - sapiente
+                    - et
                   items:
                     type: string
                 description:
                   type: text
                   description: 'The description of the new service'
-                  example: blanditiis
+                  example: iusto
                 price:
                   type: string
                   description: 'The price of the new service'
-                  example: mollitia
+                  example: saepe
               required:
                 - title
                 - price_min
@@ -629,7 +690,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: laboriosam
+            value: qui
       -
         in: path
         name: longitude
@@ -643,7 +704,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: libero
+            value: accusantium
   '/api/services/{id}/update':
     post:
       summary: 'Update a service.'
@@ -684,34 +745,34 @@ paths:
                 title:
                   type: string
                   description: 'The title of the service'
-                  example: ad
+                  example: repellendus
                 price_min:
                   type: string
                   description: ''
-                  example: reprehenderit
+                  example: mollitia
                 location_lat:
                   type: string
                   description: 'The latitude location of the new service'
-                  example: voluptatum
+                  example: rerum
                 location_long:
                   type: string
                   description: 'The longitude location of the new service'
-                  example: illum
+                  example: doloribus
                 categories:
                   type: array
                   description: ''
                   example:
-                    - aut
+                    - quis
                   items:
                     type: string
                 description:
                   type: string
                   description: 'The description of the service'
-                  example: quia
+                  example: at
                 price:
                   type: string
                   description: 'The price of the service'
-                  example: quas
+                  example: dignissimos
               required:
                 - title
                 - price_min
@@ -730,7 +791,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: alias
+            value: voluptatem
   '/api/services/{id}/images/add':
     post:
       summary: 'Add services images'
@@ -790,7 +851,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: facilis
+            value: explicabo
   /api/service/request:
     post:
       summary: 'Request for a service'
@@ -831,11 +892,11 @@ paths:
                 service_id:
                   type: string
                   description: 'The id of the service'
-                  example: id
+                  example: adipisci
                 message:
                   type: string
                   description: 'An optional message for the service provider'
-                  example: totam
+                  example: veniam
               required:
                 - service_id
   /api/service/delivery/status/update:
@@ -878,15 +939,15 @@ paths:
                 service_request_id:
                   type: string
                   description: 'The ID of the service request to be changed'
-                  example: eligendi
+                  example: consequatur
                 status:
                   type: string
                   description: 'The new status of the service(Completed/Delivered, Delete, Dispute)'
-                  example: consequuntur
+                  example: eveniet
                 service_id:
                   type: string
                   description: 'The ID of the service'
-                  example: commodi
+                  example: doloribus
               required:
                 - service_request_id
                 - status

@@ -20,14 +20,14 @@ endpoints:
         name: email
         description: 'The user''s email or phone number'
         required: true
-        example: aut
+        example: quisquam
         type: string
         custom: []
       password:
         name: password
         description: 'The user''s password'
         required: true
-        example: iure
+        example: neque
         type: string
         custom: []
     responses:
@@ -56,42 +56,42 @@ endpoints:
         name: first_name
         description: 'The vendor''s first name'
         required: true
-        example: dicta
+        example: perspiciatis
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'The vendor''s last name'
         required: true
-        example: beatae
+        example: quidem
         type: string
         custom: []
       email:
         name: email
         description: 'The vendor''s email'
         required: true
-        example: dolorum
+        example: ut
         type: string
         custom: []
       phone_number:
         name: phone_number
         description: 'The vendor''s phone number'
         required: true
-        example: eveniet
+        example: quis
         type: string
         custom: []
       password:
         name: password
         description: 'The vendor''s password'
         required: true
-        example: ut
+        example: iure
         type: string
         custom: []
       role:
         name: role
         description: 'The person''s role(vendor or user)'
         required: true
-        example: temporibus
+        example: error
         type: string
         custom: []
     responses:
@@ -120,7 +120,7 @@ endpoints:
         name: phone_number
         description: 'The user''s phone number'
         required: true
-        example: id
+        example: quas
         type: string
         custom: []
     responses:
@@ -149,7 +149,7 @@ endpoints:
         name: code
         description: 'The Entered code'
         required: true
-        example: ratione
+        example: et
         type: string
         custom: []
     responses:
@@ -178,21 +178,21 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: quis
+        example: doloremque
         type: string
         custom: []
       password:
         name: password
         description: 'New password'
         required: true
-        example: ab
+        example: blanditiis
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'New password confirmation'
         required: true
-        example: voluptas
+        example: dolor
         type: string
         custom: []
     responses:
@@ -224,3 +224,68 @@ endpoints:
         headers: []
         description: '200'
     responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/google/authenticate
+    metadata:
+      title: 'Social Login'
+      description: 'Login through google'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'The name of the user'
+        required: true
+        example: et
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'The email of the user'
+        required: true
+        example: veniam
+        type: string
+        custom: []
+      phone_number:
+        name: phone_number
+        description: 'The user''s phone number'
+        required: false
+        example: voluptate
+        type: string
+        custom: []
+      token:
+        name: token
+        description: 'A google provided token'
+        required: false
+        example: omnis
+        type: string
+        custom: []
+      email_verified:
+        name: email_verified
+        description: 'Whether the user email is verified'
+        required: false
+        example: false
+        type: boolean
+        custom: []
+    responses:
+      -
+        status: 200
+        content: '{}'
+        headers: []
+        description: '200'
+    responseFields:
+      token:
+        name: token
+        description: 'The authentication token that will be used to make other requests'
+        type: ''
+      data:
+        name: data
+        description: 'The authenticated user information'
+        type: ''

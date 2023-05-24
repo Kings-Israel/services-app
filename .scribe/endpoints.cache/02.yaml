@@ -20,7 +20,7 @@ endpoints:
         name: id
         description: 'The id of the service'
         required: false
-        example: voluptatem
+        example: unde
         type: string
         custom: []
     queryParameters: []
@@ -55,28 +55,28 @@ endpoints:
         name: title
         description: 'The title of the new service'
         required: true
-        example: quos
+        example: a
         type: string
         custom: []
       price_min:
         name: price_min
         description: ''
         required: true
-        example: inventore
+        example: rerum
         type: string
         custom: []
       location_lat:
         name: location_lat
         description: 'The latitude location of the new service'
         required: true
-        example: praesentium
+        example: explicabo
         type: string
         custom: []
       location_long:
         name: location_long
         description: 'The longitude location of the new service'
         required: true
-        example: nesciunt
+        example: molestiae
         type: string
         custom: []
       categories:
@@ -84,21 +84,21 @@ endpoints:
         description: 'The category/categories of the new service'
         required: true
         example:
-          - sapiente
+          - et
         type: 'string[]'
         custom: []
       description:
         name: description
         description: 'The description of the new service'
         required: false
-        example: blanditiis
+        example: iusto
         type: text
         custom: []
       price:
         name: price
         description: 'The price of the new service'
         required: true
-        example: mollitia
+        example: saepe
         type: string
         custom: []
     responses:
@@ -129,14 +129,14 @@ endpoints:
         name: latitude
         description: ''
         required: false
-        example: laboriosam
+        example: qui
         type: string
         custom: []
       longitude:
         name: longitude
         description: ''
         required: false
-        example: libero
+        example: accusantium
         type: string
         custom: []
     queryParameters: []
@@ -169,7 +169,7 @@ endpoints:
         name: id
         description: 'The ID of the service'
         required: false
-        example: alias
+        example: voluptatem
         type: string
         custom: []
     queryParameters: []
@@ -178,28 +178,28 @@ endpoints:
         name: title
         description: 'The title of the service'
         required: true
-        example: ad
+        example: repellendus
         type: string
         custom: []
       price_min:
         name: price_min
         description: ''
         required: true
-        example: reprehenderit
+        example: mollitia
         type: string
         custom: []
       location_lat:
         name: location_lat
         description: 'The latitude location of the new service'
         required: false
-        example: voluptatum
+        example: rerum
         type: string
         custom: []
       location_long:
         name: location_long
         description: 'The longitude location of the new service'
         required: false
-        example: illum
+        example: doloribus
         type: string
         custom: []
       categories:
@@ -207,21 +207,21 @@ endpoints:
         description: ''
         required: true
         example:
-          - aut
+          - quis
         type: 'string[]'
         custom: []
       description:
         name: description
         description: 'The description of the service'
         required: false
-        example: quia
+        example: at
         type: string
         custom: []
       price:
         name: price
         description: 'The price of the service'
         required: false
-        example: quas
+        example: dignissimos
         type: string
         custom: []
     responses:
@@ -252,7 +252,7 @@ endpoints:
         name: id
         description: 'The id of the service'
         required: false
-        example: facilis
+        example: explicabo
         type: string
         custom: []
     queryParameters: []
@@ -291,14 +291,14 @@ endpoints:
         name: service_id
         description: 'The id of the service'
         required: true
-        example: id
+        example: adipisci
         type: string
         custom: []
       message:
         name: message
         description: 'An optional message for the service provider'
         required: false
-        example: totam
+        example: veniam
         type: string
         custom: []
     responses:
@@ -327,21 +327,21 @@ endpoints:
         name: service_request_id
         description: 'The ID of the service request to be changed'
         required: true
-        example: eligendi
+        example: consequatur
         type: string
         custom: []
       status:
         name: status
         description: 'The new status of the service(Completed/Delivered, Delete, Dispute)'
         required: true
-        example: consequuntur
+        example: eveniet
         type: string
         custom: []
       service_id:
         name: service_id
         description: 'The ID of the service'
         required: true
-        example: commodi
+        example: doloribus
         type: string
         custom: []
     responses:

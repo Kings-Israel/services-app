@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Services App",
-        "_postman_id": "c083359d-1e79-452e-a1ea-fbc7e9d2c5aa",
+        "_postman_id": "6df92c0e-2f27-4d15-8c1d-6d767bc20d89",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"aut\",\"password\":\"iure\"}"
+                            "raw": "{\"email\":\"quisquam\",\"password\":\"neque\"}"
                         },
                         "description": "",
                         "auth": {
@@ -79,7 +79,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"dicta\",\"last_name\":\"beatae\",\"email\":\"dolorum\",\"phone_number\":\"eveniet\",\"password\":\"ut\",\"role\":\"temporibus\"}"
+                            "raw": "{\"first_name\":\"perspiciatis\",\"last_name\":\"quidem\",\"email\":\"ut\",\"phone_number\":\"quis\",\"password\":\"iure\",\"role\":\"error\"}"
                         },
                         "description": "",
                         "auth": {
@@ -117,7 +117,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone_number\":\"id\"}"
+                            "raw": "{\"phone_number\":\"quas\"}"
                         },
                         "description": "",
                         "auth": {
@@ -155,7 +155,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"ratione\"}"
+                            "raw": "{\"code\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -193,7 +193,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"quis\",\"password\":\"ab\",\"password_confirmation\":\"voluptas\"}"
+                            "raw": "{\"code\":\"doloremque\",\"password\":\"blanditiis\",\"password_confirmation\":\"dolor\"}"
                         },
                         "description": "",
                         "auth": {
@@ -231,6 +231,44 @@
                         ],
                         "body": null,
                         "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Social Login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/google\/authenticate",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/google\/authenticate"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"et\",\"email\":\"veniam\",\"phone_number\":\"voluptate\",\"token\":\"omnis\",\"email_verified\":false}"
+                        },
+                        "description": "Login through google",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": [
                         {
@@ -294,7 +332,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quis",
+                                    "value": "nisi",
                                     "description": "The ID of the category"
                                 }
                             ]
@@ -347,7 +385,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"tenetur\"}"
+                            "raw": "{\"name\":\"ullam\"}"
                         },
                         "description": "",
                         "auth": {
@@ -386,7 +424,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"molestiae\"}"
+                            "raw": "{\"name\":\"rerum\"}"
                         },
                         "description": "",
                         "auth": {
@@ -413,7 +451,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptatem",
+                                    "value": "unde",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -466,7 +504,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"quos\",\"price_min\":\"inventore\",\"location_lat\":\"praesentium\",\"location_long\":\"nesciunt\",\"categories\":[\"sapiente\"],\"description\":\"blanditiis\",\"price\":\"mollitia\"}"
+                            "raw": "{\"title\":\"a\",\"price_min\":\"rerum\",\"location_lat\":\"explicabo\",\"location_long\":\"molestiae\",\"categories\":[\"et\"],\"description\":\"iusto\",\"price\":\"saepe\"}"
                         },
                         "description": ""
                     },
@@ -491,13 +529,13 @@
                                 {
                                     "id": "latitude",
                                     "key": "latitude",
-                                    "value": "laboriosam",
+                                    "value": "qui",
                                     "description": ""
                                 },
                                 {
                                     "id": "longitude",
                                     "key": "longitude",
-                                    "value": "libero",
+                                    "value": "accusantium",
                                     "description": ""
                                 }
                             ]
@@ -540,7 +578,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "alias",
+                                    "value": "voluptatem",
                                     "description": "The ID of the service"
                                 }
                             ]
@@ -558,7 +596,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"ad\",\"price_min\":\"reprehenderit\",\"location_lat\":\"voluptatum\",\"location_long\":\"illum\",\"categories\":[\"aut\"],\"description\":\"quia\",\"price\":\"quas\"}"
+                            "raw": "{\"title\":\"repellendus\",\"price_min\":\"mollitia\",\"location_lat\":\"rerum\",\"location_long\":\"doloribus\",\"categories\":[\"quis\"],\"description\":\"at\",\"price\":\"dignissimos\"}"
                         },
                         "description": ""
                     },
@@ -583,7 +621,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "facilis",
+                                    "value": "explicabo",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -639,7 +677,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_id\":\"id\",\"message\":\"totam\"}"
+                            "raw": "{\"service_id\":\"adipisci\",\"message\":\"veniam\"}"
                         },
                         "description": ""
                     },
@@ -674,7 +712,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_request_id\":\"eligendi\",\"status\":\"consequuntur\",\"service_id\":\"commodi\"}"
+                            "raw": "{\"service_request_id\":\"consequatur\",\"status\":\"eveniet\",\"service_id\":\"doloribus\"}"
                         },
                         "description": ""
                     },

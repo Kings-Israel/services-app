@@ -25,6 +25,7 @@ Route::post('/register', [RegisteredUserController::class, 'store']);
 Route::post('/forgot-password', [RegisteredUserController::class, 'sendResetPasswordCode']);
 Route::post('/otp/validate', [RegisteredUserController::class, 'validateOtp']);
 Route::post('/reset-password', [RegisteredUserController::class, 'resetPassword']);
+Route::post('/google/authenticate', [AuthenticatedSessionController::class, 'googleAuthenticate']);
 
 Route::get('/services/{latitude?}/{longitude?}', [ServiceController::class, 'index']);
 Route::get('/services/{id}', [ServiceController::class, 'show']);

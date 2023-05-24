@@ -42,7 +42,7 @@ endpoints:
         name: id
         description: 'The ID of the category'
         required: false
-        example: quis
+        example: nisi
         type: string
         custom: []
     queryParameters: []
@@ -73,7 +73,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: tenetur
+        example: ullam
         type: string
         custom: []
       image:
@@ -111,7 +111,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: molestiae
+        example: rerum
         type: string
         custom: []
       image:
