@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "http:\/\/services.test\/"
+            "value": "http:\/\/172.104.245.14\/services-app\/api"
         }
     ],
     "info": {
         "name": "Services App",
-        "_postman_id": "0603ed3c-a65d-4c7e-a58c-bbefa1c11f2e",
+        "_postman_id": "c083359d-1e79-452e-a1ea-fbc7e9d2c5aa",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"enim\",\"password\":\"molestias\"}"
+                            "raw": "{\"email\":\"aut\",\"password\":\"iure\"}"
                         },
                         "description": "",
                         "auth": {
@@ -79,7 +79,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"minus\",\"last_name\":\"eum\",\"email\":\"et\",\"phone_number\":\"quae\",\"password\":\"blanditiis\",\"role\":\"esse\"}"
+                            "raw": "{\"first_name\":\"dicta\",\"last_name\":\"beatae\",\"email\":\"dolorum\",\"phone_number\":\"eveniet\",\"password\":\"ut\",\"role\":\"temporibus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -117,7 +117,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone_number\":\"dignissimos\"}"
+                            "raw": "{\"phone_number\":\"id\"}"
                         },
                         "description": "",
                         "auth": {
@@ -155,7 +155,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"sunt\"}"
+                            "raw": "{\"code\":\"ratione\"}"
                         },
                         "description": "",
                         "auth": {
@@ -193,7 +193,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"reprehenderit\",\"password\":\"voluptates\",\"password_confirmation\":\"velit\"}"
+                            "raw": "{\"code\":\"quis\",\"password\":\"ab\",\"password_confirmation\":\"voluptas\"}"
                         },
                         "description": "",
                         "auth": {
@@ -294,7 +294,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "adipisci",
+                                    "value": "quis",
                                     "description": "The ID of the category"
                                 }
                             ]
@@ -347,7 +347,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"rem\"}"
+                            "raw": "{\"name\":\"tenetur\"}"
                         },
                         "description": "",
                         "auth": {
@@ -386,7 +386,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"voluptatum\"}"
+                            "raw": "{\"name\":\"molestiae\"}"
                         },
                         "description": "",
                         "auth": {
@@ -413,7 +413,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "et",
+                                    "value": "voluptatem",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -466,7 +466,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"expedita\",\"price_min\":\"id\",\"location_lat\":\"eligendi\",\"location_long\":\"dolor\",\"categories\":[\"in\"],\"description\":\"ipsum\",\"price\":\"nihil\"}"
+                            "raw": "{\"title\":\"quos\",\"price_min\":\"inventore\",\"location_lat\":\"praesentium\",\"location_long\":\"nesciunt\",\"categories\":[\"sapiente\"],\"description\":\"blanditiis\",\"price\":\"mollitia\"}"
                         },
                         "description": ""
                     },
@@ -491,13 +491,13 @@
                                 {
                                     "id": "latitude",
                                     "key": "latitude",
-                                    "value": "velit",
+                                    "value": "laboriosam",
                                     "description": ""
                                 },
                                 {
                                     "id": "longitude",
                                     "key": "longitude",
-                                    "value": "quo",
+                                    "value": "libero",
                                     "description": ""
                                 }
                             ]
@@ -540,7 +540,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "porro",
+                                    "value": "alias",
                                     "description": "The ID of the service"
                                 }
                             ]
@@ -558,7 +558,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"maxime\",\"price_min\":\"sit\",\"location_lat\":\"officia\",\"location_long\":\"id\",\"categories\":[\"quia\"],\"description\":\"atque\",\"price\":\"pariatur\"}"
+                            "raw": "{\"title\":\"ad\",\"price_min\":\"reprehenderit\",\"location_lat\":\"voluptatum\",\"location_long\":\"illum\",\"categories\":[\"aut\"],\"description\":\"quia\",\"price\":\"quas\"}"
                         },
                         "description": ""
                     },
@@ -583,7 +583,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "modi",
+                                    "value": "facilis",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -639,7 +639,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_id\":\"animi\",\"message\":\"nisi\"}"
+                            "raw": "{\"service_id\":\"id\",\"message\":\"totam\"}"
                         },
                         "description": ""
                     },
@@ -674,7 +674,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_request_id\":\"est\",\"status\":\"velit\",\"service_id\":\"occaecati\"}"
+                            "raw": "{\"service_request_id\":\"eligendi\",\"status\":\"consequuntur\",\"service_id\":\"commodi\"}"
                         },
                         "description": ""
                     },
