@@ -1,11 +1,11 @@
 openapi: 3.0.3
 info:
-  title: Laravel
+  title: 'Services App'
   description: ''
   version: 1.0.0
 servers:
   -
-    url: 'http://services.test'
+    url: 'https://172.104.245.14/services-app'
 paths:
   /api/login:
     post:
@@ -34,11 +34,11 @@ paths:
                 email:
                   type: string
                   description: "The user's email or phone number"
-                  example: maxie21@example.com
+                  example: jabari.metz@example.net
                 password:
                   type: string
                   description: "The user's password"
-                  example: "!':^~,1b"
+                  example: ',!c($o-sF#04WtSWc'
               required:
                 - email
                 - password
@@ -70,27 +70,27 @@ paths:
                 first_name:
                   type: string
                   description: "The vendor's first name"
-                  example: debitis
+                  example: beatae
                 last_name:
                   type: string
                   description: "The vendor's last name"
-                  example: quas
+                  example: sed
                 email:
                   type: string
                   description: "The vendor's email"
-                  example: tmurphy@example.com
+                  example: goodwin.alvina@example.net
                 phone_number:
                   type: string
                   description: "The vendor's phone number"
-                  example: sapiente
+                  example: aliquam
                 password:
                   type: string
                   description: "The vendor's password"
-                  example: 'I:{97)I'
+                  example: 'V66Hm=0S<RH8:9ChnMZ'
                 role:
                   type: string
                   description: "The person's role(vendor or user)"
-                  example: omnis
+                  example: repellat
               required:
                 - first_name
                 - last_name
@@ -126,7 +126,7 @@ paths:
                 phone_number:
                   type: string
                   description: "The user's phone number"
-                  example: delectus
+                  example: incidunt
               required:
                 - phone_number
       security: []
@@ -157,7 +157,7 @@ paths:
                 code:
                   type: string
                   description: 'The Entered code'
-                  example: rem
+                  example: eligendi
               required:
                 - code
       security: []
@@ -188,15 +188,15 @@ paths:
                 code:
                   type: string
                   description: ''
-                  example: et
+                  example: blanditiis
                 password:
                   type: string
                   description: 'New password'
-                  example: 'hQ=9*Qgik?pg'
+                  example: 'C!T)U~n+-7R"/CL"o'
                 password_confirmation:
                   type: string
                   description: 'New password confirmation'
-                  example: rem
+                  example: voluptatem
               required:
                 - code
                 - password
@@ -233,15 +233,15 @@ paths:
                 email:
                   type: string
                   description: 'The email of the user'
-                  example: keebler.christopher@example.org
+                  example: okeefe.roderick@example.com
                 phone_number:
                   type: string
                   description: "The user's phone number"
-                  example: magnam
+                  example: ea
                 token:
                   type: string
                   description: 'A google provided token'
-                  example: et
+                  example: libero
                 email_verified:
                   type: boolean
                   description: 'Whether the user email is verified'
@@ -317,7 +317,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: ipsum
+            value: quo
   '/api/services/{latitude}/{longitude}':
     get:
       summary: 'Get all services.'
@@ -350,7 +350,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: aut
+            value: ullam
       -
         in: path
         name: longitude
@@ -364,7 +364,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: sint
+            value: corrupti
   '/api/services/{id}':
     get:
       summary: 'Show service details.'
@@ -397,7 +397,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: facere
+            value: vero
   /api/services:
     post:
       summary: 'Add a new service.'
@@ -425,30 +425,30 @@ paths:
                 title:
                   type: string
                   description: 'The title of the new service'
-                  example: hic
+                  example: quod
                 price_min:
                   type: string
                   description: ''
-                  example: tempora
+                  example: magnam
                 location_lat:
                   type: string
                   description: 'The latitude location of the new service'
-                  example: veniam
+                  example: maiores
                 location_long:
                   type: string
                   description: 'The longitude location of the new service'
-                  example: et
+                  example: quis
                 categories:
                   type: array
                   description: 'The category/categories of the new service'
                   example:
-                    - odit
+                    - laboriosam
                   items:
                     type: string
                 description:
                   type: text
                   description: 'The description of the new service'
-                  example: 'Esse esse delectus enim harum nostrum itaque est eligendi.'
+                  example: 'Dolorem officiis et quo quis magnam nisi accusantium.'
                 price:
                   type: string
                   description: 'The price of the new service'
@@ -487,19 +487,19 @@ paths:
                 title:
                   type: string
                   description: 'The title of the service'
-                  example: ea
+                  example: vel
                 price_min:
                   type: string
                   description: ''
-                  example: ad
+                  example: voluptates
                 location_lat:
                   type: string
                   description: 'The latitude location of the new service'
-                  example: rerum
+                  example: eveniet
                 location_long:
                   type: string
                   description: 'The longitude location of the new service'
-                  example: non
+                  example: harum
                 categories:
                   type: object
                   description: ''
@@ -508,11 +508,11 @@ paths:
                 description:
                   type: string
                   description: 'The description of the service'
-                  example: 'Eos voluptatem illo molestias est tempore.'
+                  example: 'Aperiam laudantium debitis cumque ab nesciunt.'
                 price:
                   type: string
                   description: 'The price of the service'
-                  example: et
+                  example: rerum
               required:
                 - title
                 - price_min
@@ -531,7 +531,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: in
+            value: voluptatem
   '/api/services/{id}/images/add':
     post:
       summary: 'Add services images'
@@ -577,7 +577,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: qui
+            value: voluptatibus
   /api/service/request:
     post:
       summary: 'Request for a service'
@@ -605,11 +605,11 @@ paths:
                 service_id:
                   type: string
                   description: 'The id of the service'
-                  example: quisquam
+                  example: occaecati
                 message:
                   type: string
                   description: 'An optional message for the service provider'
-                  example: tenetur
+                  example: unde
               required:
                 - service_id
   /api/service/delivery/status/update:
@@ -639,15 +639,15 @@ paths:
                 service_request_id:
                   type: string
                   description: 'The ID of the service request to be changed'
-                  example: provident
+                  example: atque
                 status:
                   type: string
                   description: 'The new status of the service(Completed/Delivered, Delete, Dispute)'
-                  example: est
+                  example: adipisci
                 service_id:
                   type: string
                   description: 'The ID of the service'
-                  example: dolor
+                  example: est
               required:
                 - service_request_id
                 - status

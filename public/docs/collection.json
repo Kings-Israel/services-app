@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "http:\/\/services.test\/"
+            "value": "https:\/\/172.104.245.14\/services-app\/"
         }
     ],
     "info": {
-        "name": "Laravel",
-        "_postman_id": "0fe8b0a6-e132-45d9-bd76-b71b6c394c2d",
+        "name": "Services App",
+        "_postman_id": "0eea72cd-ebf6-4fbf-b8ba-d703120b4deb",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"maxie21@example.com\",\"password\":\"!':^~,1b\"}"
+                            "raw": "{\"email\":\"jabari.metz@example.net\",\"password\":\",!c($o-sF#04WtSWc\"}"
                         },
                         "description": "",
                         "auth": {
@@ -79,7 +79,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"debitis\",\"last_name\":\"quas\",\"email\":\"tmurphy@example.com\",\"phone_number\":\"sapiente\",\"password\":\"I:{97)I\",\"role\":\"omnis\"}"
+                            "raw": "{\"first_name\":\"beatae\",\"last_name\":\"sed\",\"email\":\"goodwin.alvina@example.net\",\"phone_number\":\"aliquam\",\"password\":\"V66Hm=0S<RH8:9ChnMZ\",\"role\":\"repellat\"}"
                         },
                         "description": "",
                         "auth": {
@@ -117,7 +117,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone_number\":\"delectus\"}"
+                            "raw": "{\"phone_number\":\"incidunt\"}"
                         },
                         "description": "",
                         "auth": {
@@ -155,7 +155,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"rem\"}"
+                            "raw": "{\"code\":\"eligendi\"}"
                         },
                         "description": "",
                         "auth": {
@@ -193,7 +193,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"et\",\"password\":\"hQ=9*Qgik?pg\",\"password_confirmation\":\"rem\"}"
+                            "raw": "{\"code\":\"blanditiis\",\"password\":\"C!T)U~n+-7R\\\"\\\/CL\\\"o\",\"password_confirmation\":\"voluptatem\"}"
                         },
                         "description": "",
                         "auth": {
@@ -231,7 +231,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"consequatur\",\"email\":\"keebler.christopher@example.org\",\"phone_number\":\"magnam\",\"token\":\"et\",\"email_verified\":false}"
+                            "raw": "{\"name\":\"consequatur\",\"email\":\"okeefe.roderick@example.com\",\"phone_number\":\"ea\",\"token\":\"libero\",\"email_verified\":false}"
                         },
                         "description": "Login through google",
                         "auth": {
@@ -332,7 +332,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ipsum",
+                                    "value": "quo",
                                     "description": "The ID of the category"
                                 }
                             ]
@@ -381,13 +381,13 @@
                                 {
                                     "id": "latitude",
                                     "key": "latitude",
-                                    "value": "aut",
+                                    "value": "ullam",
                                     "description": ""
                                 },
                                 {
                                     "id": "longitude",
                                     "key": "longitude",
-                                    "value": "sint",
+                                    "value": "corrupti",
                                     "description": ""
                                 }
                             ]
@@ -430,7 +430,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "facere",
+                                    "value": "vero",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -483,7 +483,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"hic\",\"price_min\":\"tempora\",\"location_lat\":\"veniam\",\"location_long\":\"et\",\"categories\":[\"odit\"],\"description\":\"Esse esse delectus enim harum nostrum itaque est eligendi.\",\"price\":\"et\"}"
+                            "raw": "{\"title\":\"quod\",\"price_min\":\"magnam\",\"location_lat\":\"maiores\",\"location_long\":\"quis\",\"categories\":[\"laboriosam\"],\"description\":\"Dolorem officiis et quo quis magnam nisi accusantium.\",\"price\":\"et\"}"
                         },
                         "description": ""
                     },
@@ -508,7 +508,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "in",
+                                    "value": "voluptatem",
                                     "description": "The ID of the service"
                                 }
                             ]
@@ -526,7 +526,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"ea\",\"price_min\":\"ad\",\"location_lat\":\"rerum\",\"location_long\":\"non\",\"categories\":[],\"description\":\"Eos voluptatem illo molestias est tempore.\",\"price\":\"et\"}"
+                            "raw": "{\"title\":\"vel\",\"price_min\":\"voluptates\",\"location_lat\":\"eveniet\",\"location_long\":\"harum\",\"categories\":[],\"description\":\"Aperiam laudantium debitis cumque ab nesciunt.\",\"price\":\"rerum\"}"
                         },
                         "description": ""
                     },
@@ -551,7 +551,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "qui",
+                                    "value": "voluptatibus",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -607,7 +607,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_id\":\"quisquam\",\"message\":\"tenetur\"}"
+                            "raw": "{\"service_id\":\"occaecati\",\"message\":\"unde\"}"
                         },
                         "description": ""
                     },
@@ -642,7 +642,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_request_id\":\"provident\",\"status\":\"est\",\"service_id\":\"dolor\"}"
+                            "raw": "{\"service_request_id\":\"atque\",\"status\":\"adipisci\",\"service_id\":\"est\"}"
                         },
                         "description": ""
                     },
