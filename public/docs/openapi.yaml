@@ -34,11 +34,11 @@ paths:
                 email:
                   type: string
                   description: "The user's email or phone number"
-                  example: darrion33@example.com
+                  example: lonnie21@example.net
                 password:
                   type: string
                   description: "The user's password"
-                  example: 'D3<m0|q?No;`'
+                  example: 'U"B6!.N6F\'
               required:
                 - email
                 - password
@@ -70,27 +70,27 @@ paths:
                 first_name:
                   type: string
                   description: "The vendor's first name"
-                  example: eius
+                  example: vel
                 last_name:
                   type: string
                   description: "The vendor's last name"
-                  example: ullam
+                  example: incidunt
                 email:
                   type: string
                   description: "The vendor's email"
-                  example: holden.gottlieb@example.com
+                  example: felicita.daugherty@example.com
                 phone_number:
                   type: string
                   description: "The vendor's phone number"
-                  example: adipisci
+                  example: debitis
                 password:
                   type: string
                   description: "The vendor's password"
-                  example: '39aMu[arHq1S'
+                  example: '.:_vc=#M=]8'
                 role:
                   type: string
                   description: "The person's role(vendor or user)"
-                  example: ratione
+                  example: sit
               required:
                 - first_name
                 - last_name
@@ -126,7 +126,7 @@ paths:
                 phone_number:
                   type: string
                   description: "The user's phone number"
-                  example: earum
+                  example: et
               required:
                 - phone_number
       security: []
@@ -157,7 +157,7 @@ paths:
                 code:
                   type: string
                   description: 'The Entered code'
-                  example: voluptas
+                  example: quos
               required:
                 - code
       security: []
@@ -188,15 +188,15 @@ paths:
                 code:
                   type: string
                   description: ''
-                  example: voluptatum
+                  example: eligendi
                 password:
                   type: string
                   description: 'New password'
-                  example: 'on~@cq,''I"P?Hm6,.M8V'
+                  example: 'LE''n>\$'
                 password_confirmation:
                   type: string
                   description: 'New password confirmation'
-                  example: laudantium
+                  example: similique
               required:
                 - code
                 - password
@@ -229,19 +229,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the user'
-                  example: id
+                  example: maiores
                 email:
                   type: string
                   description: 'The email of the user'
-                  example: cmosciski@example.com
+                  example: lesch.manuel@example.com
                 phone_number:
                   type: string
                   description: "The user's phone number"
-                  example: voluptatem
+                  example: sequi
                 token:
                   type: string
                   description: 'A google provided token'
-                  example: quia
+                  example: vel
                 email_verified:
                   type: boolean
                   description: 'Whether the user email is verified'
@@ -317,7 +317,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: non
+            value: ex
   /api/reviews:
     get:
       summary: 'Get reviews'
@@ -359,7 +359,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the review.'
-        example: magni
+        example: itaque
         required: true
         schema:
           type: string
@@ -376,7 +376,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: incidunt
+            value: assumenda
   /api/review:
     post:
       summary: 'Store a review for a service'
@@ -404,15 +404,15 @@ paths:
                 service_id:
                   type: string
                   description: 'The ID of the service'
-                  example: dolores
+                  example: aspernatur
                 rating:
                   type: integer
                   description: 'The rating of the service'
-                  example: 1
+                  example: 2
                 review:
                   type: string
                   description: 'The service review'
-                  example: amet
+                  example: possimus
               required:
                 - service_id
                 - rating
@@ -444,11 +444,11 @@ paths:
                 rating:
                   type: integer
                   description: 'The rating of the service'
-                  example: 17
+                  example: 3
                 review:
                   type: string
                   description: 'The review to of the service'
-                  example: iusto
+                  example: rerum
               required:
                 - rating
     parameters:
@@ -465,7 +465,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: non
+            value: iste
   /api/bookmarks:
     get:
       summary: 'Get Bookmarked Services'
@@ -505,14 +505,6 @@ paths:
       -
         in: path
         name: id
-        description: 'The ID of the bookmark.'
-        example: eos
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: ID
         description: 'The ID of the bookmark.'
         example: 3
         required: true
@@ -570,31 +562,31 @@ paths:
       -
         in: path
         name: latitude
-        description: 'Optional parameter.'
+        description: "Optional parameter. The user's latitudal location."
         required: true
         schema:
-          type: string
+          type: integer
         examples:
           omitted:
             summary: 'When the value is omitted'
             value: ''
           present:
             summary: 'When the value is present'
-            value: sit
+            value: -1
       -
         in: path
         name: longitude
-        description: 'Optional parameter.'
+        description: "Optional parameter. The user's longitudal location."
         required: true
         schema:
-          type: string
+          type: integer
         examples:
           omitted:
             summary: 'When the value is omitted'
             value: ''
           present:
             summary: 'When the value is present'
-            value: in
+            value: 36
   '/api/services/{id}':
     get:
       summary: 'Show service details.'
@@ -648,42 +640,35 @@ paths:
               properties:
                 title:
                   type: string
-                  description: 'The title of the new service'
-                  example: quam
+                  description: 'The title of the new service.'
+                  example: '"Mjenzi Services"'
                 price_min:
                   type: string
-                  description: ''
-                  example: molestias
+                  description: 'The price of the new service.'
+                  example: '"200"'
                 location_lat:
                   type: string
-                  description: 'The latitude location of the new service'
-                  example: est
+                  description: 'The latitude location of the new service.'
+                  example: '-1.260284'
                 location_long:
                   type: string
-                  description: 'The longitude location of the new service'
-                  example: veritatis
+                  description: 'The longitude location of the new service.'
+                  example: '36.477463'
                 categories:
                   type: array
-                  description: 'The category/categories of the new service'
+                  description: 'The category/categories of the new service.'
                   example:
-                    - a
+                    - 1
+                    - 4
+                    - 8
                   items:
                     type: string
-                description:
-                  type: text
-                  description: 'The description of the new service'
-                  example: 'Consequatur ratione consequatur reiciendis qui repellendus illo est.'
-                price:
-                  type: string
-                  description: 'The price of the new service'
-                  example: officiis
               required:
                 - title
                 - price_min
                 - location_lat
                 - location_long
                 - categories
-                - price
   '/api/services/{id}/update':
     post:
       summary: 'Update a service.'
@@ -711,19 +696,19 @@ paths:
                 title:
                   type: string
                   description: 'The title of the service'
-                  example: magnam
+                  example: numquam
                 price_min:
                   type: string
                   description: ''
-                  example: perspiciatis
+                  example: aut
                 location_lat:
                   type: string
                   description: 'The latitude location of the new service'
-                  example: nesciunt
+                  example: perferendis
                 location_long:
                   type: string
                   description: 'The longitude location of the new service'
-                  example: eaque
+                  example: voluptatem
                 categories:
                   type: object
                   description: ''
@@ -732,11 +717,11 @@ paths:
                 description:
                   type: string
                   description: 'The description of the service'
-                  example: 'Rerum sunt id sed et consequuntur vitae.'
+                  example: 'Id adipisci voluptates asperiores id autem commodi similique.'
                 price:
                   type: string
                   description: 'The price of the service'
-                  example: dolor
+                  example: beatae
               required:
                 - title
                 - price_min
@@ -817,11 +802,11 @@ paths:
                 service_id:
                   type: string
                   description: 'The id of the service'
-                  example: molestias
+                  example: porro
                 message:
                   type: string
                   description: 'An optional message for the service provider'
-                  example: earum
+                  example: ea
               required:
                 - service_id
   /api/service/delivery/status/update:
@@ -851,15 +836,15 @@ paths:
                 service_request_id:
                   type: string
                   description: 'The ID of the service request to be changed'
-                  example: eos
+                  example: in
                 status:
                   type: string
                   description: 'The new status of the service(Completed/Delivered, Delete, Dispute)'
-                  example: porro
+                  example: nulla
                 service_id:
                   type: string
                   description: 'The ID of the service'
-                  example: quasi
+                  example: alias
               required:
                 - service_request_id
                 - status

@@ -60,19 +60,11 @@ endpoints:
         name: id
         description: 'The ID of the bookmark.'
         required: true
-        example: eos
-        type: string
-        custom: []
-      ID:
-        name: ID
-        description: 'The ID of the bookmark.'
-        required: true
         example: 3
         type: integer
         custom: []
     cleanUrlParameters:
-      id: eos
-      ID: 3
+      id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

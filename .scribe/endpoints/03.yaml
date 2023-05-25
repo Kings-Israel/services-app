@@ -58,19 +58,19 @@ endpoints:
         name: id
         description: 'The ID of the review.'
         required: true
-        example: magni
+        example: itaque
         type: string
         custom: []
       ID:
         name: ID
         description: 'The ID of the review'
         required: false
-        example: incidunt
+        example: assumenda
         type: string
         custom: []
     cleanUrlParameters:
-      id: magni
-      ID: incidunt
+      id: itaque
+      ID: assumenda
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -114,27 +114,27 @@ endpoints:
         name: service_id
         description: 'The ID of the service'
         required: true
-        example: dolores
+        example: aspernatur
         type: string
         custom: []
       rating:
         name: rating
         description: 'The rating of the service'
         required: true
-        example: 1
+        example: 2
         type: integer
         custom: []
       review:
         name: review
         description: 'The service review'
         required: false
-        example: amet
+        example: possimus
         type: string
         custom: []
     cleanBodyParameters:
-      service_id: dolores
-      rating: 1
-      review: amet
+      service_id: aspernatur
+      rating: 2
+      review: possimus
     fileParameters: []
     responses:
       -
@@ -170,11 +170,11 @@ endpoints:
         name: id
         description: 'The id of the review'
         required: false
-        example: non
+        example: iste
         type: string
         custom: []
     cleanUrlParameters:
-      id: non
+      id: iste
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -182,19 +182,19 @@ endpoints:
         name: rating
         description: 'The rating of the service'
         required: true
-        example: 17
+        example: 3
         type: integer
         custom: []
       review:
         name: review
         description: 'The review to of the service'
         required: false
-        example: iusto
+        example: rerum
         type: string
         custom: []
     cleanBodyParameters:
-      rating: 17
-      review: iusto
+      rating: 3
+      review: rerum
     fileParameters: []
     responses:
       -

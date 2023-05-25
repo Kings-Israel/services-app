@@ -51,7 +51,7 @@ class ServiceBookmarkController extends Controller
     /**
      * Get Bookmarked Service
      *
-     * @urlParam ID integer required The ID of the bookmark. Example: 3
+     * @urlParam id integer required The ID of the bookmark. Example: 3
      *
      * @response 200
      *

@@ -19,6 +19,9 @@ class ServiceController extends Controller
     /**
      * Get all services.
      *
+     * @urlParam latitude integer The user's latitudal location. Example: -1.269483
+     * @urlParam longitude integer The user's longitudal location. Example: 36.249583
+     *
      * @response 200
      * @responseField content List of all services
      */
@@ -46,12 +49,11 @@ class ServiceController extends Controller
      * Add a new service.
      * @authenticated
      *
-     * @bodyParam title string required The title of the new service
-     * @bodyParam description text The description of the new service
-     * @bodyParam price string required The price of the new service
-     * @bodyParam location_lat string required The latitude location of the new service
-     * @bodyParam location_long string required The longitude location of the new service
-     * @bodyParam categories array required The category/categories of the new service
+     * @bodyParam title string required The title of the new service. Example: "Mjenzi Services"
+     * @bodyParam price_min string required The price of the new service. Example: "200"
+     * @bodyParam location_lat string required The latitude location of the new service. Example: -1.260284
+     * @bodyParam location_long string required The longitude location of the new service. Example: 36.477463
+     * @bodyParam categories array required The category/categories of the new service. Example: [1, 4, 8]
      *
      * @response 201
      * @responseField data Details of the added service

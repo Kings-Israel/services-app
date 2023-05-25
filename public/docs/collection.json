@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Services App",
-        "_postman_id": "17b77491-e5df-417b-a8fc-8c1ee732f531",
+        "_postman_id": "4be5b71d-0abf-423a-a203-706e68100b9c",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"darrion33@example.com\",\"password\":\"D3<m0|q?No;`\"}"
+                            "raw": "{\"email\":\"lonnie21@example.net\",\"password\":\"U\\\"B6!.N6F\\\\\"}"
                         },
                         "description": "",
                         "auth": {
@@ -79,7 +79,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"eius\",\"last_name\":\"ullam\",\"email\":\"holden.gottlieb@example.com\",\"phone_number\":\"adipisci\",\"password\":\"39aMu[arHq1S\",\"role\":\"ratione\"}"
+                            "raw": "{\"first_name\":\"vel\",\"last_name\":\"incidunt\",\"email\":\"felicita.daugherty@example.com\",\"phone_number\":\"debitis\",\"password\":\".:_vc=#M=]8\",\"role\":\"sit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -117,7 +117,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone_number\":\"earum\"}"
+                            "raw": "{\"phone_number\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -155,7 +155,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"voluptas\"}"
+                            "raw": "{\"code\":\"quos\"}"
                         },
                         "description": "",
                         "auth": {
@@ -193,7 +193,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"voluptatum\",\"password\":\"on~@cq,'I\\\"P?Hm6,.M8V\",\"password_confirmation\":\"laudantium\"}"
+                            "raw": "{\"code\":\"eligendi\",\"password\":\"LE'n>\\\\$\",\"password_confirmation\":\"similique\"}"
                         },
                         "description": "",
                         "auth": {
@@ -231,7 +231,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"id\",\"email\":\"cmosciski@example.com\",\"phone_number\":\"voluptatem\",\"token\":\"quia\",\"email_verified\":true}"
+                            "raw": "{\"name\":\"maiores\",\"email\":\"lesch.manuel@example.com\",\"phone_number\":\"sequi\",\"token\":\"vel\",\"email_verified\":true}"
                         },
                         "description": "Login through google",
                         "auth": {
@@ -332,7 +332,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "non",
+                                    "value": "ex",
                                     "description": "The ID of the category"
                                 }
                             ]
@@ -416,13 +416,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "magni",
+                                    "value": "itaque",
                                     "description": "The ID of the review."
                                 },
                                 {
                                     "id": "ID",
                                     "key": "ID",
-                                    "value": "incidunt",
+                                    "value": "assumenda",
                                     "description": "The ID of the review"
                                 }
                             ]
@@ -475,7 +475,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_id\":\"dolores\",\"rating\":1,\"review\":\"amet\"}"
+                            "raw": "{\"service_id\":\"aspernatur\",\"rating\":2,\"review\":\"possimus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -503,7 +503,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "non",
+                                    "value": "iste",
                                     "description": "The id of the review"
                                 }
                             ]
@@ -521,7 +521,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"rating\":17,\"review\":\"iusto\"}"
+                            "raw": "{\"rating\":3,\"review\":\"rerum\"}"
                         },
                         "description": ""
                     },
@@ -584,12 +584,6 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "eos",
-                                    "description": "The ID of the bookmark."
-                                },
-                                {
-                                    "id": "ID",
-                                    "key": "ID",
                                     "value": "3",
                                     "description": "The ID of the bookmark."
                                 }
@@ -674,14 +668,14 @@
                                 {
                                     "id": "latitude",
                                     "key": "latitude",
-                                    "value": "sit",
-                                    "description": ""
+                                    "value": "-1",
+                                    "description": "The user's latitudal location."
                                 },
                                 {
                                     "id": "longitude",
                                     "key": "longitude",
-                                    "value": "in",
-                                    "description": ""
+                                    "value": "36",
+                                    "description": "The user's longitudal location."
                                 }
                             ]
                         },
@@ -776,7 +770,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"quam\",\"price_min\":\"molestias\",\"location_lat\":\"est\",\"location_long\":\"veritatis\",\"categories\":[\"a\"],\"description\":\"Consequatur ratione consequatur reiciendis qui repellendus illo est.\",\"price\":\"officiis\"}"
+                            "raw": "{\"title\":\"\\\"Mjenzi Services\\\"\",\"price_min\":\"\\\"200\\\"\",\"location_lat\":\"-1.260284\",\"location_long\":\"36.477463\",\"categories\":[1,4,8]}"
                         },
                         "description": ""
                     },
@@ -819,7 +813,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"magnam\",\"price_min\":\"perspiciatis\",\"location_lat\":\"nesciunt\",\"location_long\":\"eaque\",\"categories\":[],\"description\":\"Rerum sunt id sed et consequuntur vitae.\",\"price\":\"dolor\"}"
+                            "raw": "{\"title\":\"numquam\",\"price_min\":\"aut\",\"location_lat\":\"perferendis\",\"location_long\":\"voluptatem\",\"categories\":[],\"description\":\"Id adipisci voluptates asperiores id autem commodi similique.\",\"price\":\"beatae\"}"
                         },
                         "description": ""
                     },
@@ -900,7 +894,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_id\":\"molestias\",\"message\":\"earum\"}"
+                            "raw": "{\"service_id\":\"porro\",\"message\":\"ea\"}"
                         },
                         "description": ""
                     },
@@ -935,7 +929,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_request_id\":\"eos\",\"status\":\"porro\",\"service_id\":\"quasi\"}"
+                            "raw": "{\"service_request_id\":\"in\",\"status\":\"nulla\",\"service_id\":\"alias\"}"
                         },
                         "description": ""
                     },
