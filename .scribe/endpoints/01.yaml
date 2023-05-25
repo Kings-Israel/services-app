@@ -22,19 +22,19 @@ endpoints:
         name: latitude
         description: ''
         required: false
-        example: ullam
+        example: magnam
         type: string
         custom: []
       longitude:
         name: longitude
         description: ''
         required: false
-        example: corrupti
+        example: magnam
         type: string
         custom: []
     cleanUrlParameters:
-      latitude: ullam
-      longitude: corrupti
+      latitude: magnam
+      longitude: magnam
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -81,11 +81,11 @@ endpoints:
         name: id
         description: 'The id of the service'
         required: false
-        example: vero
+        example: et
         type: string
         custom: []
     cleanUrlParameters:
-      id: vero
+      id: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -136,28 +136,28 @@ endpoints:
         name: title
         description: 'The title of the new service'
         required: true
-        example: quod
+        example: eum
         type: string
         custom: []
       price_min:
         name: price_min
         description: ''
         required: true
-        example: magnam
+        example: et
         type: string
         custom: []
       location_lat:
         name: location_lat
         description: 'The latitude location of the new service'
         required: true
-        example: maiores
+        example: sapiente
         type: string
         custom: []
       location_long:
         name: location_long
         description: 'The longitude location of the new service'
         required: true
-        example: quis
+        example: voluptate
         type: string
         custom: []
       categories:
@@ -165,32 +165,32 @@ endpoints:
         description: 'The category/categories of the new service'
         required: true
         example:
-          - laboriosam
+          - provident
         type: 'string[]'
         custom: []
       description:
         name: description
         description: 'The description of the new service'
         required: false
-        example: 'Dolorem officiis et quo quis magnam nisi accusantium.'
+        example: 'Non distinctio ipsum dolor ullam libero ab rerum et.'
         type: text
         custom: []
       price:
         name: price
         description: 'The price of the new service'
         required: true
-        example: et
+        example: ea
         type: string
         custom: []
     cleanBodyParameters:
-      title: quod
-      price_min: magnam
-      location_lat: maiores
-      location_long: quis
+      title: eum
+      price_min: et
+      location_lat: sapiente
+      location_long: voluptate
       categories:
-        - laboriosam
-      description: 'Dolorem officiis et quo quis magnam nisi accusantium.'
-      price: et
+        - provident
+      description: 'Non distinctio ipsum dolor ullam libero ab rerum et.'
+      price: ea
     fileParameters: []
     responses:
       -
@@ -233,11 +233,11 @@ endpoints:
         name: id
         description: 'The ID of the service'
         required: false
-        example: voluptatem
+        example: neque
         type: string
         custom: []
     cleanUrlParameters:
-      id: voluptatem
+      id: neque
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -245,28 +245,28 @@ endpoints:
         name: title
         description: 'The title of the service'
         required: true
-        example: vel
+        example: molestias
         type: string
         custom: []
       price_min:
         name: price_min
         description: ''
         required: true
-        example: voluptates
+        example: tenetur
         type: string
         custom: []
       location_lat:
         name: location_lat
         description: 'The latitude location of the new service'
         required: false
-        example: eveniet
+        example: dolor
         type: string
         custom: []
       location_long:
         name: location_long
         description: 'The longitude location of the new service'
         required: false
-        example: harum
+        example: voluptatem
         type: string
         custom: []
       categories:
@@ -280,24 +280,24 @@ endpoints:
         name: description
         description: 'The description of the service'
         required: false
-        example: 'Aperiam laudantium debitis cumque ab nesciunt.'
+        example: 'Vel itaque mollitia ex iusto quis amet eos.'
         type: string
         custom: []
       price:
         name: price
         description: 'The price of the service'
         required: false
-        example: rerum
+        example: qui
         type: string
         custom: []
     cleanBodyParameters:
-      title: vel
-      price_min: voluptates
-      location_lat: eveniet
-      location_long: harum
+      title: molestias
+      price_min: tenetur
+      location_lat: dolor
+      location_long: voluptatem
       categories: []
-      description: 'Aperiam laudantium debitis cumque ab nesciunt.'
-      price: rerum
+      description: 'Vel itaque mollitia ex iusto quis amet eos.'
+      price: qui
     fileParameters: []
     responses:
       -
@@ -340,11 +340,11 @@ endpoints:
         name: id
         description: 'The id of the service'
         required: false
-        example: voluptatibus
+        example: quos
         type: string
         custom: []
     cleanUrlParameters:
-      id: voluptatibus
+      id: quos
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -395,19 +395,19 @@ endpoints:
         name: service_id
         description: 'The id of the service'
         required: true
-        example: occaecati
+        example: ut
         type: string
         custom: []
       message:
         name: message
         description: 'An optional message for the service provider'
         required: false
-        example: unde
+        example: ut
         type: string
         custom: []
     cleanBodyParameters:
-      service_id: occaecati
-      message: unde
+      service_id: ut
+      message: ut
     fileParameters: []
     responses:
       -
@@ -447,27 +447,27 @@ endpoints:
         name: service_request_id
         description: 'The ID of the service request to be changed'
         required: true
-        example: atque
+        example: nobis
         type: string
         custom: []
       status:
         name: status
         description: 'The new status of the service(Completed/Delivered, Delete, Dispute)'
         required: true
-        example: adipisci
+        example: et
         type: string
         custom: []
       service_id:
         name: service_id
         description: 'The ID of the service'
         required: true
-        example: est
+        example: accusamus
         type: string
         custom: []
     cleanBodyParameters:
-      service_request_id: atque
-      status: adipisci
-      service_id: est
+      service_request_id: nobis
+      status: et
+      service_id: accusamus
     fileParameters: []
     responses:
       -

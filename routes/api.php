@@ -3,8 +3,10 @@
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ServiceBookmarkController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServiceRequestController;
+use App\Http\Controllers\ServiceReviewController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -32,6 +34,10 @@ Route::get('/services/{id}', [ServiceController::class, 'show']);
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/categories/{id}', [CategoryController::class, 'show']);
 
+// Reviews
+Route::get('/reviews', [ServiceReviewController::class, 'reviews']);
+Route::get('/reviews/{id}', [ServiceReviewController::class, 'review']);
+
 Route::middleware(['auth:sanctum'])->group(function () {
     // User
     Route::get('/user', [UserController::class, 'show']);
@@ -48,6 +54,15 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     // Service Requests
     Route::get('/service/requests', [ServiceRequestController::class, 'index']);
+
+    // Bookmarks
+    Route::get('/bookmarks', [ServiceBookmarkController::class, 'bookmarks']);
+    Route::get('/bookmarks/{id}', [ServiceBookmarkController::class, 'bookmark']);
+    Route::post('/bookmark-service', [ServiceBookmarkController::class, 'bookmarkService']);
+
+    // Reviews
+    Route::post('/review', [ServiceReviewController::class, 'store']);
+    Route::post('/review/{id}', [ServiceReviewController::class, 'update']);
 
     // Admin
     Route::group(['prefix' => 'admin/', 'as' => 'admin.'], function () {

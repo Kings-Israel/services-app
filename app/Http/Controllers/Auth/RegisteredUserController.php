@@ -42,7 +42,7 @@ class RegisteredUserController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone_number' => ['required', 'string', 'unique:users'],
-            'password' => ['required', Rules\Password::defaults()],
+            'password' => ['required'],
             'role' => ['required', 'string']
         ]);
 
@@ -81,7 +81,7 @@ class RegisteredUserController extends Controller
 
             $token = $user->createToken($request->email)->plainTextToken;
 
-            return $this->respondWithSuccess(['data' => $user->only('id', 'first_name', 'last_name', 'email', 'avatar'), 'token' => $token]);
+            return $this->respondWithSuccess(['data' => $user->only('id', 'first_name', 'last_name', 'phone_number', 'email', 'avatar'), 'token' => $token]);
         }
 
         return response()->noContent();

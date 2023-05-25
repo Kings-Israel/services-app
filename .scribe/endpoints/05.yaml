@@ -1,18 +1,18 @@
-name: 'Reviews APIs'
+name: 'Service Bookmarking APIs'
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/reviews
+    uri: api/bookmarks
     metadata:
-      groupName: 'Reviews APIs'
+      groupName: 'Service Bookmarking APIs'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get reviews'
+      title: 'Get Bookmarked Services'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -40,13 +40,13 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/reviews/{id}'
+    uri: 'api/bookmarks/{id}'
     metadata:
-      groupName: 'Reviews APIs'
+      groupName: 'Service Bookmarking APIs'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Get a review'
+      title: 'Get Bookmarked Service'
       description: ''
       authenticated: false
       custom: []
@@ -56,21 +56,21 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the review.'
+        description: 'The ID of the bookmark.'
         required: true
-        example: ullam
+        example: neque
         type: string
         custom: []
       ID:
         name: ID
-        description: 'The ID of the review'
+        description: 'The ID of the bookmark'
         required: false
-        example: mollitia
+        example: sequi
         type: string
         custom: []
     cleanUrlParameters:
-      id: ullam
-      ID: mollitia
+      id: neque
+      ID: sequi
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -92,15 +92,15 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/review
+    uri: api/bookmark-service
     metadata:
-      groupName: 'Reviews APIs'
+      groupName: 'Service Bookmarking APIs'
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a review for a service'
+      title: 'Add or Remove a Service to and from bookmarked services'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
       Content-Type: application/json
@@ -112,89 +112,21 @@ endpoints:
     bodyParameters:
       service_id:
         name: service_id
-        description: 'The ID of the service'
-        required: true
-        example: in
-        type: string
-        custom: []
-      rating:
-        name: rating
-        description: 'The rating of the service'
-        required: true
-        example: 8
-        type: integer
-        custom: []
-      review:
-        name: review
-        description: 'The service review'
-        required: false
-        example: omnis
-        type: string
-        custom: []
-    cleanBodyParameters:
-      service_id: in
-      rating: 8
-      review: omnis
-    fileParameters: []
-    responses:
-      -
-        status: 201
-        content: '{}'
-        headers: []
         description: ''
+        required: true
+        example: fugiat
+        type: string
         custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/review/{id}'
-    metadata:
-      groupName: 'Reviews APIs'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Update a review'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
       id:
         name: id
-        description: 'The id of the review'
-        required: false
-        example: natus
-        type: string
-        custom: []
-    cleanUrlParameters:
-      id: natus
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      rating:
-        name: rating
-        description: 'The rating of the service'
+        description: 'The id of the service'
         required: true
-        example: 5
-        type: integer
-        custom: []
-      review:
-        name: review
-        description: 'The review to of the service'
-        required: false
-        example: dicta
+        example: vel
         type: string
         custom: []
     cleanBodyParameters:
-      rating: 5
-      review: dicta
+      service_id: fugiat
+      id: vel
     fileParameters: []
     responses:
       -

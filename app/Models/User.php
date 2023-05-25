@@ -67,4 +67,20 @@ class User extends Authenticatable
     {
         return $this->hasMany(ServiceRequest::class);
     }
+
+    /**
+     * Get all of the serviceReviews for the User
+     */
+    public function serviceReviews(): HasMany
+    {
+        return $this->hasMany(ServiceReview::class);
+    }
+
+    /**
+     * Get all of the bookmarks for the User
+     */
+    public function bookmarks(): HasMany
+    {
+        return $this->hasMany(ServiceBookmark::class);
+    }
 }

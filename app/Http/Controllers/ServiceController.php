@@ -28,13 +28,13 @@ class ServiceController extends Controller
         $search_query = $request->query('search_query');
 
         if ($request->query('per_page')) {
-            $services = Service::with('images', 'categories', 'user')
+            $services = Service::with('images', 'categories', 'user', 'reviews')
                         ->when($search_query && $search_query != '', function($query) use ($search_query) {
                             $query->where('title', 'LIKE', '%'.$search_query.'%');
                         })
                         ->paginate($per_page);
         } else {
-            $services = Service::with('images', 'categories', 'user')->get();
+            $services = Service::with('images', 'categories', 'user', 'reviews')->get();
         }
 
         return request()->wantsJson()
@@ -58,7 +58,7 @@ class ServiceController extends Controller
      */
     public function store(StoreServiceRequest $request)
     {
-        $service_location = Http::get('https://maps.googleapis.com/maps/api/geocode/json?latlng='.$request->location_lat.','.$request->location_long.'&key=AIzaSyCisnVFSnc5QVfU2Jm2W3oRLqMDrKwOEoM');
+        $service_location = Http::withOptions(['verify' => false])->get('https://maps.googleapis.com/maps/api/geocode/json?latlng='.$request->location_lat.','.$request->location_long.'&key=AIzaSyCisnVFSnc5QVfU2Jm2W3oRLqMDrKwOEoM');
 
         $location = $service_location['results'][0]['formatted_address'];
 
@@ -93,7 +93,7 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        $service = Service::find($id);
+        $service = Service::with('categories', 'images', 'reviews')->find($id);
 
         return request()->wantsJson()
             ? $this->respondeWithSuccess($service)
@@ -118,7 +118,7 @@ class ServiceController extends Controller
      */
     public function update(StoreServiceRequest $request, $id)
     {
-        $service_location = Http::get('https://maps.googleapis.com/maps/api/geocode/json?latlng='.$request->location_lat.','.$request->location_long.'&key=AIzaSyCisnVFSnc5QVfU2Jm2W3oRLqMDrKwOEoM');
+        $service_location = Http::withOptions(['verify' => false])->get('https://maps.googleapis.com/maps/api/geocode/json?latlng='.$request->location_lat.','.$request->location_long.'&key=AIzaSyCisnVFSnc5QVfU2Jm2W3oRLqMDrKwOEoM');
 
         $location = $service_location['results'][0]['formatted_address'];
 
@@ -174,7 +174,7 @@ class ServiceController extends Controller
      */
     public function saveServiceImages(Request $request, $id)
     {
-        abort_if(auth()->check() && auth()->user()->hasRole('user'), 401);
+        abort_if(auth()->check() && auth()->user()->hasRole('user'), 401, 'Permission denied.');
 
         $request->validate([
             'images' => 'required|array',

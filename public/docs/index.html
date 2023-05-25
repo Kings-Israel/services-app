@@ -107,6 +107,41 @@
                             </li>
                                                                         </ul>
                             </ul>
+                    <ul id="tocify-header-reviews-apis" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="reviews-apis">
+                    <a href="#reviews-apis">Reviews APIs</a>
+                </li>
+                                    <ul id="tocify-subheader-reviews-apis" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="reviews-apis-GETapi-reviews">
+                                <a href="#reviews-apis-GETapi-reviews">Get reviews</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="reviews-apis-GETapi-reviews--id-">
+                                <a href="#reviews-apis-GETapi-reviews--id-">Get a review</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="reviews-apis-POSTapi-review">
+                                <a href="#reviews-apis-POSTapi-review">Store a review for a service</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="reviews-apis-POSTapi-review--id-">
+                                <a href="#reviews-apis-POSTapi-review--id-">Update a review</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-service-bookmarking-apis" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="service-bookmarking-apis">
+                    <a href="#service-bookmarking-apis">Service Bookmarking APIs</a>
+                </li>
+                                    <ul id="tocify-subheader-service-bookmarking-apis" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="service-bookmarking-apis-GETapi-bookmarks">
+                                <a href="#service-bookmarking-apis-GETapi-bookmarks">Get Bookmarked Services</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="service-bookmarking-apis-GETapi-bookmarks--id-">
+                                <a href="#service-bookmarking-apis-GETapi-bookmarks--id-">Get Bookmarked Service</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="service-bookmarking-apis-POSTapi-bookmark-service">
+                                <a href="#service-bookmarking-apis-POSTapi-bookmark-service">Add or Remove a Service to and from bookmarked services</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
                     <ul id="tocify-header-services-apis" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="services-apis">
                     <a href="#services-apis">Services APIs</a>
@@ -196,8 +231,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"jabari.metz@example.net\",
-    \"password\": \",!c($o-sF#04WtSWc\"
+    \"email\": \"emard.raphaelle@example.net\",
+    \"password\": \"yG)Gc@?@T\\/&gt;tU&gt;=%Y&lt;\"
 }"
 </code></pre></div>
 
@@ -213,8 +248,8 @@ const headers = {
 };
 
 let body = {
-    "email": "jabari.metz@example.net",
-    "password": ",!c($o-sF#04WtSWc"
+    "email": "emard.raphaelle@example.net",
+    "password": "yG)Gc@?@T\/&gt;tU&gt;=%Y&lt;"
 };
 
 fetch(url, {
@@ -310,10 +345,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-login"
-               value="jabari.metz@example.net"
+               value="emard.raphaelle@example.net"
                data-component="body">
     <br>
-<p>The user's email or phone number Example: <code>jabari.metz@example.net</code></p>
+<p>The user's email or phone number Example: <code>emard.raphaelle@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -321,10 +356,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-login"
-               value=",!c($o-sF#04WtSWc"
+               value="yG)Gc@?@T/>tU>=%Y<"
                data-component="body">
     <br>
-<p>The user's password Example: <code>,!c($o-sF#04WtSWc</code></p>
+<p>The user's password Example: <code>yG)Gc@?@T/&gt;tU&gt;=%Y&lt;</code></p>
         </div>
         </form>
 
@@ -345,12 +380,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"beatae\",
-    \"last_name\": \"sed\",
-    \"email\": \"goodwin.alvina@example.net\",
-    \"phone_number\": \"aliquam\",
-    \"password\": \"V66Hm=0S&lt;RH8:9ChnMZ\",
-    \"role\": \"repellat\"
+    \"first_name\": \"et\",
+    \"last_name\": \"amet\",
+    \"email\": \"ashly97@example.com\",
+    \"phone_number\": \"est\",
+    \"password\": \"S,etN}TTt*yX4;3Dzx\",
+    \"role\": \"nulla\"
 }"
 </code></pre></div>
 
@@ -366,12 +401,12 @@ const headers = {
 };
 
 let body = {
-    "first_name": "beatae",
-    "last_name": "sed",
-    "email": "goodwin.alvina@example.net",
-    "phone_number": "aliquam",
-    "password": "V66Hm=0S&lt;RH8:9ChnMZ",
-    "role": "repellat"
+    "first_name": "et",
+    "last_name": "amet",
+    "email": "ashly97@example.com",
+    "phone_number": "est",
+    "password": "S,etN}TTt*yX4;3Dzx",
+    "role": "nulla"
 };
 
 fetch(url, {
@@ -467,10 +502,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="first_name"                data-endpoint="POSTapi-register"
-               value="beatae"
+               value="et"
                data-component="body">
     <br>
-<p>The vendor's first name Example: <code>beatae</code></p>
+<p>The vendor's first name Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -478,10 +513,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="last_name"                data-endpoint="POSTapi-register"
-               value="sed"
+               value="amet"
                data-component="body">
     <br>
-<p>The vendor's last name Example: <code>sed</code></p>
+<p>The vendor's last name Example: <code>amet</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -489,10 +524,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-register"
-               value="goodwin.alvina@example.net"
+               value="ashly97@example.com"
                data-component="body">
     <br>
-<p>The vendor's email Example: <code>goodwin.alvina@example.net</code></p>
+<p>The vendor's email Example: <code>ashly97@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone_number</code></b>&nbsp;&nbsp;
@@ -500,10 +535,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="phone_number"                data-endpoint="POSTapi-register"
-               value="aliquam"
+               value="est"
                data-component="body">
     <br>
-<p>The vendor's phone number Example: <code>aliquam</code></p>
+<p>The vendor's phone number Example: <code>est</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -511,10 +546,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-register"
-               value="V66Hm=0S<RH8:9ChnMZ"
+               value="S,etN}TTt*yX4;3Dzx"
                data-component="body">
     <br>
-<p>The vendor's password Example: <code>V66Hm=0S&lt;RH8:9ChnMZ</code></p>
+<p>The vendor's password Example: <code>S,etN}TTt*yX4;3Dzx</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>role</code></b>&nbsp;&nbsp;
@@ -522,10 +557,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="role"                data-endpoint="POSTapi-register"
-               value="repellat"
+               value="nulla"
                data-component="body">
     <br>
-<p>The person's role(vendor or user) Example: <code>repellat</code></p>
+<p>The person's role(vendor or user) Example: <code>nulla</code></p>
         </div>
         </form>
 
@@ -546,7 +581,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"phone_number\": \"incidunt\"
+    \"phone_number\": \"neque\"
 }"
 </code></pre></div>
 
@@ -562,7 +597,7 @@ const headers = {
 };
 
 let body = {
-    "phone_number": "incidunt"
+    "phone_number": "neque"
 };
 
 fetch(url, {
@@ -658,10 +693,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="phone_number"                data-endpoint="POSTapi-forgot-password"
-               value="incidunt"
+               value="neque"
                data-component="body">
     <br>
-<p>The user's phone number Example: <code>incidunt</code></p>
+<p>The user's phone number Example: <code>neque</code></p>
         </div>
         </form>
 
@@ -682,7 +717,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"code\": \"eligendi\"
+    \"code\": \"est\"
 }"
 </code></pre></div>
 
@@ -698,7 +733,7 @@ const headers = {
 };
 
 let body = {
-    "code": "eligendi"
+    "code": "est"
 };
 
 fetch(url, {
@@ -794,10 +829,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="code"                data-endpoint="POSTapi-otp-validate"
-               value="eligendi"
+               value="est"
                data-component="body">
     <br>
-<p>The Entered code Example: <code>eligendi</code></p>
+<p>The Entered code Example: <code>est</code></p>
         </div>
         </form>
 
@@ -818,9 +853,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"code\": \"blanditiis\",
-    \"password\": \"C!T)U~n+-7R\\\"\\/CL\\\"o\",
-    \"password_confirmation\": \"voluptatem\"
+    \"code\": \"aut\",
+    \"password\": \"(_{Yqm&gt;J\",
+    \"password_confirmation\": \"qui\"
 }"
 </code></pre></div>
 
@@ -836,9 +871,9 @@ const headers = {
 };
 
 let body = {
-    "code": "blanditiis",
-    "password": "C!T)U~n+-7R\"\/CL\"o",
-    "password_confirmation": "voluptatem"
+    "code": "aut",
+    "password": "(_{Yqm&gt;J",
+    "password_confirmation": "qui"
 };
 
 fetch(url, {
@@ -934,10 +969,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="code"                data-endpoint="POSTapi-reset-password"
-               value="blanditiis"
+               value="aut"
                data-component="body">
     <br>
-<p>Example: <code>blanditiis</code></p>
+<p>Example: <code>aut</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -945,10 +980,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-reset-password"
-               value="C!T)U~n+-7R"/CL"o"
+               value="(_{Yqm>J"
                data-component="body">
     <br>
-<p>New password Example: <code>C!T)U~n+-7R"/CL"o</code></p>
+<p>New password Example: <code>(_{Yqm&gt;J</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password_confirmation</code></b>&nbsp;&nbsp;
@@ -956,10 +991,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password_confirmation"                data-endpoint="POSTapi-reset-password"
-               value="voluptatem"
+               value="qui"
                data-component="body">
     <br>
-<p>New password confirmation Example: <code>voluptatem</code></p>
+<p>New password confirmation Example: <code>qui</code></p>
         </div>
         </form>
 
@@ -980,10 +1015,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"consequatur\",
-    \"email\": \"okeefe.roderick@example.com\",
-    \"phone_number\": \"ea\",
-    \"token\": \"libero\",
+    \"name\": \"aspernatur\",
+    \"email\": \"langosh.macie@example.net\",
+    \"phone_number\": \"voluptatem\",
+    \"token\": \"quaerat\",
     \"email_verified\": false
 }"
 </code></pre></div>
@@ -1000,10 +1035,10 @@ const headers = {
 };
 
 let body = {
-    "name": "consequatur",
-    "email": "okeefe.roderick@example.com",
-    "phone_number": "ea",
-    "token": "libero",
+    "name": "aspernatur",
+    "email": "langosh.macie@example.net",
+    "phone_number": "voluptatem",
+    "token": "quaerat",
     "email_verified": false
 };
 
@@ -1100,10 +1135,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-google-authenticate"
-               value="consequatur"
+               value="aspernatur"
                data-component="body">
     <br>
-<p>The name of the user Example: <code>consequatur</code></p>
+<p>The name of the user Example: <code>aspernatur</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -1111,10 +1146,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-google-authenticate"
-               value="okeefe.roderick@example.com"
+               value="langosh.macie@example.net"
                data-component="body">
     <br>
-<p>The email of the user Example: <code>okeefe.roderick@example.com</code></p>
+<p>The email of the user Example: <code>langosh.macie@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone_number</code></b>&nbsp;&nbsp;
@@ -1122,10 +1157,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="phone_number"                data-endpoint="POSTapi-google-authenticate"
-               value="ea"
+               value="voluptatem"
                data-component="body">
     <br>
-<p>The user's phone number Example: <code>ea</code></p>
+<p>The user's phone number Example: <code>voluptatem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>token</code></b>&nbsp;&nbsp;
@@ -1133,10 +1168,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="token"                data-endpoint="POSTapi-google-authenticate"
-               value="libero"
+               value="quaerat"
                data-component="body">
     <br>
-<p>A google provided token Example: <code>libero</code></p>
+<p>A google provided token Example: <code>quaerat</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email_verified</code></b>&nbsp;&nbsp;
@@ -1425,14 +1460,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://172.104.245.14/services-app/api/categories/quo" \
+    --get "https://172.104.245.14/services-app/api/categories/sunt" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://172.104.245.14/services-app/api/categories/quo"
+    "https://172.104.245.14/services-app/api/categories/sunt"
 );
 
 const headers = {
@@ -1532,12 +1567,1001 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="GETapi-categories--id-"
-               value="quo"
+               value="sunt"
                data-component="url">
     <br>
-<p>The ID of the category Example: <code>quo</code></p>
+<p>The ID of the category Example: <code>sunt</code></p>
             </div>
                     </form>
+
+                <h1 id="reviews-apis">Reviews APIs</h1>
+
+    
+
+                                <h2 id="reviews-apis-GETapi-reviews">Get reviews</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-reviews">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://172.104.245.14/services-app/api/reviews" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://172.104.245.14/services-app/api/reviews"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-reviews">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-reviews" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-reviews"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-reviews"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-reviews" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-reviews">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-reviews" data-method="GET"
+      data-path="api/reviews"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-reviews', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-reviews"
+                    onclick="tryItOut('GETapi-reviews');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-reviews"
+                    onclick="cancelTryOut('GETapi-reviews');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-reviews"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/reviews</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-reviews"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-reviews"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="reviews-apis-GETapi-reviews--id-">Get a review</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-reviews--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://172.104.245.14/services-app/api/reviews/ullam" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://172.104.245.14/services-app/api/reviews/ullam"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-reviews--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-reviews--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-reviews--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-reviews--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-reviews--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-reviews--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-reviews--id-" data-method="GET"
+      data-path="api/reviews/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-reviews--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-reviews--id-"
+                    onclick="tryItOut('GETapi-reviews--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-reviews--id-"
+                    onclick="cancelTryOut('GETapi-reviews--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-reviews--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/reviews/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-reviews--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-reviews--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="id"                data-endpoint="GETapi-reviews--id-"
+               value="ullam"
+               data-component="url">
+    <br>
+<p>The ID of the review. Example: <code>ullam</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>ID</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+               name="ID"                data-endpoint="GETapi-reviews--id-"
+               value="mollitia"
+               data-component="url">
+    <br>
+<p>The ID of the review Example: <code>mollitia</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="reviews-apis-POSTapi-review">Store a review for a service</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-review">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://172.104.245.14/services-app/api/review" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"service_id\": \"in\",
+    \"rating\": 8,
+    \"review\": \"omnis\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://172.104.245.14/services-app/api/review"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "service_id": "in",
+    "rating": 8,
+    "review": "omnis"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-review">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-review" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-review"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-review"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-review" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-review">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-review" data-method="POST"
+      data-path="api/review"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-review', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-review"
+                    onclick="tryItOut('POSTapi-review');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-review"
+                    onclick="cancelTryOut('POSTapi-review');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-review"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/review</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="POSTapi-review"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="POSTapi-review"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>service_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="service_id"                data-endpoint="POSTapi-review"
+               value="in"
+               data-component="body">
+    <br>
+<p>The ID of the service Example: <code>in</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>rating</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               name="rating"                data-endpoint="POSTapi-review"
+               value="8"
+               data-component="body">
+    <br>
+<p>The rating of the service Example: <code>8</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>review</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+               name="review"                data-endpoint="POSTapi-review"
+               value="omnis"
+               data-component="body">
+    <br>
+<p>The service review Example: <code>omnis</code></p>
+        </div>
+        </form>
+
+                    <h2 id="reviews-apis-POSTapi-review--id-">Update a review</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-review--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://172.104.245.14/services-app/api/review/natus" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"rating\": 5,
+    \"review\": \"dicta\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://172.104.245.14/services-app/api/review/natus"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "rating": 5,
+    "review": "dicta"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-review--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-review--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-review--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-review--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-review--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-review--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-review--id-" data-method="POST"
+      data-path="api/review/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-review--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-review--id-"
+                    onclick="tryItOut('POSTapi-review--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-review--id-"
+                    onclick="cancelTryOut('POSTapi-review--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-review--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/review/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="POSTapi-review--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="POSTapi-review--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+               name="id"                data-endpoint="POSTapi-review--id-"
+               value="natus"
+               data-component="url">
+    <br>
+<p>The id of the review Example: <code>natus</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>rating</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               name="rating"                data-endpoint="POSTapi-review--id-"
+               value="5"
+               data-component="body">
+    <br>
+<p>The rating of the service Example: <code>5</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>review</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+               name="review"                data-endpoint="POSTapi-review--id-"
+               value="dicta"
+               data-component="body">
+    <br>
+<p>The review to of the service Example: <code>dicta</code></p>
+        </div>
+        </form>
+
+                <h1 id="service-bookmarking-apis">Service Bookmarking APIs</h1>
+
+    
+
+                                <h2 id="service-bookmarking-apis-GETapi-bookmarks">Get Bookmarked Services</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-bookmarks">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://172.104.245.14/services-app/api/bookmarks" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://172.104.245.14/services-app/api/bookmarks"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-bookmarks">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-bookmarks" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-bookmarks"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-bookmarks"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-bookmarks" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-bookmarks">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-bookmarks" data-method="GET"
+      data-path="api/bookmarks"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-bookmarks', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-bookmarks"
+                    onclick="tryItOut('GETapi-bookmarks');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-bookmarks"
+                    onclick="cancelTryOut('GETapi-bookmarks');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-bookmarks"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/bookmarks</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-bookmarks"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-bookmarks"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="service-bookmarking-apis-GETapi-bookmarks--id-">Get Bookmarked Service</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-bookmarks--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://172.104.245.14/services-app/api/bookmarks/neque" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://172.104.245.14/services-app/api/bookmarks/neque"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-bookmarks--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-bookmarks--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-bookmarks--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-bookmarks--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-bookmarks--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-bookmarks--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-bookmarks--id-" data-method="GET"
+      data-path="api/bookmarks/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-bookmarks--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-bookmarks--id-"
+                    onclick="tryItOut('GETapi-bookmarks--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-bookmarks--id-"
+                    onclick="cancelTryOut('GETapi-bookmarks--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-bookmarks--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/bookmarks/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-bookmarks--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-bookmarks--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="id"                data-endpoint="GETapi-bookmarks--id-"
+               value="neque"
+               data-component="url">
+    <br>
+<p>The ID of the bookmark. Example: <code>neque</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>ID</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+               name="ID"                data-endpoint="GETapi-bookmarks--id-"
+               value="sequi"
+               data-component="url">
+    <br>
+<p>The ID of the bookmark Example: <code>sequi</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="service-bookmarking-apis-POSTapi-bookmark-service">Add or Remove a Service to and from bookmarked services</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-bookmark-service">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://172.104.245.14/services-app/api/bookmark-service" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"service_id\": \"fugiat\",
+    \"id\": \"vel\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://172.104.245.14/services-app/api/bookmark-service"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "service_id": "fugiat",
+    "id": "vel"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-bookmark-service">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-bookmark-service" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-bookmark-service"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-bookmark-service"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-bookmark-service" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-bookmark-service">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-bookmark-service" data-method="POST"
+      data-path="api/bookmark-service"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-bookmark-service', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-bookmark-service"
+                    onclick="tryItOut('POSTapi-bookmark-service');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-bookmark-service"
+                    onclick="cancelTryOut('POSTapi-bookmark-service');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-bookmark-service"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/bookmark-service</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="POSTapi-bookmark-service"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="POSTapi-bookmark-service"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>service_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="service_id"                data-endpoint="POSTapi-bookmark-service"
+               value="fugiat"
+               data-component="body">
+    <br>
+<p>Example: <code>fugiat</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="id"                data-endpoint="POSTapi-bookmark-service"
+               value="vel"
+               data-component="body">
+    <br>
+<p>The id of the service Example: <code>vel</code></p>
+        </div>
+        </form>
 
                 <h1 id="services-apis">Services APIs</h1>
 
@@ -1556,14 +2580,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://172.104.245.14/services-app/api/services/ullam/corrupti" \
+    --get "https://172.104.245.14/services-app/api/services/magnam/magnam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://172.104.245.14/services-app/api/services/ullam/corrupti"
+    "https://172.104.245.14/services-app/api/services/magnam/magnam"
 );
 
 const headers = {
@@ -1663,10 +2687,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="latitude"                data-endpoint="GETapi-services--latitude----longitude--"
-               value="ullam"
+               value="magnam"
                data-component="url">
     <br>
-<p>Example: <code>ullam</code></p>
+<p>Example: <code>magnam</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>longitude</code></b>&nbsp;&nbsp;
@@ -1674,10 +2698,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="longitude"                data-endpoint="GETapi-services--latitude----longitude--"
-               value="corrupti"
+               value="magnam"
                data-component="url">
     <br>
-<p>Example: <code>corrupti</code></p>
+<p>Example: <code>magnam</code></p>
             </div>
                     </form>
 
@@ -1703,14 +2727,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://172.104.245.14/services-app/api/services/vero" \
+    --get "https://172.104.245.14/services-app/api/services/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://172.104.245.14/services-app/api/services/vero"
+    "https://172.104.245.14/services-app/api/services/et"
 );
 
 const headers = {
@@ -1810,10 +2834,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="GETapi-services--id-"
-               value="vero"
+               value="et"
                data-component="url">
     <br>
-<p>The id of the service Example: <code>vero</code></p>
+<p>The id of the service Example: <code>et</code></p>
             </div>
                     </form>
 
@@ -1844,15 +2868,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"quod\",
-    \"price_min\": \"magnam\",
-    \"location_lat\": \"maiores\",
-    \"location_long\": \"quis\",
+    \"title\": \"eum\",
+    \"price_min\": \"et\",
+    \"location_lat\": \"sapiente\",
+    \"location_long\": \"voluptate\",
     \"categories\": [
-        \"laboriosam\"
+        \"provident\"
     ],
-    \"description\": \"Dolorem officiis et quo quis magnam nisi accusantium.\",
-    \"price\": \"et\"
+    \"description\": \"Non distinctio ipsum dolor ullam libero ab rerum et.\",
+    \"price\": \"ea\"
 }"
 </code></pre></div>
 
@@ -1868,15 +2892,15 @@ const headers = {
 };
 
 let body = {
-    "title": "quod",
-    "price_min": "magnam",
-    "location_lat": "maiores",
-    "location_long": "quis",
+    "title": "eum",
+    "price_min": "et",
+    "location_lat": "sapiente",
+    "location_long": "voluptate",
     "categories": [
-        "laboriosam"
+        "provident"
     ],
-    "description": "Dolorem officiis et quo quis magnam nisi accusantium.",
-    "price": "et"
+    "description": "Non distinctio ipsum dolor ullam libero ab rerum et.",
+    "price": "ea"
 };
 
 fetch(url, {
@@ -1972,10 +2996,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="title"                data-endpoint="POSTapi-services"
-               value="quod"
+               value="eum"
                data-component="body">
     <br>
-<p>The title of the new service Example: <code>quod</code></p>
+<p>The title of the new service Example: <code>eum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price_min</code></b>&nbsp;&nbsp;
@@ -1983,10 +3007,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="price_min"                data-endpoint="POSTapi-services"
-               value="magnam"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>magnam</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location_lat</code></b>&nbsp;&nbsp;
@@ -1994,10 +3018,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="location_lat"                data-endpoint="POSTapi-services"
-               value="maiores"
+               value="sapiente"
                data-component="body">
     <br>
-<p>The latitude location of the new service Example: <code>maiores</code></p>
+<p>The latitude location of the new service Example: <code>sapiente</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location_long</code></b>&nbsp;&nbsp;
@@ -2005,10 +3029,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="location_long"                data-endpoint="POSTapi-services"
-               value="quis"
+               value="voluptate"
                data-component="body">
     <br>
-<p>The longitude location of the new service Example: <code>quis</code></p>
+<p>The longitude location of the new service Example: <code>voluptate</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>categories</code></b>&nbsp;&nbsp;
@@ -2029,10 +3053,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="description"                data-endpoint="POSTapi-services"
-               value="Dolorem officiis et quo quis magnam nisi accusantium."
+               value="Non distinctio ipsum dolor ullam libero ab rerum et."
                data-component="body">
     <br>
-<p>The description of the new service Example: <code>Dolorem officiis et quo quis magnam nisi accusantium.</code></p>
+<p>The description of the new service Example: <code>Non distinctio ipsum dolor ullam libero ab rerum et.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -2040,10 +3064,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="price"                data-endpoint="POSTapi-services"
-               value="et"
+               value="ea"
                data-component="body">
     <br>
-<p>The price of the new service Example: <code>et</code></p>
+<p>The price of the new service Example: <code>ea</code></p>
         </div>
         </form>
 
@@ -2070,24 +3094,24 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://172.104.245.14/services-app/api/services/voluptatem/update" \
+    "https://172.104.245.14/services-app/api/services/neque/update" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"vel\",
-    \"price_min\": \"voluptates\",
-    \"location_lat\": \"eveniet\",
-    \"location_long\": \"harum\",
+    \"title\": \"molestias\",
+    \"price_min\": \"tenetur\",
+    \"location_lat\": \"dolor\",
+    \"location_long\": \"voluptatem\",
     \"categories\": [],
-    \"description\": \"Aperiam laudantium debitis cumque ab nesciunt.\",
-    \"price\": \"rerum\"
+    \"description\": \"Vel itaque mollitia ex iusto quis amet eos.\",
+    \"price\": \"qui\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://172.104.245.14/services-app/api/services/voluptatem/update"
+    "https://172.104.245.14/services-app/api/services/neque/update"
 );
 
 const headers = {
@@ -2096,13 +3120,13 @@ const headers = {
 };
 
 let body = {
-    "title": "vel",
-    "price_min": "voluptates",
-    "location_lat": "eveniet",
-    "location_long": "harum",
+    "title": "molestias",
+    "price_min": "tenetur",
+    "location_lat": "dolor",
+    "location_long": "voluptatem",
     "categories": [],
-    "description": "Aperiam laudantium debitis cumque ab nesciunt.",
-    "price": "rerum"
+    "description": "Vel itaque mollitia ex iusto quis amet eos.",
+    "price": "qui"
 };
 
 fetch(url, {
@@ -2198,10 +3222,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="POSTapi-services--id--update"
-               value="voluptatem"
+               value="neque"
                data-component="url">
     <br>
-<p>The ID of the service Example: <code>voluptatem</code></p>
+<p>The ID of the service Example: <code>neque</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2210,10 +3234,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="title"                data-endpoint="POSTapi-services--id--update"
-               value="vel"
+               value="molestias"
                data-component="body">
     <br>
-<p>The title of the service Example: <code>vel</code></p>
+<p>The title of the service Example: <code>molestias</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price_min</code></b>&nbsp;&nbsp;
@@ -2221,10 +3245,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="price_min"                data-endpoint="POSTapi-services--id--update"
-               value="voluptates"
+               value="tenetur"
                data-component="body">
     <br>
-<p>Example: <code>voluptates</code></p>
+<p>Example: <code>tenetur</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location_lat</code></b>&nbsp;&nbsp;
@@ -2232,10 +3256,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="location_lat"                data-endpoint="POSTapi-services--id--update"
-               value="eveniet"
+               value="dolor"
                data-component="body">
     <br>
-<p>The latitude location of the new service Example: <code>eveniet</code></p>
+<p>The latitude location of the new service Example: <code>dolor</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>location_long</code></b>&nbsp;&nbsp;
@@ -2243,10 +3267,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="location_long"                data-endpoint="POSTapi-services--id--update"
-               value="harum"
+               value="voluptatem"
                data-component="body">
     <br>
-<p>The longitude location of the new service Example: <code>harum</code></p>
+<p>The longitude location of the new service Example: <code>voluptatem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>categories</code></b>&nbsp;&nbsp;
@@ -2265,10 +3289,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="description"                data-endpoint="POSTapi-services--id--update"
-               value="Aperiam laudantium debitis cumque ab nesciunt."
+               value="Vel itaque mollitia ex iusto quis amet eos."
                data-component="body">
     <br>
-<p>The description of the service Example: <code>Aperiam laudantium debitis cumque ab nesciunt.</code></p>
+<p>The description of the service Example: <code>Vel itaque mollitia ex iusto quis amet eos.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -2276,10 +3300,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="price"                data-endpoint="POSTapi-services--id--update"
-               value="rerum"
+               value="qui"
                data-component="body">
     <br>
-<p>The price of the service Example: <code>rerum</code></p>
+<p>The price of the service Example: <code>qui</code></p>
         </div>
         </form>
 
@@ -2305,7 +3329,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://172.104.245.14/services-app/api/services/voluptatibus/images/add" \
+    "https://172.104.245.14/services-app/api/services/quos/images/add" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
 </code></pre></div>
@@ -2313,7 +3337,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://172.104.245.14/services-app/api/services/voluptatibus/images/add"
+    "https://172.104.245.14/services-app/api/services/quos/images/add"
 );
 
 const headers = {
@@ -2413,10 +3437,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="id"                data-endpoint="POSTapi-services--id--images-add"
-               value="voluptatibus"
+               value="quos"
                data-component="url">
     <br>
-<p>The id of the service Example: <code>voluptatibus</code></p>
+<p>The id of the service Example: <code>quos</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2452,8 +3476,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"service_id\": \"occaecati\",
-    \"message\": \"unde\"
+    \"service_id\": \"ut\",
+    \"message\": \"ut\"
 }"
 </code></pre></div>
 
@@ -2469,8 +3493,8 @@ const headers = {
 };
 
 let body = {
-    "service_id": "occaecati",
-    "message": "unde"
+    "service_id": "ut",
+    "message": "ut"
 };
 
 fetch(url, {
@@ -2566,10 +3590,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="service_id"                data-endpoint="POSTapi-service-request"
-               value="occaecati"
+               value="ut"
                data-component="body">
     <br>
-<p>The id of the service Example: <code>occaecati</code></p>
+<p>The id of the service Example: <code>ut</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>message</code></b>&nbsp;&nbsp;
@@ -2577,10 +3601,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="message"                data-endpoint="POSTapi-service-request"
-               value="unde"
+               value="ut"
                data-component="body">
     <br>
-<p>An optional message for the service provider Example: <code>unde</code></p>
+<p>An optional message for the service provider Example: <code>ut</code></p>
         </div>
         </form>
 
@@ -2602,9 +3626,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"service_request_id\": \"atque\",
-    \"status\": \"adipisci\",
-    \"service_id\": \"est\"
+    \"service_request_id\": \"nobis\",
+    \"status\": \"et\",
+    \"service_id\": \"accusamus\"
 }"
 </code></pre></div>
 
@@ -2620,9 +3644,9 @@ const headers = {
 };
 
 let body = {
-    "service_request_id": "atque",
-    "status": "adipisci",
-    "service_id": "est"
+    "service_request_id": "nobis",
+    "status": "et",
+    "service_id": "accusamus"
 };
 
 fetch(url, {
@@ -2718,10 +3742,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="service_request_id"                data-endpoint="POSTapi-service-delivery-status-update"
-               value="atque"
+               value="nobis"
                data-component="body">
     <br>
-<p>The ID of the service request to be changed Example: <code>atque</code></p>
+<p>The ID of the service request to be changed Example: <code>nobis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
@@ -2729,10 +3753,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="status"                data-endpoint="POSTapi-service-delivery-status-update"
-               value="adipisci"
+               value="et"
                data-component="body">
     <br>
-<p>The new status of the service(Completed/Delivered, Delete, Dispute) Example: <code>adipisci</code></p>
+<p>The new status of the service(Completed/Delivered, Delete, Dispute) Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>service_id</code></b>&nbsp;&nbsp;
@@ -2740,10 +3764,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="service_id"                data-endpoint="POSTapi-service-delivery-status-update"
-               value="est"
+               value="accusamus"
                data-component="body">
     <br>
-<p>The ID of the service Example: <code>est</code></p>
+<p>The ID of the service Example: <code>accusamus</code></p>
         </div>
         </form>
 

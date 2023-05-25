@@ -58,4 +58,20 @@ class Service extends Model
     {
         return $this->hasMany(ServiceRequest::class);
     }
+
+    /**
+     * Get all of the reviews for the Service
+     */
+    public function reviews(): HasMany
+    {
+        return $this->hasMany(ServiceReview::class);
+    }
+
+    /**
+     * Get all of the bookmarked for the Service
+     */
+    public function bookmarked(): HasMany
+    {
+        return $this->hasMany(ServiceBookmark::class);
+    }
 }

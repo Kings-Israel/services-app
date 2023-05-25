@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Services App",
-        "_postman_id": "0eea72cd-ebf6-4fbf-b8ba-d703120b4deb",
+        "_postman_id": "5939ce34-9902-446b-945e-e10920d75e56",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"jabari.metz@example.net\",\"password\":\",!c($o-sF#04WtSWc\"}"
+                            "raw": "{\"email\":\"emard.raphaelle@example.net\",\"password\":\"yG)Gc@?@T\\\/>tU>=%Y<\"}"
                         },
                         "description": "",
                         "auth": {
@@ -79,7 +79,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"beatae\",\"last_name\":\"sed\",\"email\":\"goodwin.alvina@example.net\",\"phone_number\":\"aliquam\",\"password\":\"V66Hm=0S<RH8:9ChnMZ\",\"role\":\"repellat\"}"
+                            "raw": "{\"first_name\":\"et\",\"last_name\":\"amet\",\"email\":\"ashly97@example.com\",\"phone_number\":\"est\",\"password\":\"S,etN}TTt*yX4;3Dzx\",\"role\":\"nulla\"}"
                         },
                         "description": "",
                         "auth": {
@@ -117,7 +117,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone_number\":\"incidunt\"}"
+                            "raw": "{\"phone_number\":\"neque\"}"
                         },
                         "description": "",
                         "auth": {
@@ -155,7 +155,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"eligendi\"}"
+                            "raw": "{\"code\":\"est\"}"
                         },
                         "description": "",
                         "auth": {
@@ -193,7 +193,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"blanditiis\",\"password\":\"C!T)U~n+-7R\\\"\\\/CL\\\"o\",\"password_confirmation\":\"voluptatem\"}"
+                            "raw": "{\"code\":\"aut\",\"password\":\"(_{Yqm>J\",\"password_confirmation\":\"qui\"}"
                         },
                         "description": "",
                         "auth": {
@@ -231,7 +231,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"consequatur\",\"email\":\"okeefe.roderick@example.com\",\"phone_number\":\"ea\",\"token\":\"libero\",\"email_verified\":false}"
+                            "raw": "{\"name\":\"aspernatur\",\"email\":\"langosh.macie@example.net\",\"phone_number\":\"voluptatem\",\"token\":\"quaerat\",\"email_verified\":false}"
                         },
                         "description": "Login through google",
                         "auth": {
@@ -332,7 +332,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quo",
+                                    "value": "sunt",
                                     "description": "The ID of the category"
                                 }
                             ]
@@ -366,6 +366,299 @@
             ]
         },
         {
+            "name": "Reviews APIs",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get reviews",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/reviews",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/reviews"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get a review",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/reviews\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/reviews\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "ullam",
+                                    "description": "The ID of the review."
+                                },
+                                {
+                                    "id": "ID",
+                                    "key": "ID",
+                                    "value": "mollitia",
+                                    "description": "The ID of the review"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a review for a service",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/review",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/review"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"service_id\":\"in\",\"rating\":8,\"review\":\"omnis\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update a review",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/review\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/review\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "natus",
+                                    "description": "The id of the review"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"rating\":5,\"review\":\"dicta\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Service Bookmarking APIs",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get Bookmarked Services",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/bookmarks",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/bookmarks"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Bookmarked Service",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/bookmarks\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/bookmarks\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "neque",
+                                    "description": "The ID of the bookmark."
+                                },
+                                {
+                                    "id": "ID",
+                                    "key": "ID",
+                                    "value": "sequi",
+                                    "description": "The ID of the bookmark"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Add or Remove a Service to and from bookmarked services",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/bookmark-service",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/bookmark-service"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"service_id\":\"fugiat\",\"id\":\"vel\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Services APIs",
             "description": "",
             "item": [
@@ -381,13 +674,13 @@
                                 {
                                     "id": "latitude",
                                     "key": "latitude",
-                                    "value": "ullam",
+                                    "value": "magnam",
                                     "description": ""
                                 },
                                 {
                                     "id": "longitude",
                                     "key": "longitude",
-                                    "value": "corrupti",
+                                    "value": "magnam",
                                     "description": ""
                                 }
                             ]
@@ -430,7 +723,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "vero",
+                                    "value": "et",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -483,7 +776,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"quod\",\"price_min\":\"magnam\",\"location_lat\":\"maiores\",\"location_long\":\"quis\",\"categories\":[\"laboriosam\"],\"description\":\"Dolorem officiis et quo quis magnam nisi accusantium.\",\"price\":\"et\"}"
+                            "raw": "{\"title\":\"eum\",\"price_min\":\"et\",\"location_lat\":\"sapiente\",\"location_long\":\"voluptate\",\"categories\":[\"provident\"],\"description\":\"Non distinctio ipsum dolor ullam libero ab rerum et.\",\"price\":\"ea\"}"
                         },
                         "description": ""
                     },
@@ -508,7 +801,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptatem",
+                                    "value": "neque",
                                     "description": "The ID of the service"
                                 }
                             ]
@@ -526,7 +819,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"vel\",\"price_min\":\"voluptates\",\"location_lat\":\"eveniet\",\"location_long\":\"harum\",\"categories\":[],\"description\":\"Aperiam laudantium debitis cumque ab nesciunt.\",\"price\":\"rerum\"}"
+                            "raw": "{\"title\":\"molestias\",\"price_min\":\"tenetur\",\"location_lat\":\"dolor\",\"location_long\":\"voluptatem\",\"categories\":[],\"description\":\"Vel itaque mollitia ex iusto quis amet eos.\",\"price\":\"qui\"}"
                         },
                         "description": ""
                     },
@@ -551,7 +844,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptatibus",
+                                    "value": "quos",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -607,7 +900,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_id\":\"occaecati\",\"message\":\"unde\"}"
+                            "raw": "{\"service_id\":\"ut\",\"message\":\"ut\"}"
                         },
                         "description": ""
                     },
@@ -642,7 +935,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_request_id\":\"atque\",\"status\":\"adipisci\",\"service_id\":\"est\"}"
+                            "raw": "{\"service_request_id\":\"nobis\",\"status\":\"et\",\"service_id\":\"accusamus\"}"
                         },
                         "description": ""
                     },

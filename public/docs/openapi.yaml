@@ -34,11 +34,11 @@ paths:
                 email:
                   type: string
                   description: "The user's email or phone number"
-                  example: jabari.metz@example.net
+                  example: emard.raphaelle@example.net
                 password:
                   type: string
                   description: "The user's password"
-                  example: ',!c($o-sF#04WtSWc'
+                  example: 'yG)Gc@?@T/>tU>=%Y<'
               required:
                 - email
                 - password
@@ -70,27 +70,27 @@ paths:
                 first_name:
                   type: string
                   description: "The vendor's first name"
-                  example: beatae
+                  example: et
                 last_name:
                   type: string
                   description: "The vendor's last name"
-                  example: sed
+                  example: amet
                 email:
                   type: string
                   description: "The vendor's email"
-                  example: goodwin.alvina@example.net
+                  example: ashly97@example.com
                 phone_number:
                   type: string
                   description: "The vendor's phone number"
-                  example: aliquam
+                  example: est
                 password:
                   type: string
                   description: "The vendor's password"
-                  example: 'V66Hm=0S<RH8:9ChnMZ'
+                  example: 'S,etN}TTt*yX4;3Dzx'
                 role:
                   type: string
                   description: "The person's role(vendor or user)"
-                  example: repellat
+                  example: nulla
               required:
                 - first_name
                 - last_name
@@ -126,7 +126,7 @@ paths:
                 phone_number:
                   type: string
                   description: "The user's phone number"
-                  example: incidunt
+                  example: neque
               required:
                 - phone_number
       security: []
@@ -157,7 +157,7 @@ paths:
                 code:
                   type: string
                   description: 'The Entered code'
-                  example: eligendi
+                  example: est
               required:
                 - code
       security: []
@@ -188,15 +188,15 @@ paths:
                 code:
                   type: string
                   description: ''
-                  example: blanditiis
+                  example: aut
                 password:
                   type: string
                   description: 'New password'
-                  example: 'C!T)U~n+-7R"/CL"o'
+                  example: '(_{Yqm>J'
                 password_confirmation:
                   type: string
                   description: 'New password confirmation'
-                  example: voluptatem
+                  example: qui
               required:
                 - code
                 - password
@@ -229,19 +229,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the user'
-                  example: consequatur
+                  example: aspernatur
                 email:
                   type: string
                   description: 'The email of the user'
-                  example: okeefe.roderick@example.com
+                  example: langosh.macie@example.net
                 phone_number:
                   type: string
                   description: "The user's phone number"
-                  example: ea
+                  example: voluptatem
                 token:
                   type: string
                   description: 'A google provided token'
-                  example: libero
+                  example: quaerat
                 email_verified:
                   type: boolean
                   description: 'Whether the user email is verified'
@@ -317,7 +317,248 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: quo
+            value: sunt
+  /api/reviews:
+    get:
+      summary: 'Get reviews'
+      operationId: getReviews
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Reviews APIs'
+      security: []
+  '/api/reviews/{id}':
+    get:
+      summary: 'Get a review'
+      operationId: getAReview
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Reviews APIs'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the review.'
+        example: ullam
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: ID
+        description: 'Optional parameter. The ID of the review'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: mollitia
+  /api/review:
+    post:
+      summary: 'Store a review for a service'
+      operationId: storeAReviewForAService
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Reviews APIs'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                service_id:
+                  type: string
+                  description: 'The ID of the service'
+                  example: in
+                rating:
+                  type: integer
+                  description: 'The rating of the service'
+                  example: 8
+                review:
+                  type: string
+                  description: 'The service review'
+                  example: omnis
+              required:
+                - service_id
+                - rating
+      security: []
+  '/api/review/{id}':
+    post:
+      summary: 'Update a review'
+      operationId: updateAReview
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Reviews APIs'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rating:
+                  type: integer
+                  description: 'The rating of the service'
+                  example: 5
+                review:
+                  type: string
+                  description: 'The review to of the service'
+                  example: dicta
+              required:
+                - rating
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The id of the review'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: natus
+  /api/bookmarks:
+    get:
+      summary: 'Get Bookmarked Services'
+      operationId: getBookmarkedServices
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Service Bookmarking APIs'
+  '/api/bookmarks/{id}':
+    get:
+      summary: 'Get Bookmarked Service'
+      operationId: getBookmarkedService
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Service Bookmarking APIs'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the bookmark.'
+        example: neque
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: ID
+        description: 'Optional parameter. The ID of the bookmark'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: sequi
+  /api/bookmark-service:
+    post:
+      summary: 'Add or Remove a Service to and from bookmarked services'
+      operationId: addOrRemoveAServiceToAndFromBookmarkedServices
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Service Bookmarking APIs'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                service_id:
+                  type: string
+                  description: ''
+                  example: fugiat
+                id:
+                  type: string
+                  description: 'The id of the service'
+                  example: vel
+              required:
+                - service_id
+                - id
   '/api/services/{latitude}/{longitude}':
     get:
       summary: 'Get all services.'
@@ -350,7 +591,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: ullam
+            value: magnam
       -
         in: path
         name: longitude
@@ -364,7 +605,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: corrupti
+            value: magnam
   '/api/services/{id}':
     get:
       summary: 'Show service details.'
@@ -397,7 +638,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: vero
+            value: et
   /api/services:
     post:
       summary: 'Add a new service.'
@@ -425,34 +666,34 @@ paths:
                 title:
                   type: string
                   description: 'The title of the new service'
-                  example: quod
+                  example: eum
                 price_min:
                   type: string
                   description: ''
-                  example: magnam
+                  example: et
                 location_lat:
                   type: string
                   description: 'The latitude location of the new service'
-                  example: maiores
+                  example: sapiente
                 location_long:
                   type: string
                   description: 'The longitude location of the new service'
-                  example: quis
+                  example: voluptate
                 categories:
                   type: array
                   description: 'The category/categories of the new service'
                   example:
-                    - laboriosam
+                    - provident
                   items:
                     type: string
                 description:
                   type: text
                   description: 'The description of the new service'
-                  example: 'Dolorem officiis et quo quis magnam nisi accusantium.'
+                  example: 'Non distinctio ipsum dolor ullam libero ab rerum et.'
                 price:
                   type: string
                   description: 'The price of the new service'
-                  example: et
+                  example: ea
               required:
                 - title
                 - price_min
@@ -487,19 +728,19 @@ paths:
                 title:
                   type: string
                   description: 'The title of the service'
-                  example: vel
+                  example: molestias
                 price_min:
                   type: string
                   description: ''
-                  example: voluptates
+                  example: tenetur
                 location_lat:
                   type: string
                   description: 'The latitude location of the new service'
-                  example: eveniet
+                  example: dolor
                 location_long:
                   type: string
                   description: 'The longitude location of the new service'
-                  example: harum
+                  example: voluptatem
                 categories:
                   type: object
                   description: ''
@@ -508,11 +749,11 @@ paths:
                 description:
                   type: string
                   description: 'The description of the service'
-                  example: 'Aperiam laudantium debitis cumque ab nesciunt.'
+                  example: 'Vel itaque mollitia ex iusto quis amet eos.'
                 price:
                   type: string
                   description: 'The price of the service'
-                  example: rerum
+                  example: qui
               required:
                 - title
                 - price_min
@@ -531,7 +772,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: voluptatem
+            value: neque
   '/api/services/{id}/images/add':
     post:
       summary: 'Add services images'
@@ -577,7 +818,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: voluptatibus
+            value: quos
   /api/service/request:
     post:
       summary: 'Request for a service'
@@ -605,11 +846,11 @@ paths:
                 service_id:
                   type: string
                   description: 'The id of the service'
-                  example: occaecati
+                  example: ut
                 message:
                   type: string
                   description: 'An optional message for the service provider'
-                  example: unde
+                  example: ut
               required:
                 - service_id
   /api/service/delivery/status/update:
@@ -639,15 +880,15 @@ paths:
                 service_request_id:
                   type: string
                   description: 'The ID of the service request to be changed'
-                  example: atque
+                  example: nobis
                 status:
                   type: string
                   description: 'The new status of the service(Completed/Delivered, Delete, Dispute)'
-                  example: adipisci
+                  example: et
                 service_id:
                   type: string
                   description: 'The ID of the service'
-                  example: est
+                  example: accusamus
               required:
                 - service_request_id
                 - status
@@ -692,6 +933,12 @@ tags:
     description: ''
   -
     name: 'Categories APIs'
+    description: ''
+  -
+    name: 'Reviews APIs'
+    description: ''
+  -
+    name: 'Service Bookmarking APIs'
     description: ''
   -
     name: 'Services APIs'

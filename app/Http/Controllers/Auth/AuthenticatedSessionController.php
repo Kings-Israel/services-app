@@ -67,7 +67,7 @@ class AuthenticatedSessionController extends Controller
             $role = $user->getRoleNames()[0];
             return $this->respondWithSuccess(['user' => $user->only('id', 'first_name', 'last_name', 'email'), 'token' => $token, 'permissions' => $permissions, 'role' => $role]);
         }
-        return $this->respondWithSuccess(['data' => $user->only('id', 'first_name', 'last_name', 'email', 'avatar'), 'token' => $token]);
+        return $this->respondWithSuccess(['data' => $user->only('id', 'first_name', 'last_name', 'phone_number', 'email', 'avatar'), 'token' => $token]);
     }
 
     /**
@@ -87,6 +87,9 @@ class AuthenticatedSessionController extends Controller
             $request->session()->regenerateToken();
             return redirect('/');
         }
+
+        $request->user()->device_token = NULL;
+        $request->user()->save();
 
         $request->user()->tokens()->delete();
 
