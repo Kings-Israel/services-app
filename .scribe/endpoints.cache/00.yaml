@@ -8,6 +8,10 @@ endpoints:
       - POST
     uri: api/login
     metadata:
+      groupName: 'Auth APIs'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
       title: 'Login the user.'
       description: ''
       authenticated: false
@@ -16,34 +20,50 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
+    cleanQueryParameters: []
     bodyParameters:
       email:
         name: email
-        description: 'The user''s email or phone number'
+        description: "The user's email or phone number"
         required: true
-        example: quisquam
+        example: maxie21@example.com
         type: string
         custom: []
       password:
         name: password
-        description: 'The user''s password'
+        description: "The user's password"
         required: true
-        example: neque
+        example: "!':^~,1b"
         type: string
         custom: []
+    cleanBodyParameters:
+      email: maxie21@example.com
+      password: "!':^~,1b"
+    fileParameters: []
     responses:
       -
         status: 200
         content: '{}'
         headers: []
-        description: '200'
+        description: ''
+        custom: []
     responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
   -
     httpMethods:
       - POST
     uri: api/register
     metadata:
+      groupName: 'Auth APIs'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
       title: 'Register the user'
       description: ''
       authenticated: false
@@ -52,62 +72,82 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
+    cleanQueryParameters: []
     bodyParameters:
       first_name:
         name: first_name
-        description: 'The vendor''s first name'
+        description: "The vendor's first name"
         required: true
-        example: perspiciatis
+        example: debitis
         type: string
         custom: []
       last_name:
         name: last_name
-        description: 'The vendor''s last name'
+        description: "The vendor's last name"
         required: true
-        example: quidem
+        example: quas
         type: string
         custom: []
       email:
         name: email
-        description: 'The vendor''s email'
+        description: "The vendor's email"
         required: true
-        example: ut
+        example: tmurphy@example.com
         type: string
         custom: []
       phone_number:
         name: phone_number
-        description: 'The vendor''s phone number'
+        description: "The vendor's phone number"
         required: true
-        example: quis
+        example: sapiente
         type: string
         custom: []
       password:
         name: password
-        description: 'The vendor''s password'
+        description: "The vendor's password"
         required: true
-        example: iure
+        example: 'I:{97)I'
         type: string
         custom: []
       role:
         name: role
-        description: 'The person''s role(vendor or user)'
+        description: "The person's role(vendor or user)"
         required: true
-        example: error
+        example: omnis
         type: string
         custom: []
+    cleanBodyParameters:
+      first_name: debitis
+      last_name: quas
+      email: tmurphy@example.com
+      phone_number: sapiente
+      password: 'I:{97)I'
+      role: omnis
+    fileParameters: []
     responses:
       -
         status: 200
         content: '{}'
         headers: []
-        description: '200'
+        description: ''
+        custom: []
     responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
   -
     httpMethods:
       - POST
     uri: api/forgot-password
     metadata:
+      groupName: 'Auth APIs'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
       title: 'Request password reset code'
       description: ''
       authenticated: false
@@ -116,27 +156,42 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
+    cleanQueryParameters: []
     bodyParameters:
       phone_number:
         name: phone_number
-        description: 'The user''s phone number'
+        description: "The user's phone number"
         required: true
-        example: quas
+        example: delectus
         type: string
         custom: []
+    cleanBodyParameters:
+      phone_number: delectus
+    fileParameters: []
     responses:
       -
         status: 200
         content: '{}'
         headers: []
-        description: '200'
+        description: ''
+        custom: []
     responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
   -
     httpMethods:
       - POST
     uri: api/otp/validate
     metadata:
+      groupName: 'Auth APIs'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
       title: 'Validate the OTP'
       description: ''
       authenticated: false
@@ -145,27 +200,42 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
+    cleanQueryParameters: []
     bodyParameters:
       code:
         name: code
         description: 'The Entered code'
         required: true
-        example: et
+        example: rem
         type: string
         custom: []
+    cleanBodyParameters:
+      code: rem
+    fileParameters: []
     responses:
       -
         status: 200
         content: '{}'
         headers: []
-        description: '200'
+        description: ''
+        custom: []
     responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
   -
     httpMethods:
       - POST
     uri: api/reset-password
     metadata:
+      groupName: 'Auth APIs'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
       title: 'Reset Password'
       description: ''
       authenticated: false
@@ -174,63 +244,58 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
+    cleanQueryParameters: []
     bodyParameters:
       code:
         name: code
         description: ''
         required: true
-        example: doloremque
+        example: et
         type: string
         custom: []
       password:
         name: password
         description: 'New password'
         required: true
-        example: blanditiis
+        example: 'hQ=9*Qgik?pg'
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'New password confirmation'
         required: true
-        example: dolor
+        example: rem
         type: string
         custom: []
+    cleanBodyParameters:
+      code: et
+      password: 'hQ=9*Qgik?pg'
+      password_confirmation: rem
+    fileParameters: []
     responses:
       -
         status: 200
         content: '{}'
         headers: []
-        description: '200'
+        description: ''
+        custom: []
     responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: api/logout
-    metadata:
-      title: Logout.
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{}'
-        headers: []
-        description: '200'
-    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
   -
     httpMethods:
       - POST
     uri: api/google/authenticate
     metadata:
+      groupName: 'Auth APIs'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
       title: 'Social Login'
       description: 'Login through google'
       authenticated: false
@@ -239,34 +304,36 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
+    cleanUrlParameters: []
     queryParameters: []
+    cleanQueryParameters: []
     bodyParameters:
       name:
         name: name
         description: 'The name of the user'
         required: true
-        example: et
+        example: consequatur
         type: string
         custom: []
       email:
         name: email
         description: 'The email of the user'
         required: true
-        example: veniam
+        example: keebler.christopher@example.org
         type: string
         custom: []
       phone_number:
         name: phone_number
-        description: 'The user''s phone number'
+        description: "The user's phone number"
         required: false
-        example: voluptate
+        example: magnam
         type: string
         custom: []
       token:
         name: token
         description: 'A google provided token'
         required: false
-        example: omnis
+        example: et
         type: string
         custom: []
       email_verified:
@@ -276,18 +343,73 @@ endpoints:
         example: false
         type: boolean
         custom: []
+    cleanBodyParameters:
+      name: consequatur
+      email: keebler.christopher@example.org
+      phone_number: magnam
+      token: et
+      email_verified: false
+    fileParameters: []
     responses:
       -
         status: 200
         content: '{}'
         headers: []
-        description: '200'
+        description: ''
+        custom: []
     responseFields:
       token:
         name: token
         description: 'The authentication token that will be used to make other requests'
+        required: false
+        example: null
         type: ''
+        custom: []
       data:
         name: data
         description: 'The authenticated user information'
+        required: false
+        example: null
         type: ''
+        custom: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/logout
+    metadata:
+      groupName: 'Auth APIs'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: Logout.
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

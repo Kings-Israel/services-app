@@ -8,6 +8,11 @@ use App\Models\Category;
 use F9Web\ApiResponseHelpers;
 use Illuminate\Http\Request;
 
+/**
+ * Categories APIs
+ *
+ * @group Categories APIs
+ */
 class CategoryController extends Controller
 {
     use ApiResponseHelpers;
@@ -56,7 +61,7 @@ class CategoryController extends Controller
     public function show($id)
     {
         $category = Category::with('services.images', 'services.user')->find($id);
-        
+
         return $this->respondWithSuccess(['data' => $category]);
     }
 

@@ -15,7 +15,7 @@ class NumberGenerator
         return $number;
     }
 
-    function numberExists($model, $column, $number)
+    private static function numberExists($model, $column, $number)
     {
         return $model::where($column, $number)->exists();
     }

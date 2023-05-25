@@ -50,12 +50,12 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/service/requests', [ServiceRequestController::class, 'index']);
 
     // Admin
-    Route::group(['prefix' => 'admin/'], function () {
+    Route::group(['prefix' => 'admin/', 'as' => 'admin.'], function () {
         // Users
-        Route::get('users', [UserController::class, 'index']);
+        Route::get('users', [UserController::class, 'index'])->name('users.index');
         // Categories
-        Route::post('/categories', [CategoryController::class, 'store']);
-        Route::post('/categories/{id}/update', [CategoryController::class, 'update']);
+        Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
+        Route::post('/categories/{id}/update', [CategoryController::class, 'update'])->name('categories.update');
     });
 
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);

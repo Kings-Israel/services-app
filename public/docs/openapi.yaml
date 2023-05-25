@@ -1,31 +1,18 @@
 openapi: 3.0.3
 info:
-  title: 'Services App'
+  title: Laravel
   description: ''
   version: 1.0.0
 servers:
   -
-    url: 'http://172.104.245.14/services-app/api'
+    url: 'http://services.test'
 paths:
   /api/login:
     post:
       summary: 'Login the user.'
+      operationId: loginTheUser
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -46,12 +33,12 @@ paths:
               properties:
                 email:
                   type: string
-                  description: 'The user''s email or phone number'
-                  example: quisquam
+                  description: "The user's email or phone number"
+                  example: maxie21@example.com
                 password:
                   type: string
-                  description: 'The user''s password'
-                  example: neque
+                  description: "The user's password"
+                  example: "!':^~,1b"
               required:
                 - email
                 - password
@@ -59,22 +46,9 @@ paths:
   /api/register:
     post:
       summary: 'Register the user'
+      operationId: registerTheUser
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -95,28 +69,28 @@ paths:
               properties:
                 first_name:
                   type: string
-                  description: 'The vendor''s first name'
-                  example: perspiciatis
+                  description: "The vendor's first name"
+                  example: debitis
                 last_name:
                   type: string
-                  description: 'The vendor''s last name'
-                  example: quidem
+                  description: "The vendor's last name"
+                  example: quas
                 email:
                   type: string
-                  description: 'The vendor''s email'
-                  example: ut
+                  description: "The vendor's email"
+                  example: tmurphy@example.com
                 phone_number:
                   type: string
-                  description: 'The vendor''s phone number'
-                  example: quis
+                  description: "The vendor's phone number"
+                  example: sapiente
                 password:
                   type: string
-                  description: 'The vendor''s password'
-                  example: iure
+                  description: "The vendor's password"
+                  example: 'I:{97)I'
                 role:
                   type: string
-                  description: 'The person''s role(vendor or user)'
-                  example: error
+                  description: "The person's role(vendor or user)"
+                  example: omnis
               required:
                 - first_name
                 - last_name
@@ -128,22 +102,9 @@ paths:
   /api/forgot-password:
     post:
       summary: 'Request password reset code'
+      operationId: requestPasswordResetCode
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -164,30 +125,17 @@ paths:
               properties:
                 phone_number:
                   type: string
-                  description: 'The user''s phone number'
-                  example: quas
+                  description: "The user's phone number"
+                  example: delectus
               required:
                 - phone_number
       security: []
   /api/otp/validate:
     post:
       summary: 'Validate the OTP'
+      operationId: validateTheOTP
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -209,29 +157,16 @@ paths:
                 code:
                   type: string
                   description: 'The Entered code'
-                  example: et
+                  example: rem
               required:
                 - code
       security: []
   /api/reset-password:
     post:
       summary: 'Reset Password'
+      operationId: resetPassword
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -253,69 +188,26 @@ paths:
                 code:
                   type: string
                   description: ''
-                  example: doloremque
+                  example: et
                 password:
                   type: string
                   description: 'New password'
-                  example: blanditiis
+                  example: 'hQ=9*Qgik?pg'
                 password_confirmation:
                   type: string
                   description: 'New password confirmation'
-                  example: dolor
+                  example: rem
               required:
                 - code
                 - password
                 - password_confirmation
       security: []
-  /api/logout:
-    post:
-      summary: Logout.
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example: {  }
-                properties: {  }
-      tags:
-        - 'Auth APIs'
   /api/google/authenticate:
     post:
       summary: 'Social Login'
+      operationId: socialLogin
       description: 'Login through google'
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -337,19 +229,19 @@ paths:
                 name:
                   type: string
                   description: 'The name of the user'
-                  example: et
+                  example: consequatur
                 email:
                   type: string
                   description: 'The email of the user'
-                  example: veniam
+                  example: keebler.christopher@example.org
                 phone_number:
                   type: string
-                  description: 'The user''s phone number'
-                  example: voluptate
+                  description: "The user's phone number"
+                  example: magnam
                 token:
                   type: string
                   description: 'A google provided token'
-                  example: omnis
+                  example: et
                 email_verified:
                   type: boolean
                   description: 'Whether the user email is verified'
@@ -358,25 +250,12 @@ paths:
                 - name
                 - email
       security: []
-  /api/categories:
-    get:
-      summary: 'List all the categories.'
+  /api/logout:
+    post:
+      summary: Logout.
+      operationId: logout
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -387,27 +266,31 @@ paths:
                 example: {  }
                 properties: {  }
       tags:
-        - Endpoints
+        - 'Auth APIs'
+  /api/categories:
+    get:
+      summary: 'List all the categories.'
+      operationId: listAllTheCategories
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Categories APIs'
       security: []
   '/api/categories/{id}':
     get:
       summary: 'Get Category Details.'
+      operationId: getCategoryDetails
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -418,7 +301,7 @@ paths:
                 example: {  }
                 properties: {  }
       tags:
-        - Endpoints
+        - 'Categories APIs'
       security: []
     parameters:
       -
@@ -434,236 +317,13 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: nisi
-  /api/admin/categories:
-    post:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: ''
-                  example: ullam
-                image:
-                  type: string
-                  description: ''
-                  example: null
-              required:
-                - name
-      security: []
-  '/api/admin/categories/{id}/update':
-    post:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: ''
-                  example: rerum
-                image:
-                  type: string
-                  description: ''
-                  example: null
-              required:
-                - name
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the category.'
-        example: 1
-        required: true
-        schema:
-          type: integer
-  '/api/services/{id}':
-    get:
-      summary: 'Show service details.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example: {  }
-                properties: {  }
-      tags:
-        - 'Services APIs'
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'Optional parameter. The id of the service'
-        required: true
-        schema:
-          type: string
-        examples:
-          omitted:
-            summary: 'When the value is omitted'
-            value: ''
-          present:
-            summary: 'When the value is present'
-            value: unde
-  /api/services:
-    post:
-      summary: 'Add a new service.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        201:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example: {  }
-                properties: {  }
-      tags:
-        - 'Services APIs'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                title:
-                  type: string
-                  description: 'The title of the new service'
-                  example: a
-                price_min:
-                  type: string
-                  description: ''
-                  example: rerum
-                location_lat:
-                  type: string
-                  description: 'The latitude location of the new service'
-                  example: explicabo
-                location_long:
-                  type: string
-                  description: 'The longitude location of the new service'
-                  example: molestiae
-                categories:
-                  type: array
-                  description: 'The category/categories of the new service'
-                  example:
-                    - et
-                  items:
-                    type: string
-                description:
-                  type: text
-                  description: 'The description of the new service'
-                  example: iusto
-                price:
-                  type: string
-                  description: 'The price of the new service'
-                  example: saepe
-              required:
-                - title
-                - price_min
-                - location_lat
-                - location_long
-                - categories
-                - price
+            value: ipsum
   '/api/services/{latitude}/{longitude}':
     get:
       summary: 'Get all services.'
+      operationId: getAllServices
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -690,7 +350,7 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: qui
+            value: aut
       -
         in: path
         name: longitude
@@ -704,26 +364,108 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: accusantium
+            value: sint
+  '/api/services/{id}':
+    get:
+      summary: 'Show service details.'
+      operationId: showServiceDetails
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Services APIs'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The id of the service'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: facere
+  /api/services:
+    post:
+      summary: 'Add a new service.'
+      operationId: addANewService
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Services APIs'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'The title of the new service'
+                  example: hic
+                price_min:
+                  type: string
+                  description: ''
+                  example: tempora
+                location_lat:
+                  type: string
+                  description: 'The latitude location of the new service'
+                  example: veniam
+                location_long:
+                  type: string
+                  description: 'The longitude location of the new service'
+                  example: et
+                categories:
+                  type: array
+                  description: 'The category/categories of the new service'
+                  example:
+                    - odit
+                  items:
+                    type: string
+                description:
+                  type: text
+                  description: 'The description of the new service'
+                  example: 'Esse esse delectus enim harum nostrum itaque est eligendi.'
+                price:
+                  type: string
+                  description: 'The price of the new service'
+                  example: et
+              required:
+                - title
+                - price_min
+                - location_lat
+                - location_long
+                - categories
+                - price
   '/api/services/{id}/update':
     post:
       summary: 'Update a service.'
+      operationId: updateAService
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -745,11 +487,11 @@ paths:
                 title:
                   type: string
                   description: 'The title of the service'
-                  example: repellendus
+                  example: ea
                 price_min:
                   type: string
                   description: ''
-                  example: mollitia
+                  example: ad
                 location_lat:
                   type: string
                   description: 'The latitude location of the new service'
@@ -757,22 +499,20 @@ paths:
                 location_long:
                   type: string
                   description: 'The longitude location of the new service'
-                  example: doloribus
+                  example: non
                 categories:
-                  type: array
+                  type: object
                   description: ''
-                  example:
-                    - quis
-                  items:
-                    type: string
+                  example: []
+                  properties: []
                 description:
                   type: string
                   description: 'The description of the service'
-                  example: at
+                  example: 'Eos voluptatem illo molestias est tempore.'
                 price:
                   type: string
                   description: 'The price of the service'
-                  example: dignissimos
+                  example: et
               required:
                 - title
                 - price_min
@@ -791,26 +531,13 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: voluptatem
+            value: in
   '/api/services/{id}/images/add':
     post:
       summary: 'Add services images'
+      operationId: addServicesImages
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -832,8 +559,7 @@ paths:
                 images:
                   type: array
                   description: ''
-                  example:
-                    - null
+                  example: null
                   items:
                     type: string
       security: []
@@ -851,26 +577,13 @@ paths:
             value: ''
           present:
             summary: 'When the value is present'
-            value: explicabo
+            value: qui
   /api/service/request:
     post:
       summary: 'Request for a service'
+      operationId: requestForAService
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -892,32 +605,19 @@ paths:
                 service_id:
                   type: string
                   description: 'The id of the service'
-                  example: adipisci
+                  example: quisquam
                 message:
                   type: string
                   description: 'An optional message for the service provider'
-                  example: veniam
+                  example: tenetur
               required:
                 - service_id
   /api/service/delivery/status/update:
     post:
       summary: 'Change the status of a service delivery request'
+      operationId: changeTheStatusOfAServiceDeliveryRequest
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -939,15 +639,15 @@ paths:
                 service_request_id:
                   type: string
                   description: 'The ID of the service request to be changed'
-                  example: consequatur
+                  example: provident
                 status:
                   type: string
                   description: 'The new status of the service(Completed/Delivered, Delete, Dispute)'
-                  example: eveniet
+                  example: est
                 service_id:
                   type: string
                   description: 'The ID of the service'
-                  example: doloribus
+                  example: dolor
               required:
                 - service_request_id
                 - status
@@ -955,22 +655,9 @@ paths:
   /api/service/requests:
     get:
       summary: 'Get Service Requests'
+      operationId: getServiceRequests
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -985,22 +672,9 @@ paths:
   /api/user:
     get:
       summary: 'Get user details.'
+      operationId: getUserDetails
       description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
+      parameters: []
       responses:
         200:
           description: ''
@@ -1012,652 +686,12 @@ paths:
                 properties: {  }
       tags:
         - 'User APIs'
-  /api/admin/users:
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        404:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: ''
-                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-                  file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php'
-                  line: 43
-                  trace:
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
-                      line: 162
-                      function: handleMatchedRoute
-                      class: Illuminate\Routing\AbstractRouteCollection
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 673
-                      function: match
-                      class: Illuminate\Routing\RouteCollection
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 662
-                      function: findRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 651
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 167
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 128
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 167
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 167
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 167
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 167
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\fruitcake\laravel-cors\src\HandleCors.php'
-                      line: 52
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 167
-                      function: handle
-                      class: Fruitcake\Cors\HandleCors
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 167
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 103
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 142
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 111
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 299
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 287
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 89
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 45
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                      line: 222
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                      line: 179
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                      line: 116
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                      line: 123
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                      line: 80
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                      line: 56
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php'
-                      line: 55
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                      line: 40
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 37
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                      line: 653
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                      line: 136
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\symfony\console\Command\Command.php'
-                      line: 298
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                      line: 121
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\symfony\console\Application.php'
-                      line: 1040
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\symfony\console\Application.php'
-                      line: 301
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\symfony\console\Application.php'
-                      line: 171
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Console\Application.php'
-                      line: 94
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
-                      line: 129
-                      function: run
-                      class: Illuminate\Console\Application
-                      type: '->'
-                    -
-                      file: 'C:\xampp\htdocs\projects\laravel\services-app\artisan'
-                      line: 37
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
-                properties:
-                  message:
-                    type: string
-                    example: ''
-                  exception:
-                    type: string
-                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-                  file:
-                    type: string
-                    example: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php'
-                  line:
-                    type: integer
-                    example: 43
-                  trace:
-                    type: array
-                    example:
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Routing\RouteCollection.php'
-                        line: 162
-                        function: handleMatchedRoute
-                        class: Illuminate\Routing\AbstractRouteCollection
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 673
-                        function: match
-                        class: Illuminate\Routing\RouteCollection
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 662
-                        function: findRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 651
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 167
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 128
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 167
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 167
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 167
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 167
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\fruitcake\laravel-cors\src\HandleCors.php'
-                        line: 52
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 167
-                        function: handle
-                        class: Fruitcake\Cors\HandleCors
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 167
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 103
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 142
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 111
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 299
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 287
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 89
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 45
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                        line: 222
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                        line: 179
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                        line: 116
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                        line: 123
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                        line: 80
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                        line: 56
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php'
-                        line: 55
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                        line: 40
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 37
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                        line: 653
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                        line: 136
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\symfony\console\Command\Command.php'
-                        line: 298
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                        line: 121
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\symfony\console\Application.php'
-                        line: 1040
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\symfony\console\Application.php'
-                        line: 301
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\symfony\console\Application.php'
-                        line: 171
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Console\Application.php'
-                        line: 94
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
-                        line: 129
-                        function: run
-                        class: Illuminate\Console\Application
-                        type: '->'
-                      -
-                        file: 'C:\xampp\htdocs\projects\laravel\services-app\artisan'
-                        line: 37
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
-      tags:
-        - 'User APIs'
 tags:
   -
     name: 'Auth APIs'
     description: ''
   -
-    name: Endpoints
+    name: 'Categories APIs'
     description: ''
   -
     name: 'Services APIs'
