@@ -58,19 +58,19 @@ endpoints:
         name: id
         description: 'The ID of the bookmark.'
         required: true
-        example: neque
+        example: magni
         type: string
         custom: []
       ID:
         name: ID
         description: 'The ID of the bookmark'
         required: false
-        example: sequi
+        example: tempore
         type: string
         custom: []
     cleanUrlParameters:
-      id: neque
-      ID: sequi
+      id: magni
+      ID: tempore
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -112,21 +112,13 @@ endpoints:
     bodyParameters:
       service_id:
         name: service_id
-        description: ''
-        required: true
-        example: fugiat
-        type: string
-        custom: []
-      id:
-        name: id
         description: 'The id of the service'
         required: true
-        example: vel
+        example: natus
         type: string
         custom: []
     cleanBodyParameters:
-      service_id: fugiat
-      id: vel
+      service_id: natus
     fileParameters: []
     responses:
       -

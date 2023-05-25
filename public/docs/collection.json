@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Services App",
-        "_postman_id": "5939ce34-9902-446b-945e-e10920d75e56",
+        "_postman_id": "d13defd7-251f-429b-bf2b-4cac7fab2a62",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"emard.raphaelle@example.net\",\"password\":\"yG)Gc@?@T\\\/>tU>=%Y<\"}"
+                            "raw": "{\"email\":\"znienow@example.com\",\"password\":\"{cOTy,4\\\\zAn<7zH5Syok\"}"
                         },
                         "description": "",
                         "auth": {
@@ -79,7 +79,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"et\",\"last_name\":\"amet\",\"email\":\"ashly97@example.com\",\"phone_number\":\"est\",\"password\":\"S,etN}TTt*yX4;3Dzx\",\"role\":\"nulla\"}"
+                            "raw": "{\"first_name\":\"maxime\",\"last_name\":\"tenetur\",\"email\":\"raleigh45@example.net\",\"phone_number\":\"dicta\",\"password\":\"k=dgCUQ{Q+#{~~\",\"role\":\"cumque\"}"
                         },
                         "description": "",
                         "auth": {
@@ -117,7 +117,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"phone_number\":\"neque\"}"
+                            "raw": "{\"phone_number\":\"sunt\"}"
                         },
                         "description": "",
                         "auth": {
@@ -155,7 +155,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"est\"}"
+                            "raw": "{\"code\":\"quis\"}"
                         },
                         "description": "",
                         "auth": {
@@ -193,7 +193,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"code\":\"aut\",\"password\":\"(_{Yqm>J\",\"password_confirmation\":\"qui\"}"
+                            "raw": "{\"code\":\"quia\",\"password\":\"6k=A1Unt\",\"password_confirmation\":\"cumque\"}"
                         },
                         "description": "",
                         "auth": {
@@ -231,7 +231,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"aspernatur\",\"email\":\"langosh.macie@example.net\",\"phone_number\":\"voluptatem\",\"token\":\"quaerat\",\"email_verified\":false}"
+                            "raw": "{\"name\":\"nihil\",\"email\":\"victoria.hickle@example.org\",\"phone_number\":\"fugiat\",\"token\":\"dolores\",\"email_verified\":true}"
                         },
                         "description": "Login through google",
                         "auth": {
@@ -332,7 +332,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "sunt",
+                                    "value": "ex",
                                     "description": "The ID of the category"
                                 }
                             ]
@@ -416,13 +416,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ullam",
+                                    "value": "dolor",
                                     "description": "The ID of the review."
                                 },
                                 {
                                     "id": "ID",
                                     "key": "ID",
-                                    "value": "mollitia",
+                                    "value": "et",
                                     "description": "The ID of the review"
                                 }
                             ]
@@ -475,7 +475,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_id\":\"in\",\"rating\":8,\"review\":\"omnis\"}"
+                            "raw": "{\"service_id\":\"recusandae\",\"rating\":17,\"review\":\"dolorum\"}"
                         },
                         "description": "",
                         "auth": {
@@ -503,7 +503,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "natus",
+                                    "value": "nostrum",
                                     "description": "The id of the review"
                                 }
                             ]
@@ -521,7 +521,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"rating\":5,\"review\":\"dicta\"}"
+                            "raw": "{\"rating\":4,\"review\":\"modi\"}"
                         },
                         "description": ""
                     },
@@ -584,13 +584,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "neque",
+                                    "value": "magni",
                                     "description": "The ID of the bookmark."
                                 },
                                 {
                                     "id": "ID",
                                     "key": "ID",
-                                    "value": "sequi",
+                                    "value": "tempore",
                                     "description": "The ID of the bookmark"
                                 }
                             ]
@@ -643,7 +643,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_id\":\"fugiat\",\"id\":\"vel\"}"
+                            "raw": "{\"service_id\":\"natus\"}"
                         },
                         "description": ""
                     },
@@ -674,13 +674,13 @@
                                 {
                                     "id": "latitude",
                                     "key": "latitude",
-                                    "value": "magnam",
+                                    "value": "at",
                                     "description": ""
                                 },
                                 {
                                     "id": "longitude",
                                     "key": "longitude",
-                                    "value": "magnam",
+                                    "value": "optio",
                                     "description": ""
                                 }
                             ]
@@ -723,7 +723,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "et",
+                                    "value": "cumque",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -776,7 +776,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"eum\",\"price_min\":\"et\",\"location_lat\":\"sapiente\",\"location_long\":\"voluptate\",\"categories\":[\"provident\"],\"description\":\"Non distinctio ipsum dolor ullam libero ab rerum et.\",\"price\":\"ea\"}"
+                            "raw": "{\"title\":\"voluptas\",\"price_min\":\"repellendus\",\"location_lat\":\"hic\",\"location_long\":\"laboriosam\",\"categories\":[\"saepe\"],\"description\":\"Ut consequatur perspiciatis mollitia et.\",\"price\":\"aut\"}"
                         },
                         "description": ""
                     },
@@ -801,7 +801,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "neque",
+                                    "value": "rem",
                                     "description": "The ID of the service"
                                 }
                             ]
@@ -819,7 +819,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"molestias\",\"price_min\":\"tenetur\",\"location_lat\":\"dolor\",\"location_long\":\"voluptatem\",\"categories\":[],\"description\":\"Vel itaque mollitia ex iusto quis amet eos.\",\"price\":\"qui\"}"
+                            "raw": "{\"title\":\"quo\",\"price_min\":\"ut\",\"location_lat\":\"quia\",\"location_long\":\"ex\",\"categories\":[],\"description\":\"Reprehenderit impedit similique molestiae dolores deserunt ipsa ut et.\",\"price\":\"saepe\"}"
                         },
                         "description": ""
                     },
@@ -844,7 +844,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quos",
+                                    "value": "iusto",
                                     "description": "The id of the service"
                                 }
                             ]
@@ -900,7 +900,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_id\":\"ut\",\"message\":\"ut\"}"
+                            "raw": "{\"service_id\":\"sunt\",\"message\":\"ut\"}"
                         },
                         "description": ""
                     },
@@ -935,7 +935,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"service_request_id\":\"nobis\",\"status\":\"et\",\"service_id\":\"accusamus\"}"
+                            "raw": "{\"service_request_id\":\"sunt\",\"status\":\"iste\",\"service_id\":\"cupiditate\"}"
                         },
                         "description": ""
                     },

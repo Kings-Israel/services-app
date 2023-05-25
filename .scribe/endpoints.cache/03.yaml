@@ -60,19 +60,19 @@ endpoints:
         name: id
         description: 'The ID of the review.'
         required: true
-        example: ullam
+        example: dolor
         type: string
         custom: []
       ID:
         name: ID
         description: 'The ID of the review'
         required: false
-        example: mollitia
+        example: et
         type: string
         custom: []
     cleanUrlParameters:
-      id: ullam
-      ID: mollitia
+      id: dolor
+      ID: et
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -116,27 +116,27 @@ endpoints:
         name: service_id
         description: 'The ID of the service'
         required: true
-        example: in
+        example: recusandae
         type: string
         custom: []
       rating:
         name: rating
         description: 'The rating of the service'
         required: true
-        example: 8
+        example: 17
         type: integer
         custom: []
       review:
         name: review
         description: 'The service review'
         required: false
-        example: omnis
+        example: dolorum
         type: string
         custom: []
     cleanBodyParameters:
-      service_id: in
-      rating: 8
-      review: omnis
+      service_id: recusandae
+      rating: 17
+      review: dolorum
     fileParameters: []
     responses:
       -
@@ -172,11 +172,11 @@ endpoints:
         name: id
         description: 'The id of the review'
         required: false
-        example: natus
+        example: nostrum
         type: string
         custom: []
     cleanUrlParameters:
-      id: natus
+      id: nostrum
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -184,19 +184,19 @@ endpoints:
         name: rating
         description: 'The rating of the service'
         required: true
-        example: 5
+        example: 4
         type: integer
         custom: []
       review:
         name: review
         description: 'The review to of the service'
         required: false
-        example: dicta
+        example: modi
         type: string
         custom: []
     cleanBodyParameters:
-      rating: 5
-      review: dicta
+      rating: 4
+      review: modi
     fileParameters: []
     responses:
       -

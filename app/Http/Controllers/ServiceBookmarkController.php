@@ -69,7 +69,7 @@ class ServiceBookmarkController extends Controller
      *
      * @authenticated
      *
-     * @bodyParam id string required The id of the service
+     * @bodyParam service_id string required The id of the service
      *
      * @response 200
      * @responseParam message Service Bookmarked successfully
