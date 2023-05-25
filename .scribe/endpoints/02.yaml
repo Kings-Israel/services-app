@@ -58,11 +58,11 @@ endpoints:
         name: id
         description: 'The ID of the category'
         required: false
-        example: ex
+        example: non
         type: string
         custom: []
     cleanUrlParameters:
-      id: ex
+      id: non
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

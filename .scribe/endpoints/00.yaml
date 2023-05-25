@@ -26,19 +26,19 @@ endpoints:
         name: email
         description: "The user's email or phone number"
         required: true
-        example: znienow@example.com
+        example: darrion33@example.com
         type: string
         custom: []
       password:
         name: password
         description: "The user's password"
         required: true
-        example: '{cOTy,4\zAn<7zH5Syok'
+        example: 'D3<m0|q?No;`'
         type: string
         custom: []
     cleanBodyParameters:
-      email: znienow@example.com
-      password: '{cOTy,4\zAn<7zH5Syok'
+      email: darrion33@example.com
+      password: 'D3<m0|q?No;`'
     fileParameters: []
     responses:
       -
@@ -78,51 +78,51 @@ endpoints:
         name: first_name
         description: "The vendor's first name"
         required: true
-        example: maxime
+        example: eius
         type: string
         custom: []
       last_name:
         name: last_name
         description: "The vendor's last name"
         required: true
-        example: tenetur
+        example: ullam
         type: string
         custom: []
       email:
         name: email
         description: "The vendor's email"
         required: true
-        example: raleigh45@example.net
+        example: holden.gottlieb@example.com
         type: string
         custom: []
       phone_number:
         name: phone_number
         description: "The vendor's phone number"
         required: true
-        example: dicta
+        example: adipisci
         type: string
         custom: []
       password:
         name: password
         description: "The vendor's password"
         required: true
-        example: 'k=dgCUQ{Q+#{~~'
+        example: '39aMu[arHq1S'
         type: string
         custom: []
       role:
         name: role
         description: "The person's role(vendor or user)"
         required: true
-        example: cumque
+        example: ratione
         type: string
         custom: []
     cleanBodyParameters:
-      first_name: maxime
-      last_name: tenetur
-      email: raleigh45@example.net
-      phone_number: dicta
-      password: 'k=dgCUQ{Q+#{~~'
-      role: cumque
+      first_name: eius
+      last_name: ullam
+      email: holden.gottlieb@example.com
+      phone_number: adipisci
+      password: '39aMu[arHq1S'
+      role: ratione
     fileParameters: []
     responses:
       -
@@ -162,11 +162,11 @@ endpoints:
         name: phone_number
         description: "The user's phone number"
         required: true
-        example: sunt
+        example: earum
         type: string
         custom: []
     cleanBodyParameters:
-      phone_number: sunt
+      phone_number: earum
     fileParameters: []
     responses:
       -
@@ -206,11 +206,11 @@ endpoints:
         name: code
         description: 'The Entered code'
         required: true
-        example: quis
+        example: voluptas
         type: string
         custom: []
     cleanBodyParameters:
-      code: quis
+      code: voluptas
     fileParameters: []
     responses:
       -
@@ -250,27 +250,27 @@ endpoints:
         name: code
         description: ''
         required: true
-        example: quia
+        example: voluptatum
         type: string
         custom: []
       password:
         name: password
         description: 'New password'
         required: true
-        example: 6k=A1Unt
+        example: 'on~@cq,''I"P?Hm6,.M8V'
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'New password confirmation'
         required: true
-        example: cumque
+        example: laudantium
         type: string
         custom: []
     cleanBodyParameters:
-      code: quia
-      password: 6k=A1Unt
-      password_confirmation: cumque
+      code: voluptatum
+      password: 'on~@cq,''I"P?Hm6,.M8V'
+      password_confirmation: laudantium
     fileParameters: []
     responses:
       -
@@ -310,28 +310,28 @@ endpoints:
         name: name
         description: 'The name of the user'
         required: true
-        example: nihil
+        example: id
         type: string
         custom: []
       email:
         name: email
         description: 'The email of the user'
         required: true
-        example: victoria.hickle@example.org
+        example: cmosciski@example.com
         type: string
         custom: []
       phone_number:
         name: phone_number
         description: "The user's phone number"
         required: false
-        example: fugiat
+        example: voluptatem
         type: string
         custom: []
       token:
         name: token
         description: 'A google provided token'
         required: false
-        example: dolores
+        example: quia
         type: string
         custom: []
       email_verified:
@@ -342,10 +342,10 @@ endpoints:
         type: boolean
         custom: []
     cleanBodyParameters:
-      name: nihil
-      email: victoria.hickle@example.org
-      phone_number: fugiat
-      token: dolores
+      name: id
+      email: cmosciski@example.com
+      phone_number: voluptatem
+      token: quia
       email_verified: true
     fileParameters: []
     responses:

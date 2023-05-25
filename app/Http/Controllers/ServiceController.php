@@ -86,7 +86,7 @@ class ServiceController extends Controller
     /**
      * Show service details.
      *
-     * @urlParam id The id of the service
+     * @urlParam id integer required The id of the service. Example: 3
      *
      * @response 200
      * @responseField data The service details
@@ -111,7 +111,7 @@ class ServiceController extends Controller
      * @bodyParam location_lat string The latitude location of the new service
      * @bodyParam location_long string The longitude location of the new service
      *
-     * @urlParam id The ID of the service
+     * @urlParam id integer required The ID of the service. Example: 4
      *
      * @response 200
      * @responseField content The details of the updated service
@@ -152,7 +152,7 @@ class ServiceController extends Controller
      *
      * @authenticated
      *
-     * @urlParam id The id of the service
+     * @urlParam id integer required The id of the service. Example: 12
      *
      * @response 200
      * @responseField content The details of the deleted service
@@ -165,8 +165,8 @@ class ServiceController extends Controller
     /**
      * Add services images
      *
-     * @urlParam id The id of the service
-     * @requestBody images file required The images as an array
+     * @urlParam id integer required The id of the service. Example: 2
+     * @requestBody images array required The images as an array
      *
      * @response 200
      * @responseBody message The images were successfully added
